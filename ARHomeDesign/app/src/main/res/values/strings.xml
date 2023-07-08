@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">AR Home</string>
+    <string name="welcome">Welcome</string>
+    <string name="login">Login</string>
+    <string name="signup">Sign Up</string>
+    <string name="fgtPwd">Forgot Password</string>
+    <string name="save">Save</string>
+    <string name="send">Send</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="home">Home</string>
+    <string name="back">Back</string>
+    <string name="favorite">Favorite</string>
+    <string name="profile">Profile</string>
+
+    <string name="table">Table</string>
+    <string name="chair">Chair</string>
+    <string name="sofa">Sofa</string>
+    <string name="bed">Bed</string>
+    <string name="drawer">Drawer</string>
+
+    <string name="fId">Furniture ID :</string>
+    <string name="fType">Type :</string>
+    <string name="fColor">Color :</string>
+    <string name="fStyle">Style :</string>
+    <string name="fBrand">Brand :</string>
+    <string name="fPhone">Phone number :</string>
+    <string name="fAddress">Address :</string>
+    <string name="fLoc">Location :</string>
+
+    <string name="table1">Table 1</string>
+    <string name="table2">Table 2</string>
+    <string name="table3">Table 3</string>
+
+    <string name="chair1">Chair 1</string>
+    <string name="chair2">Chair 2</string>
+
+    <string name="sofa1">Sofa 1</string>
+    <string name="sofa2">Sofa 2</string>
+
+    <string name="bed1">Bed 1</string>
+    <string name="bed2">Bed 2</string>
+
+    <string name="add_fv">Add to Favorite</string>
+    <string name="rm_fv">Remove from Favorite</string>
+    <string name="viewAr">View AR</string>
+
+    <string name="uName">Username</string>
+    <string name="email">E-mail</string>
+    <string name="chgPw">Change Password</string>
+    <string name="curPw">Current Password</string>
+    <string name="newPw">New Password</string>
+    <string name="verNewPw">Verify New Password</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
