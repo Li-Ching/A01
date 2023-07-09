@@ -1,10 +1,6 @@
 package com.example.arhomedesign;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,53 +8,30 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+
+import com.example.arhomedesign.Methods;
+import com.example.arhomedesign.R;
+import com.example.arhomedesign.RetrofitClient;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 public class Sofa_1Fragment extends Fragment {
-    private TextView tvFurId, tvType, tvColor, tvStyle, tvBrand, tvPhoneNumber, tvAddress, tvLocation;
+    private TextView tvFurId, tvType, tvColor, tvStyle, tvBrand, tvPhoneNumber, tvAddress;
 
     LinearLayout back;
 
+
+
+    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_sofa_1, container, false);
-
-        tvFurId=view.findViewById(R.id.tvFurId);
-        tvType=view.findViewById(R.id.tvType);
-        tvColor=view.findViewById(R.id.tvColor);
-        tvStyle=view.findViewById(R.id.tvStyle);
-        tvBrand=view.findViewById(R.id.tvBrand);
-        tvPhoneNumber=view.findViewById(R.id.tvPhoneNumber);
-        tvAddress=view.findViewById(R.id.tvAddress);
-        tvLocation=view.findViewById(R.id.tvLocation);
-
-        // Call the getJokes() method of the ApiCall class,
-        // passing a callback function as a parameter.
-        FurnituresApiCall apiCall = new FurnituresApiCall();
-        apiCall.getFurnitures(Sofa_1Fragment.this, new retrofit2.Callback<Furnitures>() {
-            @Override
-            public void onResponse(retrofit2.Call<Furnitures> call, retrofit2.Response<Furnitures> response) {
-                // This method is called when the API response is received successfully.
-                if (response.isSuccessful()) {
-                    // Set the text of the text view to the
-                    // joke value returned by the API response.
-                    Furnitures furnitures = response.body();
-                    tvFurId.setText(furnitures.furnitureId);
-                    tvType.setText(furnitures.type);
-                    tvColor.setText(furnitures.color);
-                    tvStyle.setText(furnitures.style);
-                    tvBrand.setText(furnitures.brand1);
-                    tvPhoneNumber.setText(furnitures.phoneNumber);
-                    tvAddress.setText(furnitures.address);
-                    tvLocation.setText(furnitures.location);
-                }
-            }
-
-            @Override
-            public void onFailure(retrofit2.Call<Furnitures> call, Throwable t) {
-                // This method is called when the API request fails.
-                //Toast.makeText(Sofa_1Fragment.this, "Request Fail", Toast.LENGTH_SHORT).show();
-            }
-        });
 
         back = view.findViewById(R.id.back);
 
@@ -71,6 +44,43 @@ public class Sofa_1Fragment extends Fragment {
             }
         });
 
+        tvFurId = view.findViewById(R.id.tvFurId);
+        tvType = view.findViewById(R.id.tvType);
+        tvColor = view.findViewById(R.id.tvColor);
+        tvStyle = view.findViewById(R.id.tvStyle);
+        tvBrand = view.findViewById(R.id.tvBrand);
+        tvPhoneNumber = view.findViewById(R.id.tvPhoneNumber);
+        tvAddress = view.findViewById(R.id.tvAddress);
+
+
+        super.onViewCreated(view, savedInstanceState);
+
+        Methods methods = RetrofitClient.getRetrofitInstance().create(Methods.class);
+        Call<furnitures> call = methods.getFurniture();
+        call.enqueue(new Callback<furnitures>() {
+            @Override
+            public void onResponse(Call<furnitures> call, Response<furnitures> response) {
+                if (response.isSuccessful()) {
+                    tvFurId.setText(response.body().getFurnitureId());
+                    tvType.setText(response.body().getType());
+                    tvColor.setText(response.body().getColor());
+                    tvStyle.setText(response.body().getStyle());
+                    tvBrand.setText(response.body().getBrand1());
+                    tvPhoneNumber.setText(response.body().getPhoneNumber());
+                    tvAddress.setText(response.body().getAddress());
+                } else {
+                    Toast.makeText(getContext(), "An error has occurred", Toast.LENGTH_LONG).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<furnitures> call, Throwable t) {
+                Toast.makeText(getContext(), "An error has occurred", Toast.LENGTH_LONG).show();
+            }
+        });
+
+
         return view;
     }
+
 }
