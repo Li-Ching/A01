@@ -63,6 +63,7 @@
             android:textStyle="bold" />
 
         <ImageView
+            android:id="@+id/imgSofa1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:src="@drawable/sofa_1"

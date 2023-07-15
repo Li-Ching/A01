@@ -1,10 +1,15 @@
 package com.example.arhomedesign;
 
+import static com.unity3d.services.core.misc.Utilities.runOnUiThread;
+
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -14,6 +19,11 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.List;
 
 import retrofit2.Call;
@@ -45,6 +55,7 @@ public class Sofa_1Fragment extends Fragment {
         tvAddress = view.findViewById(R.id.tvAddress);
 
 
+
         Methods methods = RetrofitClient.getRetrofitInstance().create(Methods.class);
         Call<furnitures> call = methods.getFurniture();
         call.enqueue(new Callback<furnitures>() {
@@ -61,6 +72,19 @@ public class Sofa_1Fragment extends Fragment {
                     tvBrand.setText(furniture.getBrand1());
                     tvPhoneNumber.setText(furniture.getPhoneNumber());
                     tvAddress.setText(furniture.getAddress());
+
+                    /*new Thread(new Runnable(){
+                        @Override
+                        public void run() {
+
+                            final Bitmap mBitmap = getBitmapFromURL(furniture.getPicture());
+                            runOnUiThread(new Runnable(){
+                                public void run() {
+                                    ImageView mImageView = (ImageView) view.findViewById(R.id.imgSofa1);
+                                    mImageView.setImageBitmap(mBitmap);
+                                }}
+                            );
+                        }}).start();*/
                 } else {
                     Toast.makeText(getContext(), "An error has occurred", Toast.LENGTH_LONG).show();
                     Log.e("API Response", "Error: " + response.message());
@@ -75,4 +99,18 @@ public class Sofa_1Fragment extends Fragment {
 
         return view;
     }
+    /*public static Bitmap getBitmapFromURL(String src) {
+        try{
+            URL url = new URL(src);
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            conn.connect();
+
+            InputStream input = conn.getInputStream();
+            Bitmap mBitmap = BitmapFactory.decodeStream(input);
+            return mBitmap;
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+        return null;
+    }*/
 }
