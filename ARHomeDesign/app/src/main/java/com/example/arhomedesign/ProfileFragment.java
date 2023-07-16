@@ -1,5 +1,6 @@
 package com.example.arhomedesign;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -12,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import retrofit2.Call;
@@ -20,14 +22,42 @@ import retrofit2.Response;
 
 public class ProfileFragment extends Fragment {
     LinearLayout username, chgPw;
+    TextView Name, Email;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
 
         username = view.findViewById(R.id.username);
+        Name = view.findViewById(R.id.Name);
+        Email = view.findViewById(R.id.Email);
         chgPw = view.findViewById(R.id.chgPw);
+
+        Methods methods = RetrofitClient.getRetrofitInstance().create(Methods.class);
+        Call<UserData> call = methods.getProfile();
+        call.enqueue(new Callback<UserData>() {
+            @Override
+            public void onResponse(Call<UserData> call,  Response<UserData> response) {
+                UserData userData= response.body();
+                if (response.isSuccessful() && userData != null) {
+                    Log.d("API Response", "Username: " + response);
+                    Log.d("API Response", "Username: " + userData.getUsername());
+                    Log.d("API Response", "Email: " + userData.getEmail());
+                    Name.setText(userData.getUsername());
+                    Email.setText(userData.getEmail());
+                } else {
+                    Toast.makeText(getContext(), "An error has occurred", Toast.LENGTH_LONG).show();
+                    Log.e("API Response", "Error: " + response.message());
+                }
+            }
+
+            @Override
+            public void onFailure(@NonNull Call<UserData> call, @NonNull Throwable t) {
+                Toast.makeText(getContext(), "onFailure: " + t.getMessage(), Toast.LENGTH_LONG).show();
+            }
+        });
         username.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

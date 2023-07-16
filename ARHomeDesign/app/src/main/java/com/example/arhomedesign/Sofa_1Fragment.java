@@ -40,8 +40,6 @@ public class Sofa_1Fragment extends Fragment {
         tvPhoneNumber = view.findViewById(R.id.tvPhoneNumber);
         tvAddress = view.findViewById(R.id.tvAddress);
 
-
-
         Methods methods = RetrofitClient.getRetrofitInstance().create(Methods.class);
         Call<furnitures> call = methods.getFurniture();
         call.enqueue(new Callback<furnitures>() {

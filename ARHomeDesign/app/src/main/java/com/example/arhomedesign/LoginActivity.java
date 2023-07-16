@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.animation.LayoutTransition;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.util.Base64;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -16,7 +15,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.UnsupportedEncodingException;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -66,6 +64,7 @@ public class LoginActivity extends AppCompatActivity {
                             // to our both edit text.
                             Email.setText("");
                             Password.setText("");
+                            if (response.isSuccessful()) {
                                 Log.d("API Response", "呼叫成功");
 
                                 // 登入成功
@@ -84,6 +83,13 @@ public class LoginActivity extends AppCompatActivity {
                                     // 可以顯示 "帳號密碼錯誤" 的錯誤訊息或執行其他處理邏輯
                                     Toast.makeText(getApplicationContext(), "帳號密碼錯誤", Toast.LENGTH_SHORT).show();
                                 }
+                            } else {
+                                Log.d("API Response", "呼叫失敗");
+
+                                // API 呼叫失敗
+                                // 可以顯示錯誤訊息或執行其他處理邏輯
+                                Toast.makeText(getApplicationContext(), "API 呼叫失敗", Toast.LENGTH_SHORT).show();
+                            }
                         }
 
                         @Override
