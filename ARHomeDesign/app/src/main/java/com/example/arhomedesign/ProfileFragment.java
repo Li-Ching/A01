@@ -2,14 +2,21 @@ package com.example.arhomedesign;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.Toast;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class ProfileFragment extends Fragment {
     LinearLayout username, chgPw;
@@ -21,8 +28,6 @@ public class ProfileFragment extends Fragment {
 
         username = view.findViewById(R.id.username);
         chgPw = view.findViewById(R.id.chgPw);
-
-
         username.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

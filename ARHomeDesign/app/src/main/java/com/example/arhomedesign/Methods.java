@@ -15,8 +15,8 @@ public interface Methods {
     @POST("api/users")
         //on below line we are creating a method to post our data.
     Call<UserData> createPost(@Body UserData dataModal);
-    @GET("api/user")
-    Call<List<furnitures>> getUser();
+    @GET("api/users/profile")
+    Call<UserData> getProfile();
     @POST("api/login")
         //on below line we are creating a method to post our data.
     Call<LoginData> Login(@Body LoginData dataModal);
