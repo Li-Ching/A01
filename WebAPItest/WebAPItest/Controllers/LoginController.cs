@@ -19,7 +19,7 @@ namespace WebAPItest.Controllers
         }
 
         [HttpPost]
-        public string login(LoginPost value)
+        public IActionResult login(LoginPost value)
         {
             var user = (from a in _a01Context.Users
                         where a.Email == value.Email
@@ -28,7 +28,7 @@ namespace WebAPItest.Controllers
 
             if (user == null)
             {
-                return "帳號密碼錯誤";
+                return BadRequest(new { status = "帳號密碼錯誤" });
             }
             else
             {
@@ -40,7 +40,7 @@ namespace WebAPItest.Controllers
                 };
                 var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
                 HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
-                return "ok";
+                return Ok(new { status = "登入成功" });
             }
         }
 
@@ -50,9 +50,9 @@ namespace WebAPItest.Controllers
             HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
         }
         [HttpGet("NoLogin")]
-        public string noLogin()
+        public IActionResult noLogin()
         {
-            return "未登入";
+            return Ok(new { status = "未登入" });
         }
 
     }

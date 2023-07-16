@@ -1,22 +1,12 @@
 package com.example.arhomedesign;
 
-public class UserData {
-    private String username;
+public class LoginData {
     private String email;
     private String password;
 
-    public UserData(String username, String email, String password) {
-        this.username = username;
+    public LoginData(String email, String password) {
         this.email = email;
         this.password = password;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
     }
 
     public String getEmail() {

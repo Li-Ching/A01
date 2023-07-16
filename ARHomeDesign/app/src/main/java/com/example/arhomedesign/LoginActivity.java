@@ -51,11 +51,48 @@ public class LoginActivity extends AppCompatActivity {
                 //createAuthToken(email, password);
 
                 if(email.length()==0 || password.length()==0){
+                    Log.d("API Response", "長度不對");
+
                     Toast.makeText(getApplicationContext(), "Invalid Username or Password!", Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                    startActivity(intent);
+                    Methods methods = RetrofitClient.getRetrofitInstance().create(Methods.class);
+                    LoginData modal = new LoginData(email, password);
+                    Call<LoginData> call = methods.Login(modal);
+                    call.enqueue(new Callback<LoginData>() {
+                        @Override
+                        public void onResponse(Call<LoginData> call, Response<LoginData> response) {
+                            // on below line we are setting empty text
+                            // to our both edit text.
+                            Email.setText("");
+                            Password.setText("");
+                                Log.d("API Response", "呼叫成功");
+
+                                // 登入成功
+                                int statusCode = response.code(); // 取得回應狀態碼
+                                if (statusCode == 200) {
+                                    Log.d("API Response", "ok");
+
+                                    // 登入成功
+                                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                                    startActivity(intent);
+                                    finish();
+                                } else {
+                                    Log.d("API Response", "帳號密碼錯誤");
+
+                                    // 登入失敗
+                                    // 可以顯示 "帳號密碼錯誤" 的錯誤訊息或執行其他處理邏輯
+                                    Toast.makeText(getApplicationContext(), "帳號密碼錯誤", Toast.LENGTH_SHORT).show();
+                                }
+                        }
+
+                        @Override
+                        public void onFailure(Call<LoginData> call, Throwable t) {
+                            // setting text to our text view when
+                            // we get error response from API.
+                            Log.e("API Response", "Error: " + t.getMessage());
+                        }
+                    });
                 }
             }
         });

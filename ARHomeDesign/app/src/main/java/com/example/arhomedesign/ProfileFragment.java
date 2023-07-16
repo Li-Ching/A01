@@ -22,6 +22,7 @@ public class ProfileFragment extends Fragment {
         username = view.findViewById(R.id.username);
         chgPw = view.findViewById(R.id.chgPw);
 
+
         username.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

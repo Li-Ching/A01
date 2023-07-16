@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ASP.NET Core\\WebAPItest\\WebAPItest\\WebAPItest.csproj": {}
+    "C:\\Users\\Li-Ching\\A01\\WebAPItest\\WebAPItest\\WebAPItest.csproj": {}
   },
   "projects": {
-    "D:\\ASP.NET Core\\WebAPItest\\WebAPItest\\WebAPItest.csproj": {
+    "C:\\Users\\Li-Ching\\A01\\WebAPItest\\WebAPItest\\WebAPItest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ASP.NET Core\\WebAPItest\\WebAPItest\\WebAPItest.csproj",
+        "projectUniqueName": "C:\\Users\\Li-Ching\\A01\\WebAPItest\\WebAPItest\\WebAPItest.csproj",
         "projectName": "WebAPItest",
-        "projectPath": "D:\\ASP.NET Core\\WebAPItest\\WebAPItest\\WebAPItest.csproj",
+        "projectPath": "C:\\Users\\Li-Ching\\A01\\WebAPItest\\WebAPItest\\WebAPItest.csproj",
         "packagesPath": "C:\\Users\\Li-Ching\\.nuget\\packages\\",
-        "outputPath": "D:\\ASP.NET Core\\WebAPItest\\WebAPItest\\obj\\",
+        "outputPath": "C:\\Users\\Li-Ching\\A01\\WebAPItest\\WebAPItest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Li-Ching\\AppData\\Roaming\\NuGet\\NuGet.Config",

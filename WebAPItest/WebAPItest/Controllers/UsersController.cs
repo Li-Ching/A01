@@ -28,6 +28,21 @@ namespace WebAPItest.Controllers
 
             return result.ToList().Select(a=>ItemToDto(a));
         }
+        // GET: api/<UsersController>/Profile
+        [HttpGet("Profile")]
+        [Authorize]
+        public IActionResult Profile()
+        {
+            var Claim = HttpContext.User.Claims.ToList();
+            var UserId = Claim.Where(a => a.Type == "UserId").First().Value;
+
+            var result = _a01Context.Users.Find(Int32.Parse(UserId));
+            if (result == null)
+            {
+                return NotFound("沒有此使用者");
+            }
+            return Ok(result);
+        }
 
         // GET api/<UsersController>/5
         [HttpGet("{UserId}")]

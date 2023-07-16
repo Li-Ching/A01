@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KiiPsdi2eL+uX1UsJyV9ilCU8f4wDbt6tLkAdaJzUW5XXo54/Na7KE6CMyjgMfAgD9yZrLEi6cbK3l+QSZBDgA==",
+  "dgSpecHash": "UM7XqdXv70ydmJ3luDb+xGV9J72mx+3k30AZlo4I1U9xA/HJPBa+7jqYxoljuI0heuLvGelFCDKq2mFrPbQvmQ==",
   "success": true,
-  "projectFilePath": "D:\\ASP.NET Core\\WebAPItest\\WebAPItest\\WebAPItest.csproj",
+  "projectFilePath": "C:\\Users\\Li-Ching\\A01\\WebAPItest\\WebAPItest\\WebAPItest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Li-Ching\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Li-Ching\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
