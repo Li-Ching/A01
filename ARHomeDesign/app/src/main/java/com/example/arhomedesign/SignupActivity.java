@@ -68,6 +68,7 @@ public class SignupActivity extends AppCompatActivity {
                             Username.setText("");
                             Email.setText("");
                             Password.setText("");
+                            Log.d("API Response", "註冊成功");
 
                             // we are getting response from our body
                             // and passing it to our modal class.
