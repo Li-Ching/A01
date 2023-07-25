@@ -24,8 +24,9 @@ import retrofit2.Retrofit;
 
 public class LoginActivity extends AppCompatActivity {
     EditText Email, Password;
+    TextView signUp, fgtPwd;
     Button loginButton;
-    TextView noLogin, signUp, fgtPwd;
+    LinearLayout back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,9 +38,9 @@ public class LoginActivity extends AppCompatActivity {
         Email = findViewById(R.id.edtEmail);
         Password = findViewById(R.id.edtPassword);
         loginButton = findViewById(R.id.loginButton);
-        noLogin = findViewById(R.id.tvNoLogin);
-        signUp = findViewById(R.id.tvSignup);
+        signUp = findViewById(R.id.signupButton);
         fgtPwd = findViewById(R.id.tvFgtPwd);
+        back = findViewById(R.id.btnBack);
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -103,13 +104,6 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        noLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this, MainActivityNoLogin.class);
-                startActivity(intent);
-            }
-        });
 
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -123,6 +117,14 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(LoginActivity.this, ForgotPwdActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, Intro.class);
                 startActivity(intent);
             }
         });

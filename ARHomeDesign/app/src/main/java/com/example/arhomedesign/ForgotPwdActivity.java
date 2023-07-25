@@ -7,13 +7,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class ForgotPwdActivity extends AppCompatActivity {
 
     EditText email;
     Button send;
-    TextView cancel;
+    LinearLayout back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,9 +25,9 @@ public class ForgotPwdActivity extends AppCompatActivity {
 
         email = findViewById(R.id.edtEmail);
         send = findViewById(R.id.sendButton);
-        cancel = findViewById(R.id.tvCancel);
+        back = findViewById(R.id.btnBack);
 
-        cancel.setOnClickListener(new View.OnClickListener() {
+        back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ForgotPwdActivity.this, LoginActivity.class);

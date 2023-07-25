@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,7 +21,8 @@ import retrofit2.Response;
 public class SignupActivity extends AppCompatActivity {
     private EditText Username, Email, Password, VerPwd;
     private Button signUp;
-    private TextView cancel;
+
+    LinearLayout back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +32,7 @@ public class SignupActivity extends AppCompatActivity {
         getSupportActionBar().hide();
 
         signUp = findViewById(R.id.signupButton);
-        cancel = findViewById(R.id.tvCancel);
+        back = findViewById(R.id.btnBack);
 
         Username = findViewById(R.id.edtUsername);
         Email = findViewById(R.id.edtEmail);
@@ -88,7 +90,7 @@ public class SignupActivity extends AppCompatActivity {
             }
         });
 
-        cancel.setOnClickListener(new View.OnClickListener() {
+        back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(SignupActivity.this, LoginActivity.class);
