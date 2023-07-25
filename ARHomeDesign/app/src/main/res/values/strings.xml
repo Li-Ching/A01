@@ -5,6 +5,14 @@
     <string name="intro">為您的房子找到完美的家具。</string>
     <string name="start">開始</string>
 
+    <string name="uName">帳戶名字</string>
+    <string name="email">電子郵件</string>
+    <string name="passwd">密碼</string>
+    <string name="chgPw">Change Password</string>
+    <string name="curPw">Current Password</string>
+    <string name="newPw">New Password</string>
+    <string name="verNewPw">Verify New Password</string>
+
     //login page
     <string name="hello">您好！</string>
     <string name="suggestion">登錄以獲得更好的用戶體驗</string>
@@ -14,8 +22,11 @@
     <string name="guest">游客帳戶</string>
     <string name="fgtPwd">忘記密碼</string>
 
-
+    //signup page
     <string name="signup">註冊</string>
+    <string name="enter_username">輸入帳戶名字</string>
+    <string name="verify_passwd">驗證密碼</string>
+
     <string name="save">Save</string>
     <string name="send">Send</string>
     <string name="cancel">Cancel</string>
@@ -57,13 +68,6 @@
     <string name="rm_fv">Remove from Favorite</string>
     <string name="viewAr">View AR</string>
 
-    <string name="uName">帳戶名字</string>
-    <string name="email">電子郵件</string>
-    <string name="passwd">密碼</string>
-    <string name="chgPw">Change Password</string>
-    <string name="curPw">Current Password</string>
-    <string name="newPw">New Password</string>
-    <string name="verNewPw">Verify New Password</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
