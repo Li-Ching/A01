@@ -31,15 +31,16 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:orientation="vertical"
-        android:gravity="center_horizontal"
+        android:layout_width="411dp"
+        android:layout_height="317dp"
         android:background="@drawable/rounded_transparent"
         android:backgroundTint="@color/black"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView">
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.754">
 
         <TextView
             android:id="@+id/textView"
@@ -57,14 +58,24 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/btnStart"
+            android:id="@+id/btnLogin"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:background="@drawable/rounded_transparent"
             android:backgroundTint="@color/gray"
-            android:text="@string/start"
-            android:textSize="24sp"/>
+            android:text="@string/login"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btnGuest"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_transparent"
+            android:backgroundTint="@color/white"
+            android:text="@string/guest"
+            android:textSize="24sp" />
 
     </LinearLayout>
 

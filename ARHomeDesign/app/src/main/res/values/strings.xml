@@ -6,13 +6,16 @@
     <string name="start">開始</string>
 
     //login page
+    <string name="hello">您好！</string>
+    <string name="suggestion">登錄以獲得更好的用戶體驗</string>
     <string name="login">登入</string>
     <string name="enter_email">輸入電子郵件 :</string>
     <string name="enter_passwd">輸入密碼 :</string>
+    <string name="guest">游客帳戶</string>
+    <string name="fgtPwd">忘記密碼</string>
 
 
-    <string name="signup">Sign Up</string>
-    <string name="fgtPwd">Forgot Password</string>
+    <string name="signup">註冊</string>
     <string name="save">Save</string>
     <string name="send">Send</string>
     <string name="cancel">Cancel</string>
