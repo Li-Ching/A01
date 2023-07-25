@@ -5,30 +5,31 @@ import android.content.Intent;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Handler;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 
 public class Intro extends AppCompatActivity {
-    private static final int SPLASH_SCREEN_TIME_OUT = 2000;
+    Button start;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_intro);
 
         getSupportActionBar().hide();
 
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        start = findViewById(R.id.btnStart);
 
-        setContentView(R.layout.activity_intro);
-
-        new Handler().postDelayed(new Runnable() {
+        start.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void run() {
-                Intent i = new Intent(Intro.this, LoginActivity.class);
-               startActivity(i);
-               finish();
+            public void onClick(View v) {
+                Intent intent = new Intent(Intro.this, LoginActivity.class);
+                startActivity(intent);
+                finish();
             }
-        }, SPLASH_SCREEN_TIME_OUT);
+        });
+
     }
 }

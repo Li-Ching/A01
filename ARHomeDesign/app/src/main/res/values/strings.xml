@@ -1,13 +1,21 @@
 <resources>
     <string name="app_name">AR Home</string>
-    <string name="intro">為您的房子找到完美的家具</string>
-    <string name="login">Login</string>
+
+    //intro page
+    <string name="intro">為您的房子找到完美的家具。</string>
+    <string name="start">開始</string>
+
+    //login page
+    <string name="login">登入</string>
+    <string name="enter_email">輸入電子郵件 :</string>
+    <string name="enter_passwd">輸入密碼 :</string>
+
+
     <string name="signup">Sign Up</string>
     <string name="fgtPwd">Forgot Password</string>
     <string name="save">Save</string>
     <string name="send">Send</string>
     <string name="cancel">Cancel</string>
-    <string name="start">開始</string>
 
     <string name="home">Home</string>
     <string name="back">Back</string>
@@ -46,8 +54,9 @@
     <string name="rm_fv">Remove from Favorite</string>
     <string name="viewAr">View AR</string>
 
-    <string name="uName">Username</string>
-    <string name="email">E-mail</string>
+    <string name="uName">帳戶名字</string>
+    <string name="email">電子郵件</string>
+    <string name="passwd">密碼</string>
     <string name="chgPw">Change Password</string>
     <string name="curPw">Current Password</string>
     <string name="newPw">New Password</string>
