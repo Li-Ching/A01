@@ -71,7 +71,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="10dp"
                     android:fontFamily="@font/kaiu"
-                    android:text="UsernameEx1"
                     android:textColor="@color/taupe"
                     android:textSize="28sp"
                     android:textStyle="bold" />
@@ -117,7 +116,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="10dp"
                     android:fontFamily="@font/kaiu"
-                    android:text="EmailEx1"
                     android:textColor="@color/taupe"
                     android:textSize="28sp"
                     android:textStyle="bold" />
