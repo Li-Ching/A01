@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Intro"
-    android:background="@color/white">
+    android:background="@color/white"
+    tools:context=".Intro">
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@mipmap/ic_launcher_foreground"
         android:contentDescription="@null"
+        android:src="@mipmap/ic_launcher_foreground"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -23,24 +23,24 @@
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/intro"
         android:contentDescription="@null"
+        android:src="@drawable/intro"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
     <LinearLayout
-        android:layout_width="411dp"
-        android:layout_height="317dp"
-        android:background="@drawable/rounded_transparent"
+        android:layout_width="400dp"
+        android:layout_height="289dp"
+        android:background="@drawable/bottom_bar_bg"
         android:backgroundTint="@color/black"
         android:gravity="center_horizontal"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.754">
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
 
         <TextView
             android:id="@+id/textView"
@@ -64,6 +64,7 @@
             android:layout_marginTop="20dp"
             android:background="@drawable/rounded_transparent"
             android:backgroundTint="@color/gray"
+            android:fontFamily="@font/kaiu"
             android:text="@string/login"
             android:textSize="24sp" />
 
@@ -74,6 +75,7 @@
             android:layout_marginTop="20dp"
             android:background="@drawable/rounded_transparent"
             android:backgroundTint="@color/white"
+            android:fontFamily="@font/kaiu"
             android:text="@string/guest"
             android:textSize="24sp" />
 
