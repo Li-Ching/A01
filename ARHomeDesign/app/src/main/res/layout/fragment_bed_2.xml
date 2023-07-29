@@ -41,7 +41,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="10dp"
-                    android:fontFamily="@font/alegreya_sans"
+                    android:fontFamily="@font/kaiu"
                     android:text="@string/back"
                     android:textSize="26sp"
                     android:textStyle="bold"
@@ -56,7 +56,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:background="@drawable/bottom_border"
-            android:fontFamily="@font/alegreya_sans"
+            android:fontFamily="@font/kaiu"
             android:text="@string/bed2"
             android:textColor="@color/taupe"
             android:textSize="32sp"
@@ -94,7 +94,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.3"
-                        android:fontFamily="@font/alegreya_sans"
+                        android:fontFamily="@font/kaiu"
                         android:text="@string/fId"
                         android:textSize="24sp" />
 
@@ -102,7 +102,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.7"
-                        android:fontFamily="@font/alegreya_sans"
+                        android:fontFamily="@font/kaiu"
                         android:text=""
                         android:textSize="24sp" />
 
@@ -118,7 +118,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.3"
-                        android:fontFamily="@font/alegreya_sans"
+                        android:fontFamily="@font/kaiu"
                         android:text="@string/fType"
                         android:textSize="24sp" />
 
@@ -126,7 +126,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.7"
-                        android:fontFamily="@font/alegreya_sans"
+                        android:fontFamily="@font/kaiu"
                         android:text=""
                         android:textSize="24sp" />
 
@@ -142,7 +142,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.3"
-                        android:fontFamily="@font/alegreya_sans"
+                        android:fontFamily="@font/kaiu"
                         android:text="@string/fColor"
                         android:textSize="24sp" />
 
@@ -150,7 +150,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.7"
-                        android:fontFamily="@font/alegreya_sans"
+                        android:fontFamily="@font/kaiu"
                         android:text=""
                         android:textSize="24sp" />
 
@@ -166,7 +166,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.3"
-                        android:fontFamily="@font/alegreya_sans"
+                        android:fontFamily="@font/kaiu"
                         android:text="@string/fStyle"
                         android:textSize="24sp" />
 
@@ -174,7 +174,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.7"
-                        android:fontFamily="@font/alegreya_sans"
+                        android:fontFamily="@font/kaiu"
                         android:text=""
                         android:textSize="24sp" />
 
@@ -190,7 +190,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.3"
-                        android:fontFamily="@font/alegreya_sans"
+                        android:fontFamily="@font/kaiu"
                         android:text="@string/fBrand"
                         android:textSize="24sp" />
 
@@ -198,7 +198,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.7"
-                        android:fontFamily="@font/alegreya_sans"
+                        android:fontFamily="@font/kaiu"
                         android:text=""
                         android:textSize="24sp" />
 
@@ -214,7 +214,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.3"
-                        android:fontFamily="@font/alegreya_sans"
+                        android:fontFamily="@font/kaiu"
                         android:text="@string/fPhone"
                         android:textSize="24sp" />
 
@@ -222,7 +222,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.7"
-                        android:fontFamily="@font/alegreya_sans"
+                        android:fontFamily="@font/kaiu"
                         android:text=""
                         android:textSize="24sp" />
 
@@ -238,7 +238,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.3"
-                        android:fontFamily="@font/alegreya_sans"
+                        android:fontFamily="@font/kaiu"
                         android:text="@string/fAddress"
                         android:textSize="24sp" />
 
@@ -246,7 +246,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.7"
-                        android:fontFamily="@font/alegreya_sans"
+                        android:fontFamily="@font/kaiu"
                         android:text=""
                         android:textSize="24sp" />
 
@@ -262,7 +262,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.3"
-                        android:fontFamily="@font/alegreya_sans"
+                        android:fontFamily="@font/kaiu"
                         android:text="@string/fLoc"
                         android:textSize="24sp" />
 
@@ -270,7 +270,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.7"
-                        android:fontFamily="@font/alegreya_sans"
+                        android:fontFamily="@font/kaiu"
                         android:text=""
                         android:textSize="24sp" />
 
@@ -298,7 +298,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="0.6"
-                android:fontFamily="@font/alegreya_sans"
+                android:fontFamily="@font/kaiu"
                 android:background="@drawable/rounded_transparent"
                 android:backgroundTint="@color/dark_beige"
                 android:text="@string/add_fv"
@@ -312,7 +312,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="0.4"
-                android:fontFamily="@font/alegreya_sans"
+                android:fontFamily="@font/kaiu"
                 android:background="@drawable/rounded_transparent"
                 android:backgroundTint="@color/dark_beige"
                 android:text="@string/viewAr"

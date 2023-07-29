@@ -35,7 +35,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bottom_border"
-                android:fontFamily="@font/alegreya_sans"
+                android:fontFamily="@font/kaiu"
                 android:text="Recommended For You"
                 android:textSize="32sp"
                 android:textColor="@color/taupe"
@@ -163,7 +163,7 @@
                 android:layout_marginBottom="20dp"
                 android:layout_marginHorizontal="10dp"
                 android:background="@drawable/bottom_border"
-                android:fontFamily="@font/alegreya_sans"
+                android:fontFamily="@font/kaiu"
                 android:text="By Categories"
                 android:textSize="32sp"
                 android:textColor="@color/taupe"
@@ -189,7 +189,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="20dp"
-                    android:fontFamily="@font/alegreya_sans"
+                    android:fontFamily="@font/kaiu"
                     android:gravity="center_vertical"
                     android:text="@string/table"
                     android:textSize="32sp"/>
@@ -216,7 +216,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="20dp"
-                    android:fontFamily="@font/alegreya_sans"
+                    android:fontFamily="@font/kaiu"
                     android:gravity="center_vertical"
                     android:text="@string/chair"
                     android:textSize="32sp"/>
@@ -243,7 +243,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="20dp"
-                    android:fontFamily="@font/alegreya_sans"
+                    android:fontFamily="@font/kaiu"
                     android:gravity="center_vertical"
                     android:text="@string/sofa"
                     android:textSize="32sp"/>
@@ -270,7 +270,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="20dp"
-                    android:fontFamily="@font/alegreya_sans"
+                    android:fontFamily="@font/kaiu"
                     android:gravity="center_vertical"
                     android:text="@string/bed"
                     android:textSize="32sp"/>
