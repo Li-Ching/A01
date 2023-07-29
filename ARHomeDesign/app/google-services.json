@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "226596953948",
+    "project_id": "ar-home-design",
+    "storage_bucket": "ar-home-design.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:226596953948:android:0e4b9c18e6db5b8e64ab99",
+        "android_client_info": {
+          "package_name": "com.example.arhomedesign"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "226596953948-7p4e620akfe8ge8mvfcirtbtkd4rdo8i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.arhomedesign",
+            "certificate_hash": "93471dcf4e556e0d3baa6b7615a8efcd023e02dd"
+          }
+        },
+        {
+          "client_id": "226596953948-msq60v6f1472i2308jkg9hn8bujc149u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCuJICZfjPRYfSLZ4LRUqGris0T3klukKU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "226596953948-jb3bifs1kgh66qr7tef9afo89adnb9ac.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
