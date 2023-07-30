@@ -16,6 +16,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.common.SignInButton;
+import com.google.android.gms.common.api.ApiException;
+import com.google.android.gms.tasks.Task;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -27,6 +35,10 @@ public class LoginActivity extends AppCompatActivity {
     TextView signUp, fgtPwd;
     Button loginButton;
     LinearLayout back;
+
+    public static final String TAG = LoginActivity.class.getSimpleName()+"My";
+
+    private GoogleSignInClient mGoogleSignInClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +53,18 @@ public class LoginActivity extends AppCompatActivity {
         signUp = findViewById(R.id.signupButton);
         fgtPwd = findViewById(R.id.tvFgtPwd);
         back = findViewById(R.id.btnBack);
+
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestIdToken("226596953948-msq60v6f1472i2308jkg9hn8bujc149u.apps.googleusercontent.com")
+                .requestEmail()
+                .build();
+
+        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
+
+        SignInButton btSighIn = findViewById(R.id.button_SignIn);
+        btSighIn.setOnClickListener(v->{
+            startActivityForResult(mGoogleSignInClient.getSignInIntent(),200);
+        });
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -104,7 +128,6 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -128,5 +151,24 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 200) {
+            Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
+            try {
+                GoogleSignInAccount account = task.getResult(ApiException.class);
+                String result = "登入成功\nEmail："+account.getEmail()+"\nGoogle名稱："
+                        +account.getDisplayName();
+                String idToken = account.getIdToken();
+                Log.d(TAG, "Token: "+idToken);
+                Log.d(TAG, "Result: "+result);
+                //TextView tvResult = findViewById(R.id.textView_Result);
+                //tvResult.setText(result);
+            } catch (ApiException e) {
+                Log.w(TAG, "Google sign in failed", e);
+            }
+        }
     }
 }

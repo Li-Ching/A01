@@ -25,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                //.requestIdToken("1082870549671-hnq6kob2g02368r1vf1oal25hf0vpmu7.apps.googleusercontent.com")
                 .requestEmail()
                 .build();
 
