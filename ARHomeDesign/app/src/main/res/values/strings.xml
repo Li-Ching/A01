@@ -27,6 +27,11 @@
     <string name="enter_username">輸入帳戶名字</string>
     <string name="verify_passwd">驗證密碼</string>
 
+    //main page
+    <string name="recommendation">在找什麽？</string>
+
+    <string name="all">全部</string>
+
     <string name="save">Save</string>
     <string name="send">發送</string>
     <string name="cancel">Cancel</string>
@@ -36,11 +41,10 @@
     <string name="favorite">Favorite</string>
     <string name="profile">Profile</string>
 
-    <string name="table">Table</string>
-    <string name="chair">Chair</string>
-    <string name="sofa">Sofa</string>
-    <string name="bed">Bed</string>
-    <string name="drawer">Drawer</string>
+    <string name="table">桌子</string>
+    <string name="chair">椅子</string>
+    <string name="sofa">沙發</string>
+    <string name="bed">床</string>
 
     <string name="fId">Furniture ID :</string>
     <string name="fType">Type :</string>

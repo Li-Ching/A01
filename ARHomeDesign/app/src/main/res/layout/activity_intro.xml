@@ -34,7 +34,7 @@
         android:layout_width="400dp"
         android:layout_height="289dp"
         android:background="@drawable/bottom_bar_bg"
-        android:backgroundTint="@color/black"
+        android:backgroundTint="@color/matte_black"
         android:gravity="center_horizontal"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -14,7 +14,6 @@ import android.widget.LinearLayout;
 
 public class HomeFragment extends Fragment {
     LinearLayout table, chair, sofa, bed;
-    LinearLayout table2, bed2, table3, sofa1; //recommendation part
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -25,12 +24,6 @@ public class HomeFragment extends Fragment {
         chair = view.findViewById(R.id.catChair);
         sofa = view.findViewById(R.id.catSofa);
         bed = view.findViewById(R.id.catBed);
-
-        table2 = view.findViewById(R.id.butTable2);
-        bed2 = view.findViewById(R.id.butBed2);
-        table3 = view.findViewById(R.id.butTable3);
-        sofa1 = view.findViewById(R.id.butSofa1);
-
 
         table.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,61 +82,6 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        table2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Table_2Fragment table_2Fragment = new Table_2Fragment();
-
-                FragmentManager fragmentManager = getParentFragmentManager();
-                FragmentTransaction transaction = fragmentManager.beginTransaction();
-                transaction.setCustomAnimations(R.anim.slide_up, R.anim.fade_out, R.anim.fade_in, R.anim.slide_down);
-                transaction.replace(R.id.FrameLayout, table_2Fragment);
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        bed2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Bed_2Fragment bed2Fragment = new Bed_2Fragment();
-
-                FragmentManager fragmentManager = getParentFragmentManager();
-                FragmentTransaction transaction = fragmentManager.beginTransaction();
-                transaction.setCustomAnimations(R.anim.slide_up, R.anim.fade_out, R.anim.fade_in, R.anim.slide_down);
-                transaction.replace(R.id.FrameLayout, bed2Fragment);
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        table3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Table_3Fragment table_3Fragment = new Table_3Fragment();
-
-                FragmentManager fragmentManager = getParentFragmentManager();
-                FragmentTransaction transaction = fragmentManager.beginTransaction();
-                transaction.setCustomAnimations(R.anim.slide_up, R.anim.fade_out, R.anim.fade_in, R.anim.slide_down);
-                transaction.replace(R.id.FrameLayout, table_3Fragment);
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        sofa1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Sofa_1Fragment sofa_1Fragment = new Sofa_1Fragment();
-
-                FragmentManager fragmentManager = getParentFragmentManager();
-                FragmentTransaction transaction = fragmentManager.beginTransaction();
-                transaction.setCustomAnimations(R.anim.slide_up, R.anim.fade_out, R.anim.fade_in, R.anim.slide_down);
-                transaction.replace(R.id.FrameLayout, sofa_1Fragment);
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
 
         return view;
     }

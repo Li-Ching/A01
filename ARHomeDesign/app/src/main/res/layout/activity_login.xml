@@ -16,7 +16,7 @@
         android:layout_margin="10dp"
         android:gravity="center"
         android:background="@drawable/rounded_transparent"
-        android:backgroundTint="@color/black">
+        android:backgroundTint="@color/matte_black">
 
         <ImageView
             android:layout_width="40dp"
@@ -33,7 +33,7 @@
         android:gravity="center"
         android:orientation="vertical"
         android:background="@drawable/rounded_transparent"
-        android:backgroundTint="@color/black">
+        android:backgroundTint="@color/matte_black">
 
         <TextView
             android:id="@+id/textView"
@@ -53,7 +53,7 @@
         android:layout_marginHorizontal="10dp"
         android:orientation="vertical"
         android:background="@drawable/rounded_transparent"
-        android:backgroundTint="@color/black">
+        android:backgroundTint="@color/matte_black">
 
         <TextView
             android:id="@+id/tvEmail"
@@ -107,28 +107,28 @@
             android:inputType="textPassword"
             android:textSize="22sp" />
 
-
-
-                <TextView
-                    android:id="@+id/tvFgtPwd"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/line"
-                android:backgroundTint="@color/gray"
-                android:fontFamily="@font/kaiu"
-                android:text="@string/fgtPwd"
-                android:textColor="@color/gray"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tvFgtPwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/line"
+            android:backgroundTint="@color/gray"
+            android:fontFamily="@font/kaiu"
+            android:text="@string/fgtPwd"
+            android:textColor="@color/gray"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <com.google.android.gms.common.SignInButton
             android:id="@+id/button_SignIn"
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/rounded_transparent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -139,7 +139,7 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/rounded_transparent"
             android:backgroundTint="@color/gray"
             android:fontFamily="@font/kaiu"
