@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="black">#000000</color>
     <color name="matte_black">#28282B</color>
-    <color name="bright_gray">#E8E9EB</color>
-    <color name="light_gray">#FFBDBDBD</color>
     <color name="gray">#808080</color>
+    <color name="light_gray">#FFBDBDBD</color>
+    <color name="bright_gray">#E8E9EB</color>
+    <color name="lightest_gray">#F5F5F5</color>
     <color name="white">#FFFFFFFF</color>
     <color name="stone">#59788E</color>
     <color name="light_blue">#DFE9E5</color>
@@ -14,4 +16,8 @@
     <color name="dark_beige">#CFB284</color>
     <color name="camel">#C19A6B</color>
     <color name="taupe">#75463A</color>
+
+    <color name="table_1">#E8E9EB</color>
+    <color name="table_2">#B7A18E</color>
+    <color name="table_3">#D2B48C</color>
 </resources>

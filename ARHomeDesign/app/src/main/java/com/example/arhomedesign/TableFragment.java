@@ -17,34 +17,16 @@ import android.widget.TextView;
 public class TableFragment extends Fragment {
 
     LinearLayout table1, table2, table3;
-    LinearLayout back;
-    TextView table;
-    NestedScrollView scrollView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_table, container, false);
 
-        table = view.findViewById(R.id.tvTable);
-        scrollView = view.findViewById(R.id.scv);
-
         table1 = view.findViewById(R.id.butTable1);
         table2 = view.findViewById(R.id.butTable2);
         table3 = view.findViewById(R.id.butTable3);
-        back = view.findViewById(R.id.back);
 
-        table.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ViewCompat.postOnAnimation(scrollView, new Runnable() {
-                    @Override
-                    public void run() {
-                        scrollView.smoothScrollTo(0,0);
-                    }
-                });
-            }
-        });
 
         table1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,15 +67,6 @@ public class TableFragment extends Fragment {
                 transaction.replace(R.id.FrameLayout, table3Fragment);
                 transaction.addToBackStack(null);
                 transaction.commit();
-            }
-        });
-
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FragmentManager fragmentManager = getParentFragmentManager();
-                fragmentManager.popBackStack();
-
             }
         });
 
