@@ -19,33 +19,14 @@ import android.widget.TextView;
 public class SofaFragment extends Fragment {
 
     LinearLayout sofa1, sofa2;
-    LinearLayout back;
-    TextView sofa;
-    NestedScrollView scrollView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_sofa, container, false);
 
-        sofa = view.findViewById(R.id.tvSofa);
-        scrollView = view.findViewById(R.id.scv);
-
         sofa1 = view.findViewById(R.id.butSofa1);
         sofa2 = view.findViewById(R.id.butSofa2);
-        back = view.findViewById(R.id.back);
-
-        sofa.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ViewCompat.postOnAnimation(scrollView, new Runnable() {
-                    @Override
-                    public void run() {
-                        scrollView.smoothScrollTo(0,0);
-                    }
-                });
-            }
-        });
 
         sofa1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,15 +53,6 @@ public class SofaFragment extends Fragment {
                 transaction.replace(R.id.FrameLayout, sofa2Fragment);
                 transaction.addToBackStack(null);
                 transaction.commit();
-            }
-        });
-
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FragmentManager fragmentManager = getParentFragmentManager();
-                fragmentManager.popBackStack();
-
             }
         });
 

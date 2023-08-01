@@ -18,33 +18,14 @@ import android.widget.TextView;
 public class BedFragment extends Fragment {
 
     LinearLayout bed1, bed2;
-    LinearLayout back;
-
-    TextView bed;
-    NestedScrollView scrollView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_bed, container, false);
-        bed = view.findViewById(R.id.tvBed);
-        scrollView = view.findViewById(R.id.scv);
 
         bed1 = view.findViewById(R.id.butBed1);
         bed2 = view.findViewById(R.id.butBed2);
-        back = view.findViewById(R.id.back);
-
-        bed.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ViewCompat.postOnAnimation(scrollView, new Runnable() {
-                    @Override
-                    public void run() {
-                        scrollView.smoothScrollTo(0,0);
-                    }
-                });
-            }
-        });
 
         bed1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,15 +52,6 @@ public class BedFragment extends Fragment {
                 transaction.replace(R.id.FrameLayout, bed2Fragment);
                 transaction.addToBackStack(null);
                 transaction.commit();
-            }
-        });
-
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FragmentManager fragmentManager = getParentFragmentManager();
-                fragmentManager.popBackStack();
-
             }
         });
 

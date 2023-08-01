@@ -1,198 +1,192 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_marginHorizontal="5dp"
+    android:layout_marginVertical="5dp"
     tools:context=".TableFragment"
     android:background="@color/white">
 
-    <ScrollView
-        android:id="@+id/scv"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginHorizontal="5dp">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_marginVertical="5dp">
+            android:gravity="start"
+            android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="start"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:id="@+id/butTable1"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="40dp"
-                    android:layout_marginEnd="10dp"
-                    android:background="@drawable/rounded_transparent"
-                    android:backgroundTint="@color/table_1"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_gravity="end"
-                        android:layout_margin="10dp"
-                        android:src="@drawable/favorite"
-                        android:contentDescription="@null"/>
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="200dp"
-                        android:layout_marginHorizontal="10dp"
-                        android:layout_marginTop="15dp"
-                        android:src="@drawable/table_1"
-                        android:contentDescription="@null"/>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
-                            android:gravity="center"
-                            android:text="@string/table1"
-                            android:textColor="@color/gray"
-                            android:textSize="24sp"
-                            android:textStyle="bold" />
-
-                        <ImageView
-                            android:layout_width="32dp"
-                            android:layout_height="32dp"
-                            android:layout_margin="10dp"
-                            android:src="@drawable/ar"
-                            android:contentDescription="@null"/>
-
-                    </LinearLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/butTable2"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="40dp"
-                    android:layout_marginTop="30dp"
-                    android:background="@drawable/rounded_transparent"
-                    android:backgroundTint="@color/table_2"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_gravity="end"
-                        android:layout_margin="10dp"
-                        android:src="@drawable/favorite"
-                        android:contentDescription="@null"/>
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="200dp"
-                        android:layout_marginHorizontal="10dp"
-                        android:layout_marginTop="15dp"
-                        android:src="@drawable/table_2"
-                        android:contentDescription="@null"/>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
-                            android:gravity="center"
-                            android:text="@string/table2"
-                            android:textColor="@color/gray"
-                            android:textSize="24sp"
-                            android:textStyle="bold" />
-
-                        <ImageView
-                            android:layout_width="32dp"
-                            android:layout_height="32dp"
-                            android:layout_margin="10dp"
-                            android:src="@drawable/ar"
-                            android:contentDescription="@null"/>
-
-                    </LinearLayout>
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
+                android:id="@+id/butTable1"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:gravity="start"
-                android:orientation="horizontal">
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/rounded_transparent"
+                android:backgroundTint="@color/table_1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="end"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/favorite"
+                    android:contentDescription="@null"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/table_1"
+                    android:contentDescription="@null"/>
 
                 <LinearLayout
-                    android:id="@+id/butTable3"
-                    android:layout_width="150dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="40dp"
-                    android:layout_marginEnd="10dp"
-                    android:background="@drawable/rounded_transparent"
-                    android:backgroundTint="@color/table_3"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                    android:orientation="horizontal">
 
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_gravity="end"
-                        android:layout_margin="10dp"
-                        android:contentDescription="@null"
-                        android:src="@drawable/favorite" />
-
-                    <ImageView
+                    <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="200dp"
-                        android:layout_marginHorizontal="10dp"
-                        android:layout_marginTop="15dp"
-                        android:contentDescription="@null"
-                        android:src="@drawable/table_3" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:text="@string/table1"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
-                            android:gravity="center"
-                            android:text="@string/table3"
-                            android:textColor="@color/gray"
-                            android:textSize="24sp"
-                            android:textStyle="bold" />
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/ar"
+                        android:contentDescription="@null"/>
 
-                        <ImageView
-                            android:layout_width="32dp"
-                            android:layout_height="32dp"
-                            android:layout_margin="10dp"
-                            android:contentDescription="@null"
-                            android:src="@drawable/ar" />
-
-                    </LinearLayout>
                 </LinearLayout>
-
             </LinearLayout>
 
+            <LinearLayout
+                android:id="@+id/butTable2"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/rounded_transparent"
+                android:backgroundTint="@color/table_2"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="end"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/favorite"
+                    android:contentDescription="@null"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/table_2"
+                    android:contentDescription="@null"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:text="@string/table2"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/ar"
+                        android:contentDescription="@null"/>
+
+                </LinearLayout>
+            </LinearLayout>
 
         </LinearLayout>
-    </ScrollView>
-</LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/butTable3"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/rounded_transparent"
+                android:backgroundTint="@color/table_3"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="end"
+                    android:layout_margin="10dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/favorite" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="15dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/table_3" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:text="@string/table3"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_margin="10dp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ar" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>

@@ -27,13 +27,27 @@ public class HomeFragment extends Fragment {
         sofa = view.findViewById(R.id.btnSofa);
         bed = view.findViewById(R.id.btnBed);
 
-        TableFragment tableFragment = new TableFragment();
+        AllFragment allFragment = new AllFragment();
         FragmentManager fragmentManager = getChildFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         transaction.setCustomAnimations(R.anim.fade_in, R.anim.fade_out);
-        transaction.replace(R.id.FrameLayout, tableFragment);
+        transaction.replace(R.id.FrameLayout, allFragment);
         transaction.addToBackStack(null);
         transaction.commit();
+
+        all.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AllFragment allFragment = new AllFragment();
+
+                FragmentManager fragmentManager = getChildFragmentManager();
+                FragmentTransaction transaction = fragmentManager.beginTransaction();
+                transaction.setCustomAnimations(R.anim.fade_in, R.anim.fade_out);
+                transaction.replace(R.id.FrameLayout, allFragment);
+                transaction.addToBackStack(null);
+                transaction.commit();
+            }
+        });
 
         table.setOnClickListener(new View.OnClickListener() {
             @Override

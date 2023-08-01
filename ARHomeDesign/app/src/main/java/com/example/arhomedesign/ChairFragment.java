@@ -17,33 +17,14 @@ import android.widget.TextView;
 public class ChairFragment extends Fragment {
 
     LinearLayout chair1, chair2;
-    LinearLayout back;
-    TextView chair;
-    NestedScrollView scrollView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_chair, container, false);
 
-        chair = view.findViewById(R.id.tvChair);
-        scrollView = view.findViewById(R.id.scv);
-
         chair1 = view.findViewById(R.id.butChair1);
         chair2 = view.findViewById(R.id.butChair2);
-        back = view.findViewById(R.id.back);
-
-        chair.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ViewCompat.postOnAnimation(scrollView, new Runnable() {
-                    @Override
-                    public void run() {
-                        scrollView.smoothScrollTo(0,0);
-                    }
-                });
-            }
-        });
 
         chair1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,14 +54,7 @@ public class ChairFragment extends Fragment {
             }
         });
 
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FragmentManager fragmentManager = getParentFragmentManager();
-                fragmentManager.popBackStack();
 
-            }
-        });
 
         return view;
     }
