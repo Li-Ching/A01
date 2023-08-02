@@ -1,8 +1,18 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.Extensions.Configuration;
+using System.Text;
+using WebAPItest;
 using WebAPItest.Models;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Configuration.AddJsonFile("appsettings.json");
+
+// 將 _configuration 賦值給 builder.Configuration
+var _configuration = builder.Configuration;
+
 
 // Add services to the container.
 
@@ -19,11 +29,21 @@ builder.Services.AddCors(options => // 加入CORS預設Policy
 builder.Services.AddDbContext<A01Context>(options =>
         options.UseSqlServer(builder.Configuration.GetConnectionString("A01Database")));
 
-builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(option =>
-{
-    //未登入時會自動導到這個網址
-    option.LoginPath = new PathString("/api/Login/NoLogin");
-});
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidIssuer = builder.Configuration["JwtSettings:Issuer"],
+            ValidateAudience = true,
+            ValidAudience = builder.Configuration["JwtSettings:Audience"],
+            ValidateLifetime = true,
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JwtSettings:KEY"]))
+        };
+    });
+
 
 var app = builder.Build();
 
