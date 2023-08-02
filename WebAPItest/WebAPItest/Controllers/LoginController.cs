@@ -42,7 +42,7 @@ namespace WebAPItest.Controllers
                 {
                     new Claim(JwtRegisteredClaimNames.Email, String.IsNullOrEmpty(user.Email)?"":user.Email),
                     new Claim("FullName", String.IsNullOrEmpty(user.Username)?"": user.Username),
-                    new Claim(JwtRegisteredClaimNames.NameId, user.UserId.ToString())
+                    new Claim("UserId", user.UserId.ToString())
                 };
 
                 //取出appsettings.json裡的KEY處理
