@@ -2,6 +2,7 @@ package com.example.arhomedesign;
 
 import static java.security.AccessController.getContext;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -14,6 +15,11 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -22,6 +28,7 @@ public class SignupActivity extends AppCompatActivity {
     private EditText Username, Email, Password, VerPwd;
     private Button signUp;
 
+    private FirebaseAuth mAuth;
     LinearLayout back;
 
     @Override
@@ -29,6 +36,7 @@ public class SignupActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
 
+        mAuth = FirebaseAuth.getInstance();
         getSupportActionBar().hide();
 
         signUp = findViewById(R.id.signupButton);
@@ -54,36 +62,24 @@ public class SignupActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Invalid Password!", Toast.LENGTH_SHORT).show();
                 }
                 else{
+                    mAuth.createUserWithEmailAndPassword(email, password)
+                            .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                                @Override
+                                public void onComplete(@NonNull Task<AuthResult> task) {
+                                    if (task.isSuccessful()) {
+                                        Log.d("Firebase", "註冊成功");
+                                        // 顯示一個AlertDialog，告知使用者註冊成功
+
+                                    } else {
+                                        Log.d("Firebase", "註冊失敗: " + task.getException().getMessage());
+                                        // 顯示一個AlertDialog，告知使用者註冊失敗
+
+                                    }
+                                }
+                            });
                     Intent intent = new Intent(SignupActivity.this, LoginActivity.class);
                     startActivity(intent);
-                    Methods methods = RetrofitClient.getRetrofitInstance().create(Methods.class);
-                    UserData modal = new UserData(username, email, password);
-                    Call<UserData> call = methods.createPost(modal);
 
-
-                    // on below line we are executing our method.
-                    call.enqueue(new Callback<UserData>() {
-                        @Override
-                        public void onResponse(Call<UserData> call, Response<UserData> response) {
-                            // on below line we are setting empty text
-                            // to our both edit text.
-                            Username.setText("");
-                            Email.setText("");
-                            Password.setText("");
-                            Log.d("API Response", "註冊成功");
-
-                            // we are getting response from our body
-                            // and passing it to our modal class.
-                            UserData responseFromAPI = response.body();
-                        }
-
-                        @Override
-                        public void onFailure(Call<UserData> call, Throwable t) {
-                            // setting text to our text view when
-                            // we get error response from API.
-                            Log.e("API Response", "Error: " + t.getMessage());
-                        }
-                    });
                     finish();
                 }
 
