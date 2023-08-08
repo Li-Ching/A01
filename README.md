@@ -7,8 +7,8 @@
 - [x] 初步手機 APP 連接 API (使用 GET 方法)
 - [x] 初步手機 APP 連接 API (使用 POST 方法)
 - [ ] 測試及決定手機 APP 之 AR 功能要使用 Unity 3D 或是 ARCore
-- [ ] 手機 APP 連接 API 完成登入功能
-- [x] 手機 APP 連接 API 完成喜好項目功能
+- [x] 手機 APP 連接 API 完成登入功能
+- [ ] 手機 APP 連接 API 完成喜好項目功能
 - [ ] 手機 APP 連接 API 取得 3D 模型後放入相機使用 AR 功能
 
 ## Gantt Chart
