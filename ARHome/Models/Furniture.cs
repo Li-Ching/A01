@@ -14,10 +14,12 @@ namespace ARHome.Models
 
         [Display(Name = "家具風格")]
         public string? style { get; set; }     // 定義[家具風格]欄位
-
+        [Display(Name = "品牌")]
         public string? brand1 { get; set; }              // 用於儲存流水號
+        [Display(Name = "品牌電話")]
 
         public string? phoneNumber { get; set; }              // 用於儲存流水號
+        [Display(Name = "品牌地址")]
 
         public string? address { get; set; }              // 用於儲存流水號
         [Display(Name = "圖片位址")]
