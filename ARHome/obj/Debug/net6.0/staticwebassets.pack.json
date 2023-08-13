@@ -5,6 +5,46 @@
       "PackagePath": "staticwebassets\\ARHome.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Li-Ching\\A01\\ARHome\\wwwroot\\Images\\bed1.jpg",
+      "PackagePath": "staticwebassets\\Images\\bed1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Li-Ching\\A01\\ARHome\\wwwroot\\Images\\bed2.jpg",
+      "PackagePath": "staticwebassets\\Images\\bed2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Li-Ching\\A01\\ARHome\\wwwroot\\Images\\bed3.jpg",
+      "PackagePath": "staticwebassets\\Images\\bed3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Li-Ching\\A01\\ARHome\\wwwroot\\Images\\bed4.jpg",
+      "PackagePath": "staticwebassets\\Images\\bed4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Li-Ching\\A01\\ARHome\\wwwroot\\Images\\chair1.jpg",
+      "PackagePath": "staticwebassets\\Images\\chair1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Li-Ching\\A01\\ARHome\\wwwroot\\Images\\chair2.jpg",
+      "PackagePath": "staticwebassets\\Images\\chair2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Li-Ching\\A01\\ARHome\\wwwroot\\Images\\sofa1.jpg",
+      "PackagePath": "staticwebassets\\Images\\sofa1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Li-Ching\\A01\\ARHome\\wwwroot\\Images\\sofa2.jpg",
+      "PackagePath": "staticwebassets\\Images\\sofa2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Li-Ching\\A01\\ARHome\\wwwroot\\Images\\table1.jpg",
+      "PackagePath": "staticwebassets\\Images\\table1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Li-Ching\\A01\\ARHome\\wwwroot\\Images\\table2.jpg",
+      "PackagePath": "staticwebassets\\Images\\table2.jpg"
+    },
+    {
       "Id": "C:\\Users\\Li-Ching\\A01\\ARHome\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
