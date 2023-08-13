@@ -370,3 +370,5 @@ C:\Users\Chlinkuser\Documents\GitHub\A01\WebAPItest\WebAPItest\obj\Debug\net6.0\
 C:\Users\Chlinkuser\Documents\GitHub\A01\WebAPItest\WebAPItest\obj\Debug\net6.0\WebAPItest.csproj.CopyComplete
 C:\Users\Chlinkuser\Documents\GitHub\A01\WebAPItest\WebAPItest\obj\Debug\net6.0\WebAPItest.genruntimeconfig.cache
 C:\Users\Chlinkuser\Documents\GitHub\A01\WebAPItest\WebAPItest\obj\Debug\net6.0\ref\WebAPItest.dll
+C:\Users\Li-Ching\A01\WebAPItest\WebAPItest\bin\Debug\net6.0\ar-home-design-firebase-adminsdk-pcy6j-9d265a6ff1.json
+C:\Users\Li-Ching\A01\WebAPItest\WebAPItest\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

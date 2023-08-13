@@ -1,11 +1,13 @@
 C:\Users\Li-Ching\A01\WebAPItest\WebAPItest\obj\Release\net6.0\PubTmp\Out\WebAPItest.exe
 C:\Users\Li-Ching\A01\WebAPItest\WebAPItest\obj\Release\net6.0\PubTmp\Out\appsettings.Development.json
 C:\Users\Li-Ching\A01\WebAPItest\WebAPItest\obj\Release\net6.0\PubTmp\Out\appsettings.json
+C:\Users\Li-Ching\A01\WebAPItest\WebAPItest\obj\Release\net6.0\PubTmp\Out\ar-home-design-firebase-adminsdk-pcy6j-9d265a6ff1.json
 C:\Users\Li-Ching\A01\WebAPItest\WebAPItest\obj\Release\net6.0\PubTmp\Out\WebAPItest.dll
 C:\Users\Li-Ching\A01\WebAPItest\WebAPItest\obj\Release\net6.0\PubTmp\Out\WebAPItest.runtimeconfig.json
 C:\Users\Li-Ching\A01\WebAPItest\WebAPItest\obj\Release\net6.0\PubTmp\Out\WebAPItest.pdb
 C:\Users\Li-Ching\A01\WebAPItest\WebAPItest\obj\Release\net6.0\PubTmp\Out\Azure.Core.dll
 C:\Users\Li-Ching\A01\WebAPItest\WebAPItest\obj\Release\net6.0\PubTmp\Out\Azure.Identity.dll
+C:\Users\Li-Ching\A01\WebAPItest\WebAPItest\obj\Release\net6.0\PubTmp\Out\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\Li-Ching\A01\WebAPItest\WebAPItest\obj\Release\net6.0\PubTmp\Out\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Li-Ching\A01\WebAPItest\WebAPItest\obj\Release\net6.0\PubTmp\Out\Microsoft.Data.SqlClient.dll
 C:\Users\Li-Ching\A01\WebAPItest\WebAPItest\obj\Release\net6.0\PubTmp\Out\Microsoft.EntityFrameworkCore.dll

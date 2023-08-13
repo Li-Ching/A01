@@ -9,7 +9,7 @@ using System.IdentityModel.Tokens.Jwt;
 
 namespace WebAPItest.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class FavoritesController : ControllerBase
@@ -40,26 +40,45 @@ namespace WebAPItest.Controllers
             }
 
             var result = (from b in _a01Context.Favorites
+                          .Include(b => b.Furniture)
                           where b.UserId == Int32.Parse(UserId)
                           && b.FurnitureId != null // 確保 FurnitureId 不為 null
                           select new FavoritesDto
                           {
                               UserId = b.UserId,
-                              FurnitureId = b.FurnitureId
+                              FurnitureId = b.FurnitureId,
+                              Type=b.Furniture.Type,
+                              Color=b.Furniture.Color,
+                              Style=b.Furniture.Style,
+                              Brand1 = (b.Furniture.Brand==null) ? null : b.Furniture.Brand.Brand1,
+                              PhoneNumber = (b.Furniture.Brand == null) ? null : b.Furniture.Brand.PhoneNumber,
+                              Address= (b.Furniture.Brand == null) ? null : b.Furniture.Brand.Address,
+                              Logo= (b.Furniture.Brand == null) ? null :  b.Furniture.Brand.Logo,
+                              Location=b.Furniture.Location,
+                              Picture=b.Furniture.Picture
                           }).ToList();
             return result;
         }
-
         // GET api/<FavoritesController>/5
         [HttpGet("{userId}")]
         public IEnumerable<FavoritesDto> Get(int userId)
         {
             var result = (from b in _a01Context.Favorites
+                          .Include(b => b.Furniture)
                           where b.UserId== userId
                           select new FavoritesDto
                           {
                               UserId = b.UserId,
-                              FurnitureId= b.FurnitureId
+                              FurnitureId = b.FurnitureId,
+                              Type=b.Furniture.Type,
+                              Color=b.Furniture.Color,
+                              Style=b.Furniture.Style,
+                              Brand1 = (b.Furniture.Brand==null) ? null : b.Furniture.Brand.Brand1,
+                              PhoneNumber = (b.Furniture.Brand == null) ? null : b.Furniture.Brand.PhoneNumber,
+                              Address= (b.Furniture.Brand == null) ? null : b.Furniture.Brand.Address,
+                              Logo= (b.Furniture.Brand == null) ? null : b.Furniture.Brand.Logo,
+                              Location=b.Furniture.Location,
+                              Picture=b.Furniture.Picture
                           }).ToList();
             return result;
         }

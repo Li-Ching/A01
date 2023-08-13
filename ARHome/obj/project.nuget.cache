@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jxcJ6YH3oX/w53f2ICTMPnB+1U4VsKnCUjY03w005p/q5L9GlMvprUuFg3O39JTGkC4T4nR9i7kIBK5nXVkU8g==",
+  "dgSpecHash": "vxmKYCupuOfUFb2HSIaE6MYyG5EAEqdMOB+2lOYqkR/WLjx4cCIunhQZBoOPD/4W4UXfUJM6vE0uoHpsAFxBow==",
   "success": true,
-  "projectFilePath": "D:\\ASP.NET Core\\ARHome\\ARHome.csproj",
+  "projectFilePath": "C:\\Users\\Li-Ching\\A01\\ARHome\\ARHome.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Li-Ching\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Li-Ching\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

@@ -3516,11 +3516,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ASP.NET Core\\ARHome\\ARHome.csproj",
+      "projectUniqueName": "C:\\Users\\Li-Ching\\A01\\ARHome\\ARHome.csproj",
       "projectName": "ARHome",
-      "projectPath": "D:\\ASP.NET Core\\ARHome\\ARHome.csproj",
+      "projectPath": "C:\\Users\\Li-Ching\\A01\\ARHome\\ARHome.csproj",
       "packagesPath": "C:\\Users\\Li-Ching\\.nuget\\packages\\",
-      "outputPath": "D:\\ASP.NET Core\\ARHome\\obj\\",
+      "outputPath": "C:\\Users\\Li-Ching\\A01\\ARHome\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Li-Ching\\AppData\\Roaming\\NuGet\\NuGet.Config",
