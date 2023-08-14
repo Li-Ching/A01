@@ -27,7 +27,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="40dp"
                 android:layout_marginEnd="10dp"
-                android:background="@drawable/rounded_transparent"
+                android:background="@drawable/rectangle_15"
                 android:backgroundTint="@color/sofa_1"
                 android:gravity="center"
                 android:orientation="vertical">
@@ -80,7 +80,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="40dp"
                 android:layout_marginTop="30dp"
-                android:background="@drawable/rounded_transparent"
+                android:background="@drawable/rectangle_15"
                 android:backgroundTint="@color/chair_2"
                 android:gravity="center"
                 android:orientation="vertical">

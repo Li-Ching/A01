@@ -29,7 +29,7 @@ public class SignupActivity extends AppCompatActivity {
     private Button signUp;
 
     private FirebaseAuth mAuth;
-    LinearLayout back;
+    Button cancel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,12 +40,12 @@ public class SignupActivity extends AppCompatActivity {
         getSupportActionBar().hide();
 
         signUp = findViewById(R.id.signupButton);
-        back = findViewById(R.id.btnBack);
+        cancel = findViewById(R.id.cancelButton);
 
         Username = findViewById(R.id.edtUsername);
         Email = findViewById(R.id.edtEmail);
         Password = findViewById(R.id.edtPassword);
-        VerPwd = findViewById(R.id.edtVerPwd);
+        VerPwd = findViewById(R.id.edtVerPassword);
 
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,7 +86,7 @@ public class SignupActivity extends AppCompatActivity {
             }
         });
 
-        back.setOnClickListener(new View.OnClickListener() {
+        cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(SignupActivity.this, LoginActivity.class);

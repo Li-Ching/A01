@@ -35,7 +35,6 @@ public class LoginActivity extends AppCompatActivity {
     private SignInButton btnSignIn; // 將 SignInButton 改為 btnSignIn
     private Button btnLogin; // 新增對應的 loginButton 按鈕
     private Button btnSignup; // 新增對應的 signupButton 按鈕
-    LinearLayout back;
 
     public static final String TAG = LoginActivity.class.getSimpleName() + "My";
 
@@ -86,14 +85,6 @@ public class LoginActivity extends AppCompatActivity {
         btnSignIn.setOnClickListener(v -> {
             startActivityForResult(mGoogleSignInClient.getSignInIntent(), 200);
         });
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent =  new Intent(LoginActivity.this, Intro.class);
-                startActivity(intent);
-                finish();
-            }
-        });
     }
 
     private View.OnClickListener btnListener = new View.OnClickListener() {
@@ -130,7 +121,6 @@ public class LoginActivity extends AppCompatActivity {
 
         Email = findViewById(R.id.edtEmail);
         Password = findViewById(R.id.edtPassword);
-        back = findViewById(R.id.btnBack); // 將 btnBack 對應到對應的 id
     }
 
     public void onStart() {

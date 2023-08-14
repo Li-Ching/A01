@@ -14,7 +14,7 @@ public class ForgotPwdActivity extends AppCompatActivity {
 
     EditText email;
     Button send;
-    LinearLayout back;
+    Button cancel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,9 +25,9 @@ public class ForgotPwdActivity extends AppCompatActivity {
 
         email = findViewById(R.id.edtEmail);
         send = findViewById(R.id.sendButton);
-        back = findViewById(R.id.btnBack);
+        cancel = findViewById(R.id.cancelButton);
 
-        back.setOnClickListener(new View.OnClickListener() {
+        cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ForgotPwdActivity.this, LoginActivity.class);
