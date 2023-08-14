@@ -33,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
         actionBar.setHomeAsUpIndicator(R.drawable.baseline_logout_24);
         actionBar.setDisplayHomeAsUpEnabled(true);
 
+
+
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
 
         getSupportFragmentManager().beginTransaction().replace(R.id.FrameLayout, homeFragment).commit();
