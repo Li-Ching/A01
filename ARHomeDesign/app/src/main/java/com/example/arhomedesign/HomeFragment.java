@@ -2,7 +2,6 @@ package com.example.arhomedesign;
 
 import android.os.Bundle;
 
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -10,9 +9,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.LinearLayout;
 
 public class HomeFragment extends Fragment {
     ImageButton table, chair, sofa, bed;
@@ -31,7 +28,7 @@ public class HomeFragment extends Fragment {
         FragmentManager fragmentManager = getChildFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         transaction.setCustomAnimations(R.anim.fade_in, R.anim.fade_out);
-        transaction.replace(R.id.FrameLayout, tableFragment);
+        transaction.replace(R.id.HomeFrame, tableFragment);
         transaction.addToBackStack(null);
         transaction.commit();
 
@@ -43,7 +40,7 @@ public class HomeFragment extends Fragment {
                 FragmentManager fragmentManager = getChildFragmentManager();
                 FragmentTransaction transaction = fragmentManager.beginTransaction();
                 transaction.setCustomAnimations(R.anim.fade_in, R.anim.fade_out);
-                transaction.replace(R.id.FrameLayout, tableFragment);
+                transaction.replace(R.id.HomeFrame, tableFragment);
                 transaction.addToBackStack(null);
                 transaction.commit();
             }
@@ -57,7 +54,7 @@ public class HomeFragment extends Fragment {
                 FragmentManager fragmentManager = getChildFragmentManager();
                 FragmentTransaction transaction = fragmentManager.beginTransaction();
                 transaction.setCustomAnimations(R.anim.fade_in, R.anim.fade_out);
-                transaction.replace(R.id.FrameLayout, chairFragment);
+                transaction.replace(R.id.HomeFrame, chairFragment);
                 transaction.addToBackStack(null);
                 transaction.commit();
             }
@@ -71,7 +68,7 @@ public class HomeFragment extends Fragment {
                 FragmentManager fragmentManager = getChildFragmentManager();
                 FragmentTransaction transaction = fragmentManager.beginTransaction();
                 transaction.setCustomAnimations(R.anim.fade_in, R.anim.fade_out);
-                transaction.replace(R.id.FrameLayout, sofaFragment);
+                transaction.replace(R.id.HomeFrame, sofaFragment);
                 transaction.addToBackStack(null);
                 transaction.commit();
             }
@@ -85,7 +82,7 @@ public class HomeFragment extends Fragment {
                 FragmentManager fragmentManager = getChildFragmentManager();
                 FragmentTransaction transaction = fragmentManager.beginTransaction();
                 transaction.setCustomAnimations(R.anim.fade_in, R.anim.fade_out);
-                transaction.replace(R.id.FrameLayout, bedFragment);
+                transaction.replace(R.id.HomeFrame, bedFragment);
                 transaction.addToBackStack(null);
                 transaction.commit();
             }

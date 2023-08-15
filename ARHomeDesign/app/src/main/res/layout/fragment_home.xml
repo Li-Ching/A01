@@ -216,7 +216,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginHorizontal="10dp"
                             android:gravity="center"
-                            android:text="@string/table1"
+                            android:text="@string/table3"
                             android:textColor="@color/black"
                             android:textSize="20sp"
                             android:textStyle="bold" />
@@ -283,7 +283,8 @@
     <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="5dp">
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginBottom="10dp">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -292,9 +293,9 @@
 
             <ImageButton
                 android:id="@+id/btnTable"
-                android:layout_width="140dp"
-                android:layout_height="60dp"
-                android:layout_margin="10dp"
+                android:layout_width="150dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
                 android:src="@drawable/table_icon"
                 android:contentDescription="@string/table"
                 android:background="@drawable/rectangle_15"
@@ -302,31 +303,31 @@
 
             <ImageButton
                 android:id="@+id/btnChair"
-                android:layout_width="140dp"
-                android:layout_height="60dp"
-                android:layout_margin="10dp"
+                android:layout_width="150dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
                 android:src="@drawable/chair_icon"
-                android:contentDescription="@string/table"
+                android:contentDescription="@string/chair"
                 android:background="@drawable/rectangle_15"
                 android:backgroundTint="@color/white"/>
 
             <ImageButton
                 android:id="@+id/btnBed"
-                android:layout_width="140dp"
-                android:layout_height="60dp"
-                android:layout_margin="10dp"
+                android:layout_width="150dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
                 android:src="@drawable/bed_icon"
-                android:contentDescription="@string/table"
+                android:contentDescription="@string/bed"
                 android:background="@drawable/rectangle_15"
                 android:backgroundTint="@color/white"/>
 
             <ImageButton
                 android:id="@+id/btnSofa"
-                android:layout_width="140dp"
-                android:layout_height="60dp"
-                android:layout_margin="10dp"
+                android:layout_width="150dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
                 android:src="@drawable/sofa_icon"
-                android:contentDescription="@string/table"
+                android:contentDescription="@string/sofa"
                 android:background="@drawable/rectangle_15"
                 android:backgroundTint="@color/white"/>
 
@@ -335,7 +336,7 @@
     </HorizontalScrollView>
 
     <FrameLayout
-        android:id="@+id/FrameLayout"
+        android:id="@+id/HomeFrame"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
