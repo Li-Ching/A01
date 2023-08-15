@@ -14,14 +14,13 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 
 public class HomeFragment extends Fragment {
-    Button all, table, chair, sofa, bed;
+    Button table, chair, sofa, bed;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
-        all = view.findViewById(R.id.btnAll);
         table = view.findViewById(R.id.btnTable);
         chair = view.findViewById(R.id.btnChair);
         sofa = view.findViewById(R.id.btnSofa);
@@ -34,20 +33,6 @@ public class HomeFragment extends Fragment {
         transaction.replace(R.id.FrameLayout, allFragment);
         transaction.addToBackStack(null);
         transaction.commit();
-
-        all.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                AllFragment allFragment = new AllFragment();
-
-                FragmentManager fragmentManager = getChildFragmentManager();
-                FragmentTransaction transaction = fragmentManager.beginTransaction();
-                transaction.setCustomAnimations(R.anim.fade_in, R.anim.fade_out);
-                transaction.replace(R.id.FrameLayout, allFragment);
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
 
         table.setOnClickListener(new View.OnClickListener() {
             @Override

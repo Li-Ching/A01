@@ -57,6 +57,9 @@
     <string name="fAddress">Address :</string>
     <string name="fLoc">Location :</string>
 
+    <string name="brand1">Ikea</string>
+    <string name="brand2">Nitori</string>
+
     <string name="table1">Table 1</string>
     <string name="table2">Table 2</string>
     <string name="table3">Table 3</string>
