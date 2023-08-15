@@ -51,6 +51,7 @@
                     app:layout_constraintVertical_bias="0.119">
 
                     <TextView
+                        android:id="@+id/bed1Name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="10dp"
@@ -61,6 +62,7 @@
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/bed1Brand"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="10dp"
@@ -127,6 +129,7 @@
                     app:layout_constraintVertical_bias="0.119">
 
                     <TextView
+                        android:id="@+id/bed2Name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="10dp"
@@ -137,6 +140,7 @@
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/bed2Brand"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="10dp"

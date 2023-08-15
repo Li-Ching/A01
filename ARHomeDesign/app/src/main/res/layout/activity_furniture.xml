@@ -11,7 +11,7 @@
         android:layout_width="340dp"
         android:layout_height="650dp"
         android:background="@drawable/rectangle_15"
-        android:backgroundTint="@color/white"
+        android:backgroundTint="@color/blue_bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -60,6 +60,44 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.236" />
+
+        <TextView
+            android:id="@+id/furnitureName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/chair2"
+            android:textColor="@color/black"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.058"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+        <LinearLayout
+            android:layout_width="314dp"
+            android:layout_height="144dp"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/rectangle_15"
+            android:backgroundTint="@color/white"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/furnitureName"
+            app:layout_constraintVertical_bias="0.081">
+
+            <TextView
+                android:id="@+id/furnitureInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+
+        </LinearLayout>
 
         <ImageButton
             android:id="@+id/ArButton"
