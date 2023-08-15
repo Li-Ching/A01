@@ -31,12 +31,12 @@
     <color name="table_2">#B7A18E</color>
     <color name="table_3">#D2B48C</color>
 
-    <color name="bed_1">#E8E9EB</color>
-    <color name="bed_2">#E8E9EB</color>
+    <color name="bed_1">#D6C8B3</color>
+    <color name="bed_2">#A4A4A4</color>
 
-    <color name="sofa_1">#F3E5AB</color>
+    <color name="sofa_1">#FFBE82</color>
     <color name="sofa_2">#FFBDBDBD</color>
 
-    <color name="chair_1">#F3E5AB</color>
+    <color name="chair_1">#FFBE82</color>
     <color name="chair_2">#689268</color>
 </resources>
