@@ -35,6 +35,7 @@ public class LoginActivity extends AppCompatActivity {
     private SignInButton btnSignIn; // 將 SignInButton 改為 btnSignIn
     private Button btnLogin; // 新增對應的 loginButton 按鈕
     private Button btnSignup; // 新增對應的 signupButton 按鈕
+    private TextView forgotPassword;
 
     public static final String TAG = LoginActivity.class.getSimpleName() + "My";
 
@@ -81,11 +82,15 @@ public class LoginActivity extends AppCompatActivity {
         // 新增對應的 signupButton 按鈕點擊事件監聽器
         btnSignup.setOnClickListener(btnListener);
 
+        forgotPassword.setOnClickListener(btnListener);
+
         // 修改 SignInButton 的點擊事件監聽器
         btnSignIn.setOnClickListener(v -> {
             startActivityForResult(mGoogleSignInClient.getSignInIntent(), 200);
         });
     }
+
+
 
     private View.OnClickListener btnListener = new View.OnClickListener() {
         @Override
@@ -118,6 +123,7 @@ public class LoginActivity extends AppCompatActivity {
         btnSignIn = findViewById(R.id.button_SignIn);
         btnLogin = findViewById(R.id.loginButton); // 將 loginButton 對應到對應的 id
         btnSignup = findViewById(R.id.signupButton); // 將 signupButton 對應到對應的 id
+        forgotPassword = findViewById(R.id.tvFgtPwd);
 
         Email = findViewById(R.id.edtEmail);
         Password = findViewById(R.id.edtPassword);
