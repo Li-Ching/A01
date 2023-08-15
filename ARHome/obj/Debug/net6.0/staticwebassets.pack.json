@@ -5,6 +5,30 @@
       "PackagePath": "staticwebassets\\ARHome.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Li-Ching\\A01\\ARHome\\wwwroot\\Images\\Ashley-Furniture-logo.jpg",
+      "PackagePath": "staticwebassets\\Images\\Ashley-Furniture-logo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Li-Ching\\A01\\ARHome\\wwwroot\\Images\\Crate-and-Barrel-logo.jpg",
+      "PackagePath": "staticwebassets\\Images\\Crate-and-Barrel-logo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Li-Ching\\A01\\ARHome\\wwwroot\\Images\\Pottery-Barn-logo.jpg",
+      "PackagePath": "staticwebassets\\Images\\Pottery-Barn-logo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Li-Ching\\A01\\ARHome\\wwwroot\\Images\\Pottery-Barn-logo.png",
+      "PackagePath": "staticwebassets\\Images\\Pottery-Barn-logo.png"
+    },
+    {
+      "Id": "C:\\Users\\Li-Ching\\A01\\ARHome\\wwwroot\\Images\\Rooms-To-Go-logo.jpg",
+      "PackagePath": "staticwebassets\\Images\\Rooms-To-Go-logo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Li-Ching\\A01\\ARHome\\wwwroot\\Images\\West-Elm-logo.jpg",
+      "PackagePath": "staticwebassets\\Images\\West-Elm-logo.jpg"
+    },
+    {
       "Id": "C:\\Users\\Li-Ching\\A01\\ARHome\\wwwroot\\Images\\bed1.jpg",
       "PackagePath": "staticwebassets\\Images\\bed1.jpg"
     },
@@ -27,6 +51,10 @@
     {
       "Id": "C:\\Users\\Li-Ching\\A01\\ARHome\\wwwroot\\Images\\chair2.jpg",
       "PackagePath": "staticwebassets\\Images\\chair2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Li-Ching\\A01\\ARHome\\wwwroot\\Images\\ikea-logo.png",
+      "PackagePath": "staticwebassets\\Images\\ikea-logo.png"
     },
     {
       "Id": "C:\\Users\\Li-Ching\\A01\\ARHome\\wwwroot\\Images\\sofa1.jpg",

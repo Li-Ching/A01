@@ -14,5 +14,9 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background-color: #dfe7fd;
+}
+nav {
+    background-color: #cddafd;
 }
