@@ -11,10 +11,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
 public class HomeFragment extends Fragment {
-    Button table, chair, sofa, bed;
+    ImageButton table, chair, sofa, bed;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -26,11 +27,11 @@ public class HomeFragment extends Fragment {
         sofa = view.findViewById(R.id.btnSofa);
         bed = view.findViewById(R.id.btnBed);
 
-        AllFragment allFragment = new AllFragment();
+        TableFragment tableFragment = new TableFragment();
         FragmentManager fragmentManager = getChildFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         transaction.setCustomAnimations(R.anim.fade_in, R.anim.fade_out);
-        transaction.replace(R.id.FrameLayout, allFragment);
+        transaction.replace(R.id.FrameLayout, tableFragment);
         transaction.addToBackStack(null);
         transaction.commit();
 

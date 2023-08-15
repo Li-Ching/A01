@@ -31,6 +31,7 @@
     //main page
     <string name="recommendation">為您推薦</string>
     <string name="look_for">在找什麽？</string>
+    <string name="search">search</string>
 
     <string name="all">全部</string>
 

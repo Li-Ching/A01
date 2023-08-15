@@ -264,7 +264,8 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_gravity="center_vertical"
-            android:src="@drawable/baseline_search_24"/>
+            android:src="@drawable/baseline_search_24"
+            android:contentDescription="@string/search"/>
 
         <TextView
             android:id="@+id/tvLookFor"
@@ -279,8 +280,6 @@
 
     </LinearLayout>
 
-
-
     <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -291,49 +290,45 @@
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
-            <Button
+            <ImageButton
                 android:id="@+id/btnTable"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_width="140dp"
+                android:layout_height="60dp"
                 android:layout_margin="10dp"
+                android:src="@drawable/table_icon"
+                android:contentDescription="@string/table"
                 android:background="@drawable/rectangle_15"
-                android:backgroundTint="@color/bright_gray"
-                android:fontFamily="@font/kaiu"
-                android:text="@string/table"
-                android:textSize="24sp"/>
+                android:backgroundTint="@color/white"/>
 
-            <Button
+            <ImageButton
                 android:id="@+id/btnChair"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_width="140dp"
+                android:layout_height="60dp"
                 android:layout_margin="10dp"
+                android:src="@drawable/chair_icon"
+                android:contentDescription="@string/table"
                 android:background="@drawable/rectangle_15"
-                android:backgroundTint="@color/bright_gray"
-                android:fontFamily="@font/kaiu"
-                android:text="@string/chair"
-                android:textSize="24sp"/>
+                android:backgroundTint="@color/white"/>
 
-            <Button
+            <ImageButton
                 android:id="@+id/btnBed"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_width="140dp"
+                android:layout_height="60dp"
                 android:layout_margin="10dp"
+                android:src="@drawable/bed_icon"
+                android:contentDescription="@string/table"
                 android:background="@drawable/rectangle_15"
-                android:backgroundTint="@color/bright_gray"
-                android:fontFamily="@font/kaiu"
-                android:text="@string/bed"
-                android:textSize="24sp"/>
+                android:backgroundTint="@color/white"/>
 
-            <Button
+            <ImageButton
                 android:id="@+id/btnSofa"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_width="140dp"
+                android:layout_height="60dp"
                 android:layout_margin="10dp"
+                android:src="@drawable/sofa_icon"
+                android:contentDescription="@string/table"
                 android:background="@drawable/rectangle_15"
-                android:backgroundTint="@color/bright_gray"
-                android:fontFamily="@font/kaiu"
-                android:text="@string/sofa"
-                android:textSize="24sp"/>
+                android:backgroundTint="@color/white"/>
 
         </LinearLayout>
 
