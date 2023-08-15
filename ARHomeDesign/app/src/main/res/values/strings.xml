@@ -29,7 +29,8 @@
     <string name="verify_passwd">驗證密碼</string>
 
     //main page
-    <string name="recommendation">在找什麼？</string>
+    <string name="recommendation">為您推薦</string>
+    <string name="look_for">在找什麽？</string>
 
     <string name="all">全部</string>
 
