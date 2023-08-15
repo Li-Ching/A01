@@ -8,77 +8,91 @@
     tools:context=".Intro">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="@null"
-        android:src="@mipmap/ic_launcher_foreground"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <ImageView
         android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="634dp"
+        android:layout_height="931dp"
         android:contentDescription="@null"
         android:src="@drawable/intro"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <LinearLayout
-        android:layout_width="400dp"
-        android:layout_height="289dp"
-        android:background="@drawable/bottom_bar_bg"
-        android:backgroundTint="@color/matte_black"
-        android:gravity="center_horizontal"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView">
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:fontFamily="@font/kaiu"
-            android:text="@string/intro"
-            android:textAlignment="textStart"
-            android:textColor="@color/white"
-            android:textSize="36sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="115dp"
+        android:layout_height="32dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="20dp"
+        android:fontFamily="@font/kaiu"
+        android:gravity="start"
+        android:text="@string/hello"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.148"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
 
-        <Button
-            android:id="@+id/btnLogin"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/rectangle_15"
-            android:backgroundTint="@color/gray"
-            android:fontFamily="@font/kaiu"
-            android:text="@string/login"
-            android:textSize="24sp" />
+    <TextView
+        android:layout_width="264dp"
+        android:layout_height="194dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="20dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/kaiu"
+        android:gravity="start"
+        android:text="@string/intro"
+        android:textColor="@color/black"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.208" />
 
-        <Button
-            android:id="@+id/btnGuest"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/rectangle_15"
-            android:backgroundTint="@color/white"
-            android:fontFamily="@font/kaiu"
-            android:text="@string/guest"
-            android:textSize="24sp" />
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/rectangle_15"
+        android:backgroundTint="@color/red_btn"
+        android:fontFamily="@font/kaiu"
+        android:text="@string/login"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.814" />
 
-    </LinearLayout>
+    <Button
+        android:id="@+id/btnGuest"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginVertical="10dp"
+        android:layout_marginTop="88dp"
+        android:background="@drawable/rectangle_15"
+        android:backgroundTint="@color/orange_btn"
+        android:fontFamily="@font/kaiu"
+        android:text="@string/guest"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/btnLogin"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btnLogin"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

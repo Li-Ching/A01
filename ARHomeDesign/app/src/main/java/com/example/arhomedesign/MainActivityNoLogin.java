@@ -16,9 +16,7 @@ public class MainActivityNoLogin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_no_login);
 
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setHomeAsUpIndicator(R.drawable.baseline_logout_24);
-        actionBar.setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().hide();
 
         getSupportFragmentManager().beginTransaction().replace(R.id.FrameLayout, homeFragment).commit();
 

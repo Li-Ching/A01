@@ -29,11 +29,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setHomeAsUpIndicator(R.drawable.baseline_logout_24);
-        actionBar.setDisplayHomeAsUpEnabled(true);
-
-
+        getSupportActionBar().hide();
 
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
 
