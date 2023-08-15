@@ -3,9 +3,9 @@
 
     <item
         android:state_selected="true"
-        android:color="@color/white"/>
+        android:color="@color/orange_btn"/>
 
     <item
         android:state_selected="false"
-        android:color="@color/gray"/>
+        android:color="@color/white"/>
 </selector>
