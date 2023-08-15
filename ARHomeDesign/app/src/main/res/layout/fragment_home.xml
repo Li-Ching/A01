@@ -283,8 +283,7 @@
     <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="5dp"
-        android:layout_marginBottom="10dp">
+        android:layout_marginHorizontal="5dp">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -293,8 +292,8 @@
 
             <ImageButton
                 android:id="@+id/btnTable"
-                android:layout_width="150dp"
-                android:layout_height="70dp"
+                android:layout_width="130dp"
+                android:layout_height="60dp"
                 android:layout_margin="5dp"
                 android:src="@drawable/table_icon"
                 android:contentDescription="@string/table"
@@ -303,8 +302,8 @@
 
             <ImageButton
                 android:id="@+id/btnChair"
-                android:layout_width="150dp"
-                android:layout_height="70dp"
+                android:layout_width="130dp"
+                android:layout_height="60dp"
                 android:layout_margin="5dp"
                 android:src="@drawable/chair_icon"
                 android:contentDescription="@string/chair"
@@ -313,8 +312,8 @@
 
             <ImageButton
                 android:id="@+id/btnBed"
-                android:layout_width="150dp"
-                android:layout_height="70dp"
+                android:layout_width="130dp"
+                android:layout_height="60dp"
                 android:layout_margin="5dp"
                 android:src="@drawable/bed_icon"
                 android:contentDescription="@string/bed"
@@ -323,8 +322,8 @@
 
             <ImageButton
                 android:id="@+id/btnSofa"
-                android:layout_width="150dp"
-                android:layout_height="70dp"
+                android:layout_width="130dp"
+                android:layout_height="60dp"
                 android:layout_margin="5dp"
                 android:src="@drawable/sofa_icon"
                 android:contentDescription="@string/sofa"

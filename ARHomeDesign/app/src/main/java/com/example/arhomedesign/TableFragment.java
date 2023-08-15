@@ -1,5 +1,6 @@
 package com.example.arhomedesign;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -28,14 +29,8 @@ public class TableFragment extends Fragment {
         table1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Table_1Fragment table1Fragment = new Table_1Fragment();
-
-                FragmentManager fragmentManager = getParentFragmentManager();
-                FragmentTransaction transaction = fragmentManager.beginTransaction();
-                transaction.setCustomAnimations(R.anim.slide_up, R.anim.fade_out, R.anim.fade_in, R.anim.slide_down);
-                transaction.replace(R.id.FrameLayout, table1Fragment);
-                transaction.addToBackStack(null);
-                transaction.commit();
+                Intent intent = new Intent(getActivity(), FurnitureActivity.class);
+                startActivity(intent);
             }
         });
 
