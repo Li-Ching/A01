@@ -60,6 +60,8 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:elevation="20dp"
+        android:padding="10dp"
         android:background="@drawable/rectangle_15"
         android:backgroundTint="@color/red_btn"
         android:fontFamily="@font/kaiu"
