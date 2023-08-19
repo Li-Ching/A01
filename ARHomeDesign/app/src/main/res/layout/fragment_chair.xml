@@ -51,6 +51,7 @@
                     app:layout_constraintVertical_bias="0.119">
 
                     <TextView
+                        android:id="@+id/chair1Name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="10dp"
@@ -61,6 +62,7 @@
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/chair1Brand"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="10dp"
@@ -76,8 +78,11 @@
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:layout_gravity="end"
+                    android:layout_margin="5dp"
                     android:contentDescription="@string/favorite"
                     android:src="@drawable/favorite"
+                    android:background="@drawable/rectangle_10"
+                    android:backgroundTint="@color/gray_btn"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.966"
@@ -124,6 +129,7 @@
                     app:layout_constraintVertical_bias="0.119">
 
                     <TextView
+                        android:id="@+id/chair2Name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="10dp"
@@ -134,6 +140,7 @@
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/chair2Brand"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="10dp"
@@ -149,9 +156,11 @@
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:layout_gravity="end"
-                    android:layout_marginBottom="4dp"
+                    android:layout_margin="5dp"
                     android:contentDescription="@string/favorite"
                     android:src="@drawable/favorite"
+                    android:background="@drawable/rectangle_10"
+                    android:backgroundTint="@color/gray_btn"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.966"

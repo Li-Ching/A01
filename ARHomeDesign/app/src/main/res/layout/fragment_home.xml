@@ -31,10 +31,12 @@
             android:orientation="horizontal">
 
             <LinearLayout
-                android:id="@+id/butChair2"
+                android:id="@+id/butRec1"
                 android:layout_width="220dp"
                 android:layout_height="220dp"
                 android:layout_margin="10dp"
+                android:elevation="20dp"
+                android:padding="10dp"
                 android:background="@drawable/rectangle_15"
                 android:backgroundTint="@color/chair_2"
                 android:gravity="center"
@@ -66,6 +68,7 @@
                         app:layout_constraintVertical_bias="0.0">
 
                         <TextView
+                            android:id="@+id/recommended1Name"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginHorizontal="10dp"
@@ -76,6 +79,7 @@
                             android:textStyle="bold" />
 
                         <TextView
+                            android:id="@+id/recommended1Brand"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginHorizontal="10dp"
@@ -93,6 +97,8 @@
                         android:layout_gravity="end"
                         android:contentDescription="@string/favorite"
                         android:src="@drawable/favorite"
+                        android:background="@drawable/rectangle_10"
+                        android:backgroundTint="@color/gray_btn"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.965"
@@ -104,10 +110,12 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/butSofa2"
+                android:id="@+id/butRec2"
                 android:layout_width="220dp"
                 android:layout_height="220dp"
                 android:layout_margin="10dp"
+                android:elevation="100dp"
+                android:padding="10dp"
                 android:background="@drawable/rectangle_15"
                 android:backgroundTint="@color/sofa_2"
                 android:gravity="center"
@@ -139,6 +147,7 @@
                         app:layout_constraintVertical_bias="0.0">
 
                         <TextView
+                            android:id="@+id/recommended2Name"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginHorizontal="10dp"
@@ -149,6 +158,7 @@
                             android:textStyle="bold" />
 
                         <TextView
+                            android:id="@+id/recommended2Brand"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginHorizontal="10dp"
@@ -166,6 +176,8 @@
                         android:layout_gravity="end"
                         android:contentDescription="@string/favorite"
                         android:src="@drawable/favorite"
+                        android:background="@drawable/rectangle_10"
+                        android:backgroundTint="@color/gray_btn"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.965"
@@ -177,7 +189,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/butTable3"
+                android:id="@+id/butRec3"
                 android:layout_width="220dp"
                 android:layout_height="220dp"
                 android:layout_margin="10dp"
@@ -212,6 +224,7 @@
                         app:layout_constraintVertical_bias="0.0">
 
                         <TextView
+                            android:id="@+id/recommended3Name"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginHorizontal="10dp"
@@ -222,6 +235,7 @@
                             android:textStyle="bold" />
 
                         <TextView
+                            android:id="@+id/recommended3Brand"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginHorizontal="10dp"
@@ -239,6 +253,8 @@
                         android:layout_gravity="end"
                         android:contentDescription="@string/favorite"
                         android:src="@drawable/favorite"
+                        android:background="@drawable/rectangle_10"
+                        android:backgroundTint="@color/gray_btn"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.965"
@@ -295,6 +311,8 @@
                 android:layout_width="130dp"
                 android:layout_height="60dp"
                 android:layout_margin="5dp"
+                android:elevation="100dp"
+                android:padding="10dp"
                 android:src="@drawable/table_icon"
                 android:contentDescription="@string/table"
                 android:background="@drawable/rectangle_15"
