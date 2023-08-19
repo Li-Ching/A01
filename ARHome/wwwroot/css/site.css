@@ -20,3 +20,9 @@ body {
 nav {
     background-color: #cddafd;
 }
+.cursor-pointer {
+    cursor: pointer;
+}
+.card {
+    background-color: #b8c0ff;
+}

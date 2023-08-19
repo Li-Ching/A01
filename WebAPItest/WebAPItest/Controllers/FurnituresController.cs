@@ -21,7 +21,7 @@ namespace WebAPItest.Controllers
 
         // GET: api/<FurnituresController>
         [HttpGet]
-        public IEnumerable<FurnituresDto> Get()
+        public IEnumerable<FurnituresDto> Get(string? Type)
         {
             var result = (from a in _a01Context.Furnitures
                           .Include(a => a.Brand)
@@ -38,6 +38,11 @@ namespace WebAPItest.Controllers
                               Location=a.Location,
                               Picture=a.Picture
                           });
+
+            if (!string.IsNullOrWhiteSpace(Type))
+            {
+                result=result.Where(a => a.Type.Contains(Type));
+            }
 
             return result;
         }
@@ -63,6 +68,37 @@ namespace WebAPItest.Controllers
                           }).SingleOrDefault();
             return result;
         }
+
+        // GET api/<FurnituresController>/5
+        [HttpGet("Search")]
+        public IEnumerable<FurnituresDto> Search(string content)
+        {
+            var result = (from a in _a01Context.Furnitures
+                          .Include(a => a.Brand)
+                          select new FurnituresDto
+                          {
+                              FurnitureId=a.FurnitureId,
+                              Type=a.Type,
+                              Color=a.Color,
+                              Style=a.Style,
+                              Brand1 = (a.Brand==null) ? null : a.Brand.Brand1,
+                              PhoneNumber = (a.Brand == null) ? null : a.Brand.PhoneNumber,
+                              Address= (a.Brand == null) ? null : a.Brand.Address,
+                              Logo= (a.Brand == null) ? null : a.Brand.Logo,
+                              Location=a.Location,
+                              Picture=a.Picture
+                          });
+
+            if (!string.IsNullOrWhiteSpace(content))
+            {
+                result=result.Where(a => a.Type.Contains(content)||
+                                        a.Color.Contains(content)||
+                                        a.Style.Contains(content)||
+                                        a.Brand1.Contains(content));
+            }
+            return result;
+        }
+
 
         // POST api/<FurnituresController>
         /*[HttpPost]
