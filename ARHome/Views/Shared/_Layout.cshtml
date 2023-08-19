@@ -50,5 +50,28 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.2.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.2.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyBQlCNRgHyKEbUfyzKOhSxDjd7J3PyaG-o",
+            authDomain: "ar-home-design.firebaseapp.com",
+            projectId: "ar-home-design",
+            storageBucket: "ar-home-design.appspot.com",
+            messagingSenderId: "226596953948",
+            appId: "1:226596953948:web:c5e0f7418089476964ab99",
+            measurementId: "G-T214N1S0YB"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
 </body>
 </html>
