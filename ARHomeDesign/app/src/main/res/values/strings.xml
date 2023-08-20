@@ -8,10 +8,6 @@
     <string name="username">帳戶名字</string>
     <string name="email">電子郵件</string>
     <string name="passwd">密碼</string>
-    <string name="chgPw">Change Password</string>
-    <string name="curPw">Current Password</string>
-    <string name="newPw">New Password</string>
-    <string name="verNewPw">Verify New Password</string>
 
     //login page
     <string name="hello">您好！</string>
@@ -33,16 +29,32 @@
     <string name="look_for">在找什麽？</string>
     <string name="search">search</string>
 
+    //favorite page
+    <string name="favorite">喜歡項目</string>
+
+    //profile page
+    <string name="profile">帳戶設定</string>
+    <string name="logout">登出</string>
+
+    //change username page
+    <string name="chgUN">變更名字</string>
+
+    //change password page
+    <string name="chgPw">變更密碼</string>
+    <string name="enter_curPw">輸入當前密碼</string>
+    <string name="enter_newPw">輸入新的密碼</string>
+    <string name="verNewPw">驗證新的密碼</string>
+    <string name="curPw">當前密碼</string>
+    <string name="newPw">新的密碼</string>
+
     <string name="all">全部</string>
 
-    <string name="save">Save</string>
+    <string name="save">儲存</string>
     <string name="send">發送</string>
     <string name="cancel">取消</string>
 
     <string name="home">Home</string>
     <string name="back">Back</string>
-    <string name="favorite">Favorite</string>
-    <string name="profile">Profile</string>
 
     <string name="table">桌子</string>
     <string name="chair">椅子</string>

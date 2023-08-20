@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/beige"
+    android:background="@color/blue_main"
     android:orientation="vertical"
     tools:context=".ProfileFragment">
 
@@ -11,153 +11,133 @@
         android:id="@+id/tvProfile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
         android:layout_marginHorizontal="10dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/bottom_border"
         android:fontFamily="@font/kaiu"
         android:text="@string/profile"
-        android:textColor="@color/taupe"
-        android:textSize="32sp"
-        android:textStyle="bold" />
+        android:textSize="48sp"
+        android:textColor="@color/matte_black"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/kaiu"
+        android:text="@string/username"
+        android:textColor="#3F3F3F"
+        android:textSize="24sp" />
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal">
+        android:id="@+id/username"
+        android:layout_width="360dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginVertical="5dp"
+        android:orientation="horizontal"
+        android:background="@drawable/rectangle_10"
+        android:backgroundTint="@color/white">
+
+        <TextView
+            android:id="@+id/Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="10dp"
+            android:fontFamily="@font/kaiu"
+            android:textColor="#6B6B6B"
+            android:textSize="28sp"
+            android:textStyle="bold" />
 
         <ImageView
-            android:layout_width="250dp"
-            android:layout_height="250dp"
-            android:background="@drawable/baseline_person_24"
-            android:backgroundTint="@color/taupe" />
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/baseline_arrow_forward_ios_24"
+            android:contentDescription="@null"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/kaiu"
+        android:text="@string/email"
+        android:textColor="#3F3F3F"
+        android:textSize="24sp" />
+
+    <LinearLayout
+        android:id="@+id/email"
+        android:layout_width="360dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginVertical="5dp"
+        android:orientation="horizontal"
+        android:background="@drawable/rectangle_10"
+        android:backgroundTint="@color/white">
+
+        <TextView
+            android:id="@+id/Email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="10dp"
+            android:fontFamily="@font/kaiu"
+            android:textColor="#6B6B6B"
+            android:textSize="28sp"
+            android:textStyle="bold"  />
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="430dp"
-        android:background="@drawable/rectangle_15"
-        android:backgroundTint="@color/white"
-        android:orientation="vertical">
+        android:id="@+id/chgPw"
+        android:layout_width="360dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal"
+        android:background="@drawable/rectangle_10"
+        android:backgroundTint="@color/white">
 
-        <LinearLayout
-            android:id="@+id/username"
-            android:layout_width="match_parent"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="10dp"
+            android:fontFamily="@font/kaiu"
+            android:text="@string/chgPw"
+            android:textColor="#6B6B6B"
+            android:textSize="28sp"
+            android:textStyle="bold"  />
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="10dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/line"
-                    android:backgroundTint="@color/taupe"
-                    android:fontFamily="@font/kaiu"
-                    android:text="@string/username"
-                    android:textColor="@color/taupe"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/Name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="10dp"
-                    android:fontFamily="@font/kaiu"
-                    android:textColor="@color/taupe"
-                    android:textSize="28sp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center_vertical"
-                android:background="@drawable/baseline_arrow_forward_ios_24"
-                android:backgroundTint="@color/taupe" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="10dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/line"
-                    android:backgroundTint="@color/taupe"
-                    android:fontFamily="@font/kaiu"
-                    android:text="@string/email"
-                    android:textColor="@color/taupe"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/Email"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="10dp"
-                    android:fontFamily="@font/kaiu"
-                    android:textColor="@color/taupe"
-                    android:textSize="28sp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/chgPw"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="10dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginVertical="15dp"
-                android:layout_weight="1"
-                android:fontFamily="@font/kaiu"
-                android:text="@string/chgPw"
-                android:textColor="@color/taupe"
-                android:textSize="28sp"
-                android:textStyle="bold" />
-
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center_vertical"
-                android:background="@drawable/baseline_arrow_forward_ios_24"
-                android:backgroundTint="@color/taupe" />
-
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/logout_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="登出" />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/baseline_arrow_forward_ios_24"
+            android:contentDescription="@null"/>
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/logout_button"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/rectangle_15"
+        android:backgroundTint="@color/red_btn"
+        android:fontFamily="@font/kaiu"
+        android:text="@string/logout"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="24sp" />
+
 
 </LinearLayout>
