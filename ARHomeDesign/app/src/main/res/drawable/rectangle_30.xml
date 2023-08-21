@@ -10,9 +10,9 @@
     <!-- Elevated shape -->
     <item
         android:left="0dp"
-        android:top="4dp"
+        android:top="6dp"
         android:right="0dp"
-        android:bottom="8dp">
+        android:bottom="10dp">
         <shape android:shape="rectangle">
             <solid android:color="@color/matte_black" /> <!-- Shape background color -->
             <corners android:radius="30dp" /> <!-- Radius for rounded corners -->
