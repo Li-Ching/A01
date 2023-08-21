@@ -12,7 +12,7 @@ import com.google.android.material.navigation.NavigationBarView;
 public class MainActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
     HomeFragment homeFragment = new HomeFragment();
-
+    SearchFragment searchFragment = new SearchFragment();
     FavoriteFragment favoriteFragment = new FavoriteFragment();
     ProfileFragment profileFragment = new ProfileFragment();
 
@@ -35,6 +35,12 @@ public class MainActivity extends AppCompatActivity {
                         getSupportFragmentManager().beginTransaction()
                                 .setCustomAnimations(R.anim.fade_in, R.anim.fade_out)
                                 .replace(R.id.FrameLayout, homeFragment)
+                                .commit();
+                        return true;
+                    case R.id.search:
+                        getSupportFragmentManager().beginTransaction()
+                                .setCustomAnimations(R.anim.fade_in, R.anim.fade_out)
+                                .replace(R.id.FrameLayout, searchFragment)
                                 .commit();
                         return true;
                     case R.id.favorite:

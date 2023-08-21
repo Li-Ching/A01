@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_main"
+    android:orientation="vertical"
+    tools:context=".SearchFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginHorizontal="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/baseline_search_24"
+            android:contentDescription="@string/search"/>
+
+        <TextView
+            android:id="@+id/tvLookFor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:fontFamily="@font/kaiu"
+            android:text="@string/look_for"
+            android:textSize="48sp"
+            android:textColor="@color/matte_black"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btnTable"
+                android:layout_width="130dp"
+                android:layout_height="60dp"
+                android:layout_margin="5dp"
+                android:elevation="100dp"
+                android:padding="10dp"
+                android:src="@drawable/table_icon"
+                android:contentDescription="@string/table"
+                android:background="@drawable/rectangle_15"
+                android:backgroundTint="@color/white"/>
+
+            <ImageButton
+                android:id="@+id/btnChair"
+                android:layout_width="130dp"
+                android:layout_height="60dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/chair_icon"
+                android:contentDescription="@string/chair"
+                android:background="@drawable/rectangle_15"
+                android:backgroundTint="@color/white"/>
+
+            <ImageButton
+                android:id="@+id/btnBed"
+                android:layout_width="130dp"
+                android:layout_height="60dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/bed_icon"
+                android:contentDescription="@string/bed"
+                android:background="@drawable/rectangle_15"
+                android:backgroundTint="@color/white"/>
+
+            <ImageButton
+                android:id="@+id/btnSofa"
+                android:layout_width="130dp"
+                android:layout_height="60dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/sofa_icon"
+                android:contentDescription="@string/sofa"
+                android:background="@drawable/rectangle_15"
+                android:backgroundTint="@color/white"/>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <FrameLayout
+        android:id="@+id/HomeFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>
