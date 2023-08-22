@@ -17,7 +17,7 @@
         android:layout_marginHorizontal="10dp"
         android:fontFamily="@font/kaiu"
         android:text="@string/recommendation"
-        android:textSize="48sp"
+        android:textSize="40sp"
         android:textColor="@color/matte_black"
         android:textStyle="bold"/>
 

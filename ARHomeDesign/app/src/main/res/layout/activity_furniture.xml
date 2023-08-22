@@ -107,7 +107,7 @@
             android:background="@drawable/elevated_rectangle_15"
             android:backgroundTint="@color/gray_btn"
             android:contentDescription="@string/favorite"
-            android:src="@drawable/ar64"
+            android:src="@drawable/ar_icon"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
