@@ -26,7 +26,7 @@
         android:layout_width="match_parent"
         android:layout_height="160dp"
         android:layout_margin="5dp"
-        android:background="@drawable/rectangle_15"
+        android:background="@drawable/elevated_rectangle_15"
         android:backgroundTint="@color/table_3"
         android:gravity="center"
         android:orientation="horizontal">
@@ -85,7 +85,7 @@
                 android:layout_height="48dp"
                 android:layout_gravity="end"
                 android:layout_margin="5dp"
-                android:background="@drawable/rectangle_10"
+                android:background="@drawable/elevated_rectangle_10"
                 android:backgroundTint="@color/gray_btn"
                 android:contentDescription="@string/favorite"
                 android:src="@drawable/favorite_liked"

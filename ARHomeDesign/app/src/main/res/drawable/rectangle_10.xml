@@ -1,23 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- Shadow layer -->
-    <item>
-        <shape android:shape="rectangle">
-            <solid android:color="@android:color/white" /> <!-- Shadow color (use white or transparent color) -->
-            <corners android:radius="10dp" /> <!-- Radius should match the rounded shape -->
-        </shape>
-    </item>
-    <!-- Elevated shape -->
-    <item
-        android:left="0dp"
-        android:top="6dp"
-        android:right="0dp"
-        android:bottom="10dp">
-        <shape android:shape="rectangle">
-            <solid android:color="@color/matte_black" /> <!-- Shape background color -->
-            <corners android:radius="10dp" /> <!-- Radius for rounded corners -->
-            <stroke android:width="0.5dp" android:color="@color/matte_black" /> <!-- Border color -->
-            <size android:height="40dp" android:width="40dp" /> <!-- Shape size -->
-        </shape>
-    </item>
-</layer-list>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle" >
+
+    <!-- shape property for the view based on the value particular view would be drawn -->
+    <corners
+        android:radius="10dp" />
+    <stroke android:width="0.5dp"
+        android:color="@color/matte_black" />
+    <!--  stroke for defining a border for view -->
+
+    <size
+        android:height="40dp"
+        android:width="40dp" />
+    <!-- size element is used to define a design here height & width are same means square with some radius -->
+</shape>

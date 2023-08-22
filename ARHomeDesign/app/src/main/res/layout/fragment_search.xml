@@ -54,7 +54,7 @@
                 android:padding="10dp"
                 android:src="@drawable/table_icon"
                 android:contentDescription="@string/table"
-                android:background="@drawable/rectangle_15"
+                android:background="@drawable/elevated_rectangle_15"
                 android:backgroundTint="@color/white"/>
 
             <ImageButton
@@ -64,7 +64,7 @@
                 android:layout_margin="5dp"
                 android:src="@drawable/chair_icon"
                 android:contentDescription="@string/chair"
-                android:background="@drawable/rectangle_15"
+                android:background="@drawable/elevated_rectangle_15"
                 android:backgroundTint="@color/white"/>
 
             <ImageButton
@@ -74,7 +74,7 @@
                 android:layout_margin="5dp"
                 android:src="@drawable/bed_icon"
                 android:contentDescription="@string/bed"
-                android:background="@drawable/rectangle_15"
+                android:background="@drawable/elevated_rectangle_15"
                 android:backgroundTint="@color/white"/>
 
             <ImageButton
@@ -84,7 +84,7 @@
                 android:layout_margin="5dp"
                 android:src="@drawable/sofa_icon"
                 android:contentDescription="@string/sofa"
-                android:background="@drawable/rectangle_15"
+                android:background="@drawable/elevated_rectangle_15"
                 android:backgroundTint="@color/white"/>
 
         </LinearLayout>

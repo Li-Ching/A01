@@ -4,7 +4,7 @@
     <item>
         <shape android:shape="rectangle">
             <solid android:color="@android:color/white" /> <!-- Shadow color (use white or transparent color) -->
-            <corners android:radius="10dp" /> <!-- Radius should match the rounded shape -->
+            <corners android:radius="15dp" /> <!-- Radius should match the rounded shape -->
         </shape>
     </item>
     <!-- Elevated shape -->
@@ -15,7 +15,7 @@
         android:bottom="10dp">
         <shape android:shape="rectangle">
             <solid android:color="@color/matte_black" /> <!-- Shape background color -->
-            <corners android:radius="10dp" /> <!-- Radius for rounded corners -->
+            <corners android:radius="15dp" /> <!-- Radius for rounded corners -->
             <stroke android:width="0.5dp" android:color="@color/matte_black" /> <!-- Border color -->
             <size android:height="40dp" android:width="40dp" /> <!-- Shape size -->
         </shape>

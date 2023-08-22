@@ -35,19 +35,19 @@
                 android:layout_width="220dp"
                 android:layout_height="220dp"
                 android:layout_margin="10dp"
-                android:elevation="20dp"
-                android:padding="10dp"
-                android:background="@drawable/rectangle_15"
+                android:background="@drawable/elevated_rectangle_15"
                 android:backgroundTint="@color/chair_2"
+                android:elevation="20dp"
                 android:gravity="center"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:padding="10dp">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="150dp"
                     android:layout_marginHorizontal="10dp"
-                    android:src="@drawable/chair_2"
-                    android:contentDescription="@null"/>
+                    android:contentDescription="@null"
+                    android:src="@drawable/chair_2" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -95,10 +95,10 @@
                         android:layout_width="48dp"
                         android:layout_height="48dp"
                         android:layout_gravity="end"
+                        android:background="@drawable/elevated_rectangle_10"
+                        android:backgroundTint="@color/gray_btn"
                         android:contentDescription="@string/favorite"
                         android:src="@drawable/favorite"
-                        android:background="@drawable/rectangle_10"
-                        android:backgroundTint="@color/gray_btn"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.965"
@@ -114,19 +114,19 @@
                 android:layout_width="220dp"
                 android:layout_height="220dp"
                 android:layout_margin="10dp"
-                android:elevation="100dp"
-                android:padding="10dp"
-                android:background="@drawable/rectangle_15"
+                android:background="@drawable/elevated_rectangle_15"
                 android:backgroundTint="@color/sofa_2"
+                android:elevation="100dp"
                 android:gravity="center"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:padding="10dp">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="150dp"
                     android:layout_marginHorizontal="10dp"
-                    android:src="@drawable/sofa_2"
-                    android:contentDescription="@null"/>
+                    android:contentDescription="@null"
+                    android:src="@drawable/sofa_2" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -174,10 +174,10 @@
                         android:layout_width="48dp"
                         android:layout_height="48dp"
                         android:layout_gravity="end"
+                        android:background="@drawable/elevated_rectangle_10"
+                        android:backgroundTint="@color/gray_btn"
                         android:contentDescription="@string/favorite"
                         android:src="@drawable/favorite"
-                        android:background="@drawable/rectangle_10"
-                        android:backgroundTint="@color/gray_btn"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.965"
@@ -193,7 +193,7 @@
                 android:layout_width="220dp"
                 android:layout_height="220dp"
                 android:layout_margin="10dp"
-                android:background="@drawable/rectangle_15"
+                android:background="@drawable/elevated_rectangle_15"
                 android:backgroundTint="@color/table_3"
                 android:gravity="center"
                 android:orientation="vertical">
@@ -202,8 +202,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="150dp"
                     android:layout_marginHorizontal="10dp"
-                    android:src="@drawable/table_3"
-                    android:contentDescription="@null"/>
+                    android:contentDescription="@null"
+                    android:src="@drawable/table_3" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -251,10 +251,10 @@
                         android:layout_width="48dp"
                         android:layout_height="48dp"
                         android:layout_gravity="end"
+                        android:background="@drawable/elevated_rectangle_10"
+                        android:backgroundTint="@color/gray_btn"
                         android:contentDescription="@string/favorite"
                         android:src="@drawable/favorite"
-                        android:background="@drawable/rectangle_10"
-                        android:backgroundTint="@color/gray_btn"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.965"
@@ -266,6 +266,7 @@
             </LinearLayout>
 
         </LinearLayout>
+
     </HorizontalScrollView>
 
 </LinearLayout>
