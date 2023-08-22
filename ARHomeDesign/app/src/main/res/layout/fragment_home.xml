@@ -8,17 +8,32 @@
     android:background="@color/blue_main"
     android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_gravity="start"
-        android:fontFamily="@font/kaiu"
-        android:text="@string/ar_tech"
-        android:textSize="40sp"
-        android:textColor="@color/matte_black"
-        android:textStyle="bold"/>
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginHorizontal="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ar_icon"
+            android:contentDescription="@string/ar_button"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:fontFamily="@font/kaiu"
+            android:text="@string/ar_tech"
+            android:textSize="40sp"
+            android:textColor="@color/matte_black"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
     
     <LinearLayout
         android:layout_width="match_parent"
