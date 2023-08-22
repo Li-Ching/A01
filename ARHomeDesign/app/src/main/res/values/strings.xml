@@ -25,12 +25,15 @@
     <string name="verify_passwd">驗證密碼</string>
 
     //main page
+    <string name="ar_tech">實施AR技術</string>
+    <string name="trial">只需單擊一個按鈕，即可在您的房間中展示您的家具。</string>
     <string name="recommendation">為您推薦的家具</string>
     <string name="look_for">在找什麽？</string>
     <string name="search">search</string>
 
     //favorite page
     <string name="favorite">喜歡項目</string>
+    <string name="ar_button">AR按鈕</string>
 
     //profile page
     <string name="profile">帳戶設定</string>
