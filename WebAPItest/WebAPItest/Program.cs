@@ -29,21 +29,19 @@ builder.Services.AddCors(options => // 加入CORS預設Policy
 builder.Services.AddDbContext<A01Context>(options =>
         options.UseSqlServer(builder.Configuration.GetConnectionString("A01Database")));
 
-
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
+        options.Authority = "https://securetoken.google.com/ar-home-design";
         options.TokenValidationParameters = new TokenValidationParameters
         {
             ValidateIssuer = true,
-            ValidIssuer = builder.Configuration["JwtSettings:Issuer"],
+            ValidIssuer = "https://securetoken.google.com/ar-home-design",
             ValidateAudience = true,
-            ValidAudience = builder.Configuration["JwtSettings:Audience"],
-            ValidateLifetime = true,
-            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JwtSettings:KEY"]))
+            ValidAudience = "ar-home-design",
+            ValidateLifetime = true
         };
     });
-
 
 var app = builder.Build();
 
@@ -57,6 +55,7 @@ var app = builder.Build();
 // 增加Swagger產生器及Swagger UI中介軟體到Request Pipeline
 app.UseOpenApi(); // 使用Swagger 2.0 (OpenApi)產生器中介軟體
 app.UseSwaggerUi3(); // 使用 Swagger UI 3.0 中介軟體
+
 
 
 app.UseCookiePolicy();

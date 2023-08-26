@@ -27,7 +27,7 @@ namespace ARHome.Controllers
             try
             {
                 //create the user
-                await auth.CreateUserWithEmailAndPasswordAsync(loginModel.Email, loginModel.Password);
+                await auth.CreateUserWithEmailAndPasswordAsync(loginModel.Email, loginModel.Password, loginModel.displayName);
                 //log in the new user
                 var fbAuthLink = await auth
                                 .SignInWithEmailAndPasswordAsync(loginModel.Email, loginModel.Password);
@@ -36,6 +36,10 @@ namespace ARHome.Controllers
                 if (token != null)
                 {
                     HttpContext.Session.SetString("_UserToken", token);
+
+                    // Set the ViewBag for displayName
+                    ViewBag.DisplayName = loginModel.displayName;
+
 
                     return RedirectToAction("Index");
                 }
@@ -54,23 +58,27 @@ namespace ARHome.Controllers
         {
             return View();
         }
+
         [HttpPost]
         public async Task<IActionResult> SignIn(LoginModel loginModel)
         {
             try
             {
-                //log in an existing user
+                // log in an existing user
                 var fbAuthLink = await auth
                                 .SignInWithEmailAndPasswordAsync(loginModel.Email, loginModel.Password);
                 string token = fbAuthLink.FirebaseToken;
-                //save the token to a session variable
+                // save the token to a session variable
                 if (token != null)
                 {
                     HttpContext.Session.SetString("_UserToken", token);
 
+                    // Get the user's display name
+                    var user = await auth.GetUserAsync(token); // Assuming you have a GetUserAsync method
+                    ViewBag.DisplayName = user.DisplayName;
+
                     return RedirectToAction("Index");
                 }
-
             }
             catch (FirebaseAuthException ex)
             {
@@ -81,6 +89,7 @@ namespace ARHome.Controllers
 
             return View();
         }
+
 
         public IActionResult LogOut()
         {

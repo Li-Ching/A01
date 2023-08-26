@@ -3,7 +3,14 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome you have succesfully signed in</h1>
+    @if (ViewBag.DisplayName != null)
+    {
+        <h1 class="display-4">Hi @ViewBag.DisplayName, Welcome! You have successfully signed in.</h1>
+    }
+    else
+    {
+        <h1 class="display-4">Welcome! You have successfully signed in.</h1>
+    }
 
     <a asp-action="LogOut">Sign Out</a>
 </div>
