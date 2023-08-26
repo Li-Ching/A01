@@ -2,6 +2,7 @@
 {
     public class FurnituresDto
     {
+        public string? UserId { get; set; }
         public int FurnitureId { get; set; }
 
         public string? Type { get; set; }

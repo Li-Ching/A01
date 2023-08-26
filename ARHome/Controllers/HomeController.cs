@@ -73,10 +73,6 @@ namespace ARHome.Controllers
                 {
                     HttpContext.Session.SetString("_UserToken", token);
 
-                    // Get the user's display name
-                    var user = await auth.GetUserAsync(token); // Assuming you have a GetUserAsync method
-                    ViewBag.DisplayName = user.DisplayName;
-
                     return RedirectToAction("Index");
                 }
             }
@@ -104,7 +100,8 @@ namespace ARHome.Controllers
 
                 if (token != null)
                 {
-                    return View();
+                ViewBag.UserToken = token;
+                return View();
                 }
                 else
                 {

@@ -12,5 +12,4 @@ public partial class Favorite
     public int FurnitureId { get; set; }
 
     public virtual Furniture? Furniture { get; set; }
-    public virtual User? User { get; set; }
 }

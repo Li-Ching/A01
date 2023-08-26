@@ -114,10 +114,6 @@ public partial class A01Context : DbContext
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__Favorite__furnit__2B3F6F97");
 
-            entity.HasOne(d => d.User).WithMany()
-                .HasForeignKey(d => d.UserId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Favorite__userId__2A4B4B5E");
         });
 
         OnModelCreatingPartial(modelBuilder);
