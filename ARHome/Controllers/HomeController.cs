@@ -37,10 +37,6 @@ namespace ARHome.Controllers
                 {
                     HttpContext.Session.SetString("_UserToken", token);
 
-                    // Set the ViewBag for displayName
-                    ViewBag.DisplayName = loginModel.displayName;
-
-
                     return RedirectToAction("Index");
                 }
             }
@@ -93,14 +89,30 @@ namespace ARHome.Controllers
             return RedirectToAction("SignIn");
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
             
                 var token = HttpContext.Session.GetString("_UserToken");
 
                 if (token != null)
                 {
-                ViewBag.UserToken = token;
+                try
+                {
+                    // 在此处从 Firebase 或其他身份验证系统中获取用户的 displayName 和 email
+                    // 你可能需要使用 Firebase SDK 或其他适当的方式来获取这些信息
+                    // 以下是一种示例方法，假设你可以从 Firebase 中获取用户信息
+                    var user = await auth.GetUserAsync(token); // 使用 Firebase SDK 获取用户信息
+
+                    ViewBag.DisplayName = user.DisplayName;
+                    ViewBag.Email = user.Email;
+                }
+                catch (Exception ex)
+                {
+                    // 处理获取用户信息时可能发生的异常
+                    // 你可以选择如何处理这些异常，例如，如果未能获取用户信息，你可以设置为 null 或其他默认值
+                    ViewBag.DisplayName = "N/A";
+                    ViewBag.Email = "N/A";
+                }
                 return View();
                 }
                 else

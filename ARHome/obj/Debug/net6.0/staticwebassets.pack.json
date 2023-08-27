@@ -57,6 +57,14 @@
       "PackagePath": "staticwebassets\\Images\\ikea-logo.png"
     },
     {
+      "Id": "C:\\Users\\Li-Ching\\A01\\ARHome\\wwwroot\\Images\\love.png",
+      "PackagePath": "staticwebassets\\Images\\love.png"
+    },
+    {
+      "Id": "C:\\Users\\Li-Ching\\A01\\ARHome\\wwwroot\\Images\\no_love.png",
+      "PackagePath": "staticwebassets\\Images\\no_love.png"
+    },
+    {
       "Id": "C:\\Users\\Li-Ching\\A01\\ARHome\\wwwroot\\Images\\sofa1.jpg",
       "PackagePath": "staticwebassets\\Images\\sofa1.jpg"
     },

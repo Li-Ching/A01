@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0A1Ko4p+KMhWOstruyQLpHVSIL1kgt8382gzSzZanFg=",
+  "Hash": "Ii5k6MF6sIX4Q0rlOkGsQvOZoHrHs62fQ0nHNkMkLSA=",
   "Source": "ARHome",
   "BasePath": "_content/ARHome",
   "Mode": "Default",
@@ -236,6 +236,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\ikea-logo.png"
+    },
+    {
+      "Identity": "C:\\Users\\Li-Ching\\A01\\ARHome\\wwwroot\\Images\\love.png",
+      "SourceId": "ARHome",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Li-Ching\\A01\\ARHome\\wwwroot\\",
+      "BasePath": "_content/ARHome",
+      "RelativePath": "Images/love.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\love.png"
+    },
+    {
+      "Identity": "C:\\Users\\Li-Ching\\A01\\ARHome\\wwwroot\\Images\\no_love.png",
+      "SourceId": "ARHome",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Li-Ching\\A01\\ARHome\\wwwroot\\",
+      "BasePath": "_content/ARHome",
+      "RelativePath": "Images/no_love.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\no_love.png"
     },
     {
       "Identity": "C:\\Users\\Li-Ching\\A01\\ARHome\\wwwroot\\Images\\Pottery-Barn-logo.jpg",

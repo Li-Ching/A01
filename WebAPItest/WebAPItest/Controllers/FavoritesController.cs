@@ -95,14 +95,14 @@ namespace WebAPItest.Controllers
 
         // POST api/<FavoritesController>
         [HttpPost]
-        public void Post([FromBody] FavoritesDto value)
+        public void Post(int furnitureId)
         {
             var userId = GetUserIdFromFirebaseToken(); // 使用您的方法從Firebase ID令牌中提取用戶ID
 
             Favorite insert = new Favorite
             {
                 UserId=userId,
-                FurnitureId=value.FurnitureId
+                FurnitureId=furnitureId
             };
             _a01Context.Favorites.Add(insert);
             _a01Context.SaveChanges();
