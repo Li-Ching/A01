@@ -10,10 +10,6 @@ using WebAPItest.Models;
 var builder = WebApplication.CreateBuilder(args);
 builder.Configuration.AddJsonFile("appsettings.json");
 
-// ±N _configuration ½á­Èµ¹ builder.Configuration
-var _configuration = builder.Configuration;
-
-
 // Add services to the container.
 
 builder.Services.AddControllers();
