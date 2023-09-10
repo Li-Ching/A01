@@ -96,6 +96,7 @@ namespace ARHome.Controllers
 
                 if (token != null)
                 {
+                ViewBag.token=token;
                 try
                 {
                     // 在此处从 Firebase 或其他身份验证系统中获取用户的 displayName 和 email
