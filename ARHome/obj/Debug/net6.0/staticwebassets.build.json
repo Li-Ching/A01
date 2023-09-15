@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Ii5k6MF6sIX4Q0rlOkGsQvOZoHrHs62fQ0nHNkMkLSA=",
+  "Hash": "/TrVCf3iBEPP7Hd1Clq/PsD+MgTwmnbE+fNZAQSxlYQ=",
   "Source": "ARHome",
   "BasePath": "_content/ARHome",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Li-Ching\\A01\\ARHome\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\ARHome.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\Li-Ching\\A01\\ARHome\\wwwroot\\3DModel\\Koltuk.obj",
+      "SourceId": "ARHome",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Li-Ching\\A01\\ARHome\\wwwroot\\",
+      "BasePath": "_content/ARHome",
+      "RelativePath": "3DModel/Koltuk.obj",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\3DModel\\Koltuk.obj"
     },
     {
       "Identity": "C:\\Users\\Li-Ching\\A01\\ARHome\\wwwroot\\css\\site.css",

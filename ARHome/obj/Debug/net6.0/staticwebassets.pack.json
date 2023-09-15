@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\ARHome.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Li-Ching\\A01\\ARHome\\wwwroot\\3DModel\\Koltuk.obj",
+      "PackagePath": "staticwebassets\\3DModel\\Koltuk.obj"
+    },
+    {
       "Id": "C:\\Users\\Li-Ching\\A01\\ARHome\\wwwroot\\Images\\Ashley-Furniture-logo.jpg",
       "PackagePath": "staticwebassets\\Images\\Ashley-Furniture-logo.jpg"
     },
