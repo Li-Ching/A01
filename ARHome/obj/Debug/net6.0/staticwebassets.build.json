@@ -1,10 +1,6 @@
 {
   "Version": 1,
-<<<<<<< HEAD
   "Hash": "46tQGpZbSaIKPygCdyX9Ya0pUsCZoE8YI+M9+GpPpo0=",
-=======
-  "Hash": "R/p0SCH3VAaXDOj3OQq4Z3A8wLA4KtjeEtgnJ7JittQ=",
->>>>>>> 89bab4515da6c58b2602fbd95cae26a74bda89ac
   "Source": "ARHome",
   "BasePath": "_content/ARHome",
   "Mode": "Default",
@@ -1617,40 +1613,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
-    },
-    {
-      "Identity": "C:\\Users\\Li-Ching\\A01\\ARHome\\wwwroot\\lib\\OBJLoader.js",
-      "SourceId": "ARHome",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Li-Ching\\A01\\ARHome\\wwwroot\\",
-      "BasePath": "_content/ARHome",
-      "RelativePath": "lib/OBJLoader.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\OBJLoader.js"
-    },
-    {
-      "Identity": "C:\\Users\\Li-Ching\\A01\\ARHome\\wwwroot\\lib\\three.js",
-      "SourceId": "ARHome",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Li-Ching\\A01\\ARHome\\wwwroot\\",
-      "BasePath": "_content/ARHome",
-      "RelativePath": "lib/three.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\three.js"
     }
   ]
 }

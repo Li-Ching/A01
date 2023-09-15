@@ -85,6 +85,7 @@ D:\ASP.NET Core\ARHome\obj\Debug\net6.0\refint\ARHome.dll
 D:\ASP.NET Core\ARHome\obj\Debug\net6.0\ARHome.pdb
 D:\ASP.NET Core\ARHome\obj\Debug\net6.0\ARHome.genruntimeconfig.cache
 D:\ASP.NET Core\ARHome\obj\Debug\net6.0\ref\ARHome.dll
+C:\Users\Li-Ching\A01\ARHome\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\Li-Ching\A01\ARHome\bin\Debug\net6.0\appsettings.json
 C:\Users\Li-Ching\A01\ARHome\bin\Debug\net6.0\ARHome.staticwebassets.runtime.json
 C:\Users\Li-Ching\A01\ARHome\bin\Debug\net6.0\ARHome.exe
