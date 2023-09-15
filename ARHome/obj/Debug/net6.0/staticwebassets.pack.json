@@ -145,6 +145,10 @@
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
+      "Id": "C:\\Users\\Li-Ching\\A01\\ARHome\\wwwroot\\lib\\OBJLoader.js",
+      "PackagePath": "staticwebassets\\lib\\OBJLoader.js"
+    },
+    {
       "Id": "C:\\Users\\Li-Ching\\A01\\ARHome\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
@@ -371,6 +375,10 @@
     {
       "Id": "C:\\Users\\Li-Ching\\A01\\ARHome\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\Li-Ching\\A01\\ARHome\\wwwroot\\lib\\three.js",
+      "PackagePath": "staticwebassets\\lib\\three.js"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.ARHome.Microsoft.AspNetCore.StaticWebAssets.props",
