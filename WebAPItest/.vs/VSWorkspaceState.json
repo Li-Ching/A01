@@ -4,6 +4,6 @@
     "\\WebAPItest",
     "\\WebAPItest\\Controllers"
   ],
-  "SelectedNode": "\\WebAPItest\\Controllers\\LoginController.cs",
+  "SelectedNode": "\\WebAPItest\\Controllers\\FavoritesController.cs",
   "PreviewInSolutionExplorer": false
 }

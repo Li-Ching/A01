@@ -9,7 +9,7 @@ namespace ARHome.Controllers
     
     public class FavoritesController : Controller
     {// 留言板服務在私有雲虛擬機執行時的網址 (要將此網址改為你的Web API網址)
-        string baseurl = "http://172.20.10.5/A01/api/Favorites";
+        string baseurl = "http://192.168.1.104/A01API/api/Favorites";
 
         // GET: MessageBoard
         public async Task<IActionResult> Index()
