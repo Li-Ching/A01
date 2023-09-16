@@ -1,0 +1,45 @@
+﻿@model ARHome.Models.Brand
+
+@{
+    ViewData["Title"] = "顯示品牌明細";
+}
+<style>
+    dl {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        list-style: none;
+        padding: 0;
+    }
+
+    dt {
+        width: 100%;
+        text-align: left;
+        padding-right: 10px;
+        box-sizing: border-box;
+    }
+
+    /* 若需更精細的樣式，可根據需求進行調整 */
+</style>
+
+
+<h3><span class="badge rounded-pill bg-info">顯示品牌明細操作頁面</span></h3>
+<br />
+<div>
+    <img src="http://172.20.10.5/test/Images/@Model.logo" style="height:400px" alt="@Model.logo" />
+</div>
+<dl>
+    <dt>
+        <b><label asp-for="brand1" class="text-primary"></label></b>: <span>@Model.brand1</span>
+    </dt>
+    <dt>
+        <b><label asp-for="phoneNumber" class="text-primary"></label></b>: <span>@Model.phoneNumber</span>
+    </dt>
+    <dt>
+        <b><label asp-for="address" class="text-primary"></label></b>: <span>@Model.address</span>
+    </dt>
+</dl>
+<div>
+    <a asp-action="Index" class="btn btn-info btn-sm">回到家具網站首頁</a>
+</div>
+

@@ -1,0 +1,127 @@
+﻿@model IEnumerable<ARHome.Models.Furniture>
+
+@{
+    ViewData["Title"] = "家具網站首頁";
+}
+
+<style>
+
+    /* 連結的樣式 */
+    .card-link {
+        text-decoration: none;
+        color: inherit; /* 繼承父元素的顏色 */
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    /* <h1>元素的樣式 */
+    .card-title {
+        font-size: 24px; /* 調整字體大小 */
+        margin: 0; /* 清除標題的預設邊距 */
+        padding: 10px; /* 添加一些內間距 */
+    }
+
+    .card-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        min-height: 300px;
+        overflow: hidden; /* 隱藏溢出的部分 */
+    }
+
+        .card-img img {
+            width: 100%;
+            height: auto;
+            max-width: 100%; /* 設置最大寬度 */
+        }
+
+    .bar {
+        display: flex;
+        justify-content: space-between; /* 左右對齊 */
+        align-items: center; /* 垂直居中對齊 */
+        margin: 10px; /* 添加一些底部間距 */
+    }
+
+    h3 {
+        margin: 0; /* 清除標題的預設邊距 */
+    }
+
+    .search {
+        display: flex;
+        align-items: center; /* 垂直居中對齊搜索框 */
+    }
+
+    /* 調整搜索框和按鈕之間的間距 */
+    .search-bar {
+        margin-right: 10px;
+    }
+
+</style>
+
+<div class="bar">
+    <h3>
+        <a asp-area="" asp-controller="Furnitures" asp-action="Index" class="badge rounded-pill bg-info cursor-pointer">所有家具</a>
+        <a asp-area="" asp-controller="Furnitures" asp-action="Index" asp-route-type="chair" class="badge rounded-pill bg-info cursor-pointer">椅子</a>
+        <a asp-area="" asp-controller="Furnitures" asp-action="Index" asp-route-type="table" class="badge rounded-pill bg-info cursor-pointer">桌子</a>
+        <a asp-area="" asp-controller="Furnitures" asp-action="Index" asp-route-type="bed" class="badge rounded-pill bg-info cursor-pointer">床</a>
+        <a asp-area="" asp-controller="Furnitures" asp-action="Index" asp-route-type="sofa" class="badge rounded-pill bg-info cursor-pointer">沙發</a>
+    </h3>
+
+    <div class="search">
+        <form asp-area="" asp-controller="Furnitures" asp-action="Search" method="get">
+            <input class="search-bar" type="text" name="content" id="content" placeholder="想找什麼">
+            <button type="submit" class="search-btn">
+                <i class="fas fa-search"></i>
+            </button>
+        </form>
+    </div>
+
+
+</div>
+
+<br />
+
+<div class="container">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-lg-3 col-sm-4 col-6">
+                <a asp-action="Details" asp-route-id="@item.furnitureId" class="card-link">
+                    <div class="card" style="margin-bottom:5px">
+                        <div class="card-body d-flex flex-column">
+                            <i class="fa fa-heart" style="position: absolute; top: 15px; right: 15px;" onclick="toggleFavorite(this)" data-furniture-id="@item.furnitureId"></i>
+                            <div class="card-img">
+                                <img src="http://172.20.10.5/test/Images/@item.picture" alt="@item.picture" />
+                            </div>
+                            <h1 class="card-title">@item.type</h1>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        }
+    </div>
+</div>
+
+<script>
+    function toggleFavorite(furnitureId) {
+        $.ajax({
+            type: "POST",
+            url: '@Url.Action("ToggleFavorite", "Favorites")',
+            data: { furnitureId: furnitureId },
+            success: function (response) {
+                if (response.success) {
+                    // 成功加入喜好项，你可以执行相应的操作
+                    alert(response.message);
+                } else {
+                    // 操作失败，显示错误消息
+                    alert("操作失败：" + response.message);
+                }
+            },
+            error: function () {
+                alert("请求失败");
+            }
+        });
+    }
+</script>
