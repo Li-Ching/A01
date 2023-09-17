@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Views\Furnitures\ShowObjModel.cshtml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="wwwroot\Images\bed1.jpg" />
     <None Include="wwwroot\Images\bed2.jpg" />
     <None Include="wwwroot\Images\bed3.jpg" />
