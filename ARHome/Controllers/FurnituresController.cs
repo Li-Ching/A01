@@ -8,7 +8,7 @@ namespace ARHome.Controllers
 {
     public class FurnituresController : Controller
     {// 留言板服務在私有雲虛擬機執行時的網址 (要將此網址改為你的Web API網址)
-        string baseurl = "http://192.168.1.104/A01API/api/Furnitures";
+        string baseurl = "http://140.137.41.136:1380/A01/api/Furnitures";
 
         // GET: MessageBoard
         public async Task<IActionResult> Index(string? type)
