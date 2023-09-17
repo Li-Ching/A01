@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Views",
+    "\\Views\\Furnitures",
+    "\\Views\\Shared"
   ],
-  "SelectedNode": "\\ARHome.sln",
+  "SelectedNode": "\\Views\\Furnitures\\Details.cshtml",
   "PreviewInSolutionExplorer": false
 }
