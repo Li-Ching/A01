@@ -10,16 +10,19 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import com.bumptech.glide.Glide;
 
 public class FurnitureActivity extends AppCompatActivity {
     private TextView tvType, tvColor, tvStyle, tvBrand, tvPhoneNumber, tvAddress;
     ImageButton back;
+    ImageView furnitureImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +41,12 @@ public class FurnitureActivity extends AppCompatActivity {
             }
         });
 
+        furnitureImage = findViewById(R.id.furnitureImage);
+        String imageUrl = "http://140.137.41.136:1380/A01Web/Images/sofa1.jpg";
+
+        Glide.with(this)
+                .load(imageUrl)
+                .into(furnitureImage);
 
         tvType = findViewById(R.id.tvType);
         tvColor = findViewById(R.id.tvColor);
