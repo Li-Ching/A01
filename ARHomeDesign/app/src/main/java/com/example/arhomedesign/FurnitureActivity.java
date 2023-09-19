@@ -35,8 +35,6 @@ public class FurnitureActivity extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(FurnitureActivity.this, MainActivity.class);
-                startActivity(intent);
                 finish();
             }
         });
