@@ -49,11 +49,10 @@
             app:layout_constraintVertical_bias="0.024" />
 
         <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
+            android:id="@+id/furnitureImage"
+            android:layout_width="match_parent"
             android:layout_height="260dp"
-            android:contentDescription="@string/chair2"
-            android:src="@drawable/chair_2"
+            android:contentDescription="@string/sofa1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.504"
@@ -67,17 +66,20 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="10dp"
             android:layout_marginTop="8dp"
+            android:layout_marginBottom="240dp"
             android:gravity="center"
-            android:text="@string/chair2"
+            android:text="@string/sofa1"
             android:textColor="@color/black"
             android:textSize="36sp"
             android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.058"
+            app:layout_constraintHorizontal_bias="0.068"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+            app:layout_constraintTop_toBottomOf="@+id/furnitureImage" />
 
         <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="314dp"
             android:layout_height="144dp"
             android:layout_marginHorizontal="10dp"
@@ -90,13 +92,71 @@
             app:layout_constraintTop_toBottomOf="@+id/furnitureName"
             app:layout_constraintVertical_bias="0.081">
 
-            <TextView
-                android:id="@+id/furnitureInfo"
+            <androidx.core.widget.NestedScrollView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                />
+                android:layout_height="match_parent">
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
+                    <TextView
+                        android:id="@+id/tvType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:fontFamily="@font/kaiu"
+                        android:text=""
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/tvColor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:fontFamily="@font/kaiu"
+                        android:text=""
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/tvStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:fontFamily="@font/kaiu"
+                        android:text=""
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/tvBrand"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:fontFamily="@font/kaiu"
+                        android:text=""
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/tvPhoneNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:fontFamily="@font/kaiu"
+                        android:text=""
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/tvAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:fontFamily="@font/kaiu"
+                        android:text=""
+                        android:textSize="24sp" />
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
         </LinearLayout>
 
         <ImageButton
@@ -111,8 +171,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2"
-            app:layout_constraintVertical_bias="0.926" />
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            app:layout_constraintVertical_bias="0.529" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
