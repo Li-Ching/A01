@@ -25,30 +25,55 @@
 
 <h3><span class="badge rounded-pill bg-info">顯示家具明細操作頁面</span></h3>
 <br />
-<div>
-    <img src="http://140.137.41.136:1380/A01Web/Images/@Model.picture" style="height:400px" alt="@Model.picture" />
+
+<div class="container">
+    <div class="row col-md-12">
+        <div class="col-md-6">
+            <div>
+                <img src="http://140.137.41.136:1380/A01Web/Images/@Model.picture" style="height:400px" alt="@Model.picture" />
+            </div>
+            <dl>
+                <dt>
+                    <b><label asp-for="type" class="text-primary"></label></b>: <span>@Model.type</span>
+                </dt>
+                <dt>
+                    <b><label asp-for="color" class="text-primary"></label></b>: <span>@Model.color</span>
+                </dt>
+                <dt>
+                    <b><label asp-for="style" class="text-primary"></label></b>: <span>@Model.style</span>
+                </dt>
+                <dt>
+                    <b><label asp-for="brand1" class="text-primary"></label></b>: <span>@Model.brand1</span>
+                </dt>
+                <dt>
+                    <b><label asp-for="phoneNumber" class="text-primary"></label></b>: <span>@Model.phoneNumber</span>
+                </dt>
+                <dt>
+                    <b><label asp-for="address" class="text-primary"></label></b>: <span>@Model.address</span>
+                </dt>
+            </dl>
+        </div>
+        <div class="col-md-6">
+            <div id="buttonContainer">
+                <button id="button">查看模型</button>
+            </div>
+            <div style"height: 600px" id="view3dContainer" style="display:none;">
+                <iframe frameborder="0"
+                        noresize="noresize"
+                        style="background: transparent; width: 636px; height:660px;"
+                        src="https://app.vectary.com/p/43JmomPxH6MUp0cbfThcCq">
+                </iframe>
+            </div>
+        </div>
+    </div>
 </div>
-<dl>
-    <dt>
-        <b><label asp-for="type" class="text-primary"></label></b>: <span>@Model.type</span>
-    </dt>
-    <dt>
-        <b><label asp-for="color" class="text-primary"></label></b>: <span>@Model.color</span>
-    </dt>
-    <dt>
-        <b><label asp-for="style" class="text-primary"></label></b>: <span>@Model.style</span>
-    </dt>
-    <dt>
-        <b><label asp-for="brand1" class="text-primary"></label></b>: <span>@Model.brand1</span>
-    </dt>
-    <dt>
-        <b><label asp-for="phoneNumber" class="text-primary"></label></b>: <span>@Model.phoneNumber</span>
-    </dt>
-    <dt>
-        <b><label asp-for="address" class="text-primary"></label></b>: <span>@Model.address</span>
-    </dt>
-</dl>
 <div>
     <a asp-action="Index" class="btn btn-info btn-sm">回到家具網站首頁</a>
 </div>
 
+<script>
+    document.getElementById('button').addEventListener('click', function () {
+        document.getElementById('buttonContainer').style.display = 'none';
+        document.getElementById('view3dContainer').style.display = 'block';
+    });
+</script>

@@ -44,6 +44,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Aspose.3D": {
+              "target": "Package",
+              "version": "[23.8.0, )"
+            },
             "Firebase.Auth": {
               "target": "Package",
               "version": "[1.0.0, )"
@@ -75,6 +79,10 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[6.0.16, )"
+            },
+            "ThreeLib": {
+              "target": "Package",
+              "version": "[1.0.208, )"
             }
           },
           "imports": [

@@ -89,8 +89,36 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\user\\A01\\ARHome\\wwwroot\\js\\ColladaLoader.js",
+      "PackagePath": "staticwebassets\\js\\ColladaLoader.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\A01\\ARHome\\wwwroot\\js\\OrbitControls.js",
+      "PackagePath": "staticwebassets\\js\\OrbitControls.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\A01\\ARHome\\wwwroot\\js\\TGALoader.js",
+      "PackagePath": "staticwebassets\\js\\TGALoader.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\A01\\ARHome\\wwwroot\\js\\ThreeJSFunctions.js",
+      "PackagePath": "staticwebassets\\js\\ThreeJSFunctions.js"
+    },
+    {
       "Id": "C:\\Users\\user\\A01\\ARHome\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\A01\\ARHome\\wwwroot\\js\\three.js",
+      "PackagePath": "staticwebassets\\js\\three.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\A01\\ARHome\\wwwroot\\js\\three.min.js",
+      "PackagePath": "staticwebassets\\js\\three.min.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\A01\\ARHome\\wwwroot\\js\\three.module.js",
+      "PackagePath": "staticwebassets\\js\\three.module.js"
     },
     {
       "Id": "C:\\Users\\user\\A01\\ARHome\\wwwroot\\lib\\bootstrap\\LICENSE",
@@ -319,10 +347,6 @@
     {
       "Id": "C:\\Users\\user\\A01\\ARHome\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
-    },
-    {
-      "Id": "C:\\Users\\user\\A01\\ARHome\\wwwroot\\sofa.obj",
-      "PackagePath": "staticwebassets\\sofa.obj"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.ARHome.Microsoft.AspNetCore.StaticWebAssets.props",

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "8C5PYKmwQgGsgCP+h8Sc8sjnzliulopsVI5/X9pfAkuyffky/cqz7pLIZCPYceC51ykYnm9FIgdcSbyr2x8lxA==",
+  "dgSpecHash": "gCZ26xUqvYtRZcRCm8vLu+Ryx2Oayddy3A0ACg+aj/52ZWevoClsJK22hLjifp+eeQc0iOlV662b7h0fkZBkZg==",
   "success": true,
   "projectFilePath": "C:\\Users\\user\\A01\\ARHome\\ARHome.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\aspose.3d\\23.8.0\\aspose.3d.23.8.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\firebase.auth\\1.0.0\\firebase.auth.1.0.0.nupkg.sha512",
@@ -244,7 +245,19 @@
     "C:\\Users\\user\\.nuget\\packages\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
-    "C:\\Users\\user\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
+    "C:\\Users\\user\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\threelib\\1.0.208\\threelib.1.0.208.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "已使用 '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' 而非專案目標架構 'net6.0' 還原了套件 'ThreeLib 1.0.208'。此套件與您的專案並非完全相容。",
+      "libraryId": "ThreeLib",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

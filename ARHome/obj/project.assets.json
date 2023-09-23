@@ -2,6 +2,22 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "Aspose.3D/23.8.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Drawing.Common": "5.0.0"
+        },
+        "compile": {
+          "lib/net6.0/Aspose.3D.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Aspose.3D.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Azure.Core/1.24.0": {
         "type": "package",
         "dependencies": {
@@ -4143,10 +4159,57 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "ThreeLib/1.0.208": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "10.0.3"
+        },
+        "compile": {
+          "lib/net45/ThreeLib.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/ThreeLib.dll": {
+            "related": ".xml"
+          }
+        }
       }
     }
   },
   "libraries": {
+    "Aspose.3D/23.8.0": {
+      "sha512": "mNkrJ7bINyQM6Kf2XtzrqS5VkC+N/57WI9t8gIimLlnvpoqKF3DlhJZxexAesMcSWr26dGCe9zp/2w7nUX1yZQ==",
+      "type": "package",
+      "path": "aspose.3d/23.8.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Licenses/Aspose_End-User-License-Agreement.txt",
+        "Licenses/thirdpartylicense.Aspose.3D.for.NET.pdf",
+        "README.md",
+        "aspose.3d.23.8.0.nupkg.sha512",
+        "aspose.3d.nuspec",
+        "icon.png",
+        "lib/net45/Aspose.3D.dll",
+        "lib/net45/Aspose.3D.xml",
+        "lib/net46/Aspose.3D.dll",
+        "lib/net46/Aspose.3D.xml",
+        "lib/net6.0/Aspose.3D.dll",
+        "lib/net6.0/Aspose.3D.xml",
+        "lib/netcoreapp31/Aspose.3D.dll",
+        "lib/netcoreapp31/Aspose.3D.xml",
+        "lib/netstandard20/Aspose.3D.dll",
+        "lib/netstandard20/Aspose.3D.xml",
+        "lib/netstandard21/Aspose.3D.dll",
+        "lib/netstandard21/Aspose.3D.xml",
+        "web-renderer/aspose.3d-2.1.data",
+        "web-renderer/aspose.3d-2.1.js",
+        "web-renderer/aspose.3d-2.1.wasm",
+        "web-renderer/aspose3d.d.ts"
+      ]
+    },
     "Azure.Core/1.24.0": {
       "sha512": "+/qI1j2oU1S4/nvxb2k/wDsol00iGf1AyJX5g3epV7eOpQEP/2xcgh/cxgKMeFgn3U2fmgSiBnQZdkV+l5y0Uw==",
       "type": "package",
@@ -11701,17 +11764,32 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "ThreeLib/1.0.208": {
+      "sha512": "F30bdPl6t21O5rU15jq1OEuFa5Fb+iX7isj7I3zw8j70Ot/HapGuLv0cyg6G5E3NNua0WGkNwDGO/YfzJkOTxw==",
+      "type": "package",
+      "path": "threelib/1.0.208",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/ThreeLib.dll",
+        "lib/net45/ThreeLib.xml",
+        "threelib.1.0.208.nupkg.sha512",
+        "threelib.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Aspose.3D >= 23.8.0",
       "Firebase.Auth >= 1.0.0",
       "Microsoft.AspNetCore.Session >= 2.1.1",
       "Microsoft.EntityFrameworkCore >= 7.0.9",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.9",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.9",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.9",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.16"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.16",
+      "ThreeLib >= 1.0.208"
     ]
   },
   "packageFolders": {
@@ -11758,6 +11836,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "Aspose.3D": {
+            "target": "Package",
+            "version": "[23.8.0, )"
+          },
           "Firebase.Auth": {
             "target": "Package",
             "version": "[1.0.0, )"
@@ -11789,6 +11871,10 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[6.0.16, )"
+          },
+          "ThreeLib": {
+            "target": "Package",
+            "version": "[1.0.208, )"
           }
         },
         "imports": [
@@ -11813,5 +11899,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "已使用 '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' 而非專案目標架構 'net6.0' 還原了套件 'ThreeLib 1.0.208'。此套件與您的專案並非完全相容。",
+      "libraryId": "ThreeLib",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }
