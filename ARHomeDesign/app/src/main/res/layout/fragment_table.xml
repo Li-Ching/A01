@@ -15,13 +15,16 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <LinearLayout
+        <androidx.cardview.widget.CardView
             android:id="@+id/butTable1"
             android:layout_width="match_parent"
             android:layout_height="160dp"
             android:layout_margin="5dp"
-            android:background="@drawable/elevated_rectangle_15"
-            android:backgroundTint="@color/table_1"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="20dp"
+            app:cardBackgroundColor="@color/table_1"
+            app:cardMaxElevation="12dp"
+            app:cardPreventCornerOverlap="true"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -45,10 +48,10 @@
                     android:orientation="vertical"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.313"
+                    app:layout_constraintHorizontal_bias="0.834"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.119">
+                    app:layout_constraintVertical_bias="0.052">
 
                     <TextView
                         android:id="@+id/table1Name"
@@ -91,15 +94,18 @@
                     app:layout_constraintVertical_bias="0.954" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-        </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
-        <LinearLayout
+        <androidx.cardview.widget.CardView
             android:id="@+id/butTable2"
             android:layout_width="match_parent"
             android:layout_height="160dp"
             android:layout_margin="5dp"
-            android:background="@drawable/elevated_rectangle_15"
-            android:backgroundTint="@color/table_2"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="20dp"
+            app:cardBackgroundColor="@color/table_2"
+            app:cardMaxElevation="12dp"
+            app:cardPreventCornerOverlap="true"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -123,10 +129,10 @@
                     android:orientation="vertical"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.313"
+                    app:layout_constraintHorizontal_bias="0.834"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.119">
+                    app:layout_constraintVertical_bias="0.052">
 
                     <TextView
                         android:id="@+id/table2Name"
@@ -169,15 +175,18 @@
                     app:layout_constraintVertical_bias="0.954" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-        </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
-        <LinearLayout
+        <androidx.cardview.widget.CardView
             android:id="@+id/butTable3"
             android:layout_width="match_parent"
             android:layout_height="160dp"
             android:layout_margin="5dp"
-            android:background="@drawable/elevated_rectangle_15"
-            android:backgroundTint="@color/table_3"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="20dp"
+            app:cardBackgroundColor="@color/table_3"
+            app:cardMaxElevation="12dp"
+            app:cardPreventCornerOverlap="true"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -201,10 +210,10 @@
                     android:orientation="vertical"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.313"
+                    app:layout_constraintHorizontal_bias="0.834"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.119">
+                    app:layout_constraintVertical_bias="0.052">
 
                     <TextView
                         android:id="@+id/table3Name"
@@ -247,7 +256,7 @@
                     app:layout_constraintVertical_bias="0.954" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-        </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
     </LinearLayout>
 </ScrollView>
