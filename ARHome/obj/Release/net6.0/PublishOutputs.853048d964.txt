@@ -4,6 +4,7 @@ C:\Users\user\A01\ARHome\obj\Release\net6.0\PubTmp\Out\appsettings.json
 C:\Users\user\A01\ARHome\obj\Release\net6.0\PubTmp\Out\ARHome.dll
 C:\Users\user\A01\ARHome\obj\Release\net6.0\PubTmp\Out\ARHome.runtimeconfig.json
 C:\Users\user\A01\ARHome\obj\Release\net6.0\PubTmp\Out\ARHome.pdb
+C:\Users\user\A01\ARHome\obj\Release\net6.0\PubTmp\Out\Aspose.3D.dll
 C:\Users\user\A01\ARHome\obj\Release\net6.0\PubTmp\Out\Azure.Core.dll
 C:\Users\user\A01\ARHome\obj\Release\net6.0\PubTmp\Out\Azure.Identity.dll
 C:\Users\user\A01\ARHome\obj\Release\net6.0\PubTmp\Out\Firebase.Auth.dll
@@ -85,6 +86,7 @@ C:\Users\user\A01\ARHome\obj\Release\net6.0\PubTmp\Out\System.Security.Permissio
 C:\Users\user\A01\ARHome\obj\Release\net6.0\PubTmp\Out\System.Text.Encodings.Web.dll
 C:\Users\user\A01\ARHome\obj\Release\net6.0\PubTmp\Out\System.Text.Json.dll
 C:\Users\user\A01\ARHome\obj\Release\net6.0\PubTmp\Out\System.Windows.Extensions.dll
+C:\Users\user\A01\ARHome\obj\Release\net6.0\PubTmp\Out\ThreeLib.dll
 C:\Users\user\A01\ARHome\obj\Release\net6.0\PubTmp\Out\af\Humanizer.resources.dll
 C:\Users\user\A01\ARHome\obj\Release\net6.0\PubTmp\Out\ar\Humanizer.resources.dll
 C:\Users\user\A01\ARHome\obj\Release\net6.0\PubTmp\Out\az\Humanizer.resources.dll

@@ -8,16 +8,29 @@
     ".NETCoreApp,Version=v6.0": {
       "ARHome/1.0.0": {
         "dependencies": {
+          "Aspose.3D": "23.8.0",
           "Firebase.Auth": "1.0.0",
           "Microsoft.AspNetCore.Session": "2.1.1",
           "Microsoft.EntityFrameworkCore": "7.0.9",
           "Microsoft.EntityFrameworkCore.Design": "7.0.9",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.9",
           "Microsoft.EntityFrameworkCore.Tools": "7.0.9",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.16"
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.16",
+          "ThreeLib": "1.0.208"
         },
         "runtime": {
           "ARHome.dll": {}
+        }
+      },
+      "Aspose.3D/23.8.0": {
+        "dependencies": {
+          "System.Drawing.Common": "6.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/Aspose.3D.dll": {
+            "assemblyVersion": "23.8.0.0",
+            "fileVersion": "23.8.0.0"
+          }
         }
       },
       "Azure.Core/1.24.0": {
@@ -2710,6 +2723,17 @@
           "System.Threading": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0"
         }
+      },
+      "ThreeLib/1.0.208": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "runtime": {
+          "lib/net45/ThreeLib.dll": {
+            "assemblyVersion": "1.0.208.0",
+            "fileVersion": "1.0.208.0"
+          }
+        }
       }
     }
   },
@@ -2718,6 +2742,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Aspose.3D/23.8.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mNkrJ7bINyQM6Kf2XtzrqS5VkC+N/57WI9t8gIimLlnvpoqKF3DlhJZxexAesMcSWr26dGCe9zp/2w7nUX1yZQ==",
+      "path": "aspose.3d/23.8.0",
+      "hashPath": "aspose.3d.23.8.0.nupkg.sha512"
     },
     "Azure.Core/1.24.0": {
       "type": "package",
@@ -4405,6 +4436,13 @@
       "sha512": "sha512-5zJ0XDxAIg8iy+t4aMnQAu0MqVbqyvfoUVl1yDV61xdo3Vth45oA2FoY4pPkxYAH5f8ixpmTqXeEIya95x0aCQ==",
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
+    },
+    "ThreeLib/1.0.208": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-F30bdPl6t21O5rU15jq1OEuFa5Fb+iX7isj7I3zw8j70Ot/HapGuLv0cyg6G5E3NNua0WGkNwDGO/YfzJkOTxw==",
+      "path": "threelib/1.0.208",
+      "hashPath": "threelib.1.0.208.nupkg.sha512"
     }
   }
 }

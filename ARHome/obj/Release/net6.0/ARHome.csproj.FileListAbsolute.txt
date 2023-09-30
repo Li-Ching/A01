@@ -536,3 +536,5 @@ C:\Users\user\A01\ARHome\obj\Release\net6.0\refint\ARHome.dll
 C:\Users\user\A01\ARHome\obj\Release\net6.0\ARHome.pdb
 C:\Users\user\A01\ARHome\obj\Release\net6.0\ARHome.genruntimeconfig.cache
 C:\Users\user\A01\ARHome\obj\Release\net6.0\ref\ARHome.dll
+C:\Users\user\A01\ARHome\bin\Release\net6.0\Aspose.3D.dll
+C:\Users\user\A01\ARHome\bin\Release\net6.0\ThreeLib.dll
