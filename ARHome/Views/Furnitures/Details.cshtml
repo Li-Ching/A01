@@ -29,9 +29,13 @@
 <div class="container">
     <div class="row col-md-12">
         <div class="col-md-6">
+            <div onclick="toggleFavorite('@Model.furnitureId')" data-furniture-id="@Model.furnitureId" style="text-align: right;">
+                <i class="fa fa-heart"></i>
+            </div>
             <div>
                 <img src="http://140.137.41.136:1380/A01Web/Images/@Model.picture" style="width: 100%; height:auto;" alt="@Model.picture" />
             </div>
+            
             <dl>
                 <dt>
                     <b><label asp-for="type" class="text-primary"></label></b>: <span>@Model.type</span>
@@ -52,6 +56,9 @@
                     <b><label asp-for="address" class="text-primary"></label></b>: <span>@Model.address</span>
                 </dt>
             </dl>
+            
+
+
         </div>
         <div class="col-md-6">
             <div id="buttonContainer">
@@ -77,4 +84,28 @@
         document.getElementById('buttonContainer').style.display = 'none';
         document.getElementById('view3dContainer').style.display = 'block';
     });
+
+    function toggleFavorite(furnitureId) {
+        console.log(furnitureId);
+        $.ajax({
+            type: "GET",
+            url: '@Url.Action("ToggleFavorite", "Favorites")',
+            data: { furnitureId: furnitureId },
+            success: function (response) {
+                if (response.success) {
+                    console.log(response.message);
+                    alert(response.message);
+                }
+                else {
+                    alert(response.message); // 在用戶未登入時也顯示訊息
+                    window.location.href = '@Url.Action("SignIn", "Home")';
+                }
+            },
+            error: function () {
+                alert("請求失敗");
+            }
+        });
+    }
+
+
 </script>

@@ -7,6 +7,7 @@ using System.IdentityModel.Tokens.Jwt;
 using FirebaseAdmin.Auth;
 using FirebaseAdmin;
 using Google.Apis.Auth.OAuth2;
+using YamlDotNet.Core.Tokens;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -69,74 +70,89 @@ namespace WebAPItest.Controllers
                           }).ToList();
             return result;
         }
+        public class OperationResult
+        {
+            public string? Message { get; set; }
+        }
+
         // GET api/<FavoritesController>/5
-        [HttpGet("{userId}")]
-        public IEnumerable<FavoritesDto> Get(string userId)
+        [HttpGet("{furnitureId}")]
+        public IActionResult Get(int furnitureId)
         {
-            var result = (from b in _a01Context.Favorites
-                          .Include(b => b.Furniture)
-                          where b.UserId == userId
-                          select new FavoritesDto
-                          {
-                              UserId = b.UserId,
-                              FurnitureId = b.FurnitureId,
-                              Type=b.Furniture.Type,
-                              Color=b.Furniture.Color,
-                              Style=b.Furniture.Style,
-                              Brand1 = (b.Furniture.Brand==null) ? null : b.Furniture.Brand.Brand1,
-                              PhoneNumber = (b.Furniture.Brand == null) ? null : b.Furniture.Brand.PhoneNumber,
-                              Address= (b.Furniture.Brand == null) ? null : b.Furniture.Brand.Address,
-                              Logo= (b.Furniture.Brand == null) ? null : b.Furniture.Brand.Logo,
-                              Location=b.Furniture.Location,
-                              Picture=b.Furniture.Picture
-                          }).ToList();
-            return result;
-        }
-
-        // POST api/<FavoritesController>
-        [HttpPost]
-        public void Post([FromBody] Favorite value)
-        {
-            // 使用HttpContext清除緩存
-            HttpContext.Items["CachedUserId"] = null;
-
-            var userId = GetUserIdFromFirebaseToken(); // 使用您的方法從Firebase ID令牌中提取用戶ID
-
-            Favorite insert = new Favorite
+            try
             {
-                UserId = userId,
-                FurnitureId = value.FurnitureId
-            };
-            _a01Context.Favorites.Add(insert);
-            _a01Context.SaveChanges();
-        }
+                HttpContext.Items["CachedUserId"] = null;
 
-        // DELETE api/<FavoritesController>/5
-        [HttpPost("{furnitureId}")]
-        public IActionResult Delete(int furnitureId)
-        {
-            var userId = GetUserIdFromFirebaseToken(); // 使用您的方法從Firebase ID令牌中提取用戶ID
+                var userId = GetUserIdFromFirebaseToken();
+                OperationResult result = new OperationResult();
 
-            if (userId == null)
-            {
-                // 可以在這裡處理無效的 nameId，例如回傳 401 Unauthorized
-                return Unauthorized();
+                var existingFavorite = _a01Context.Favorites
+                    .SingleOrDefault(f => f.UserId == userId && f.FurnitureId == furnitureId);
+
+                if (existingFavorite != null)
+                {
+                    _a01Context.Favorites.Remove(existingFavorite);
+                    _a01Context.SaveChanges();
+                    result.Message = "刪除家具";
+                }
+                else
+                {
+                    Favorite insert = new Favorite
+                    {
+                        UserId = userId,
+                        FurnitureId = furnitureId
+                    };
+                    _a01Context.Favorites.Add(insert);
+                    _a01Context.SaveChanges();
+                    result.Message = "新增家具";
+                }
+
+                return Ok(result);
             }
-
-            var delete = (from b in _a01Context.Favorites
-                          where b.UserId == userId
-                          && b.FurnitureId == furnitureId
-                          && b.FurnitureId != null // 確保 FurnitureId 不為 null
-                          select b).SingleOrDefault();
-
-            if (delete == null)
+            catch (Exception ex)
             {
-                return NotFound();
+                // 處理例外情況，例如記錄錯誤或返回適當的錯誤響應
+                return StatusCode(500, new { Message = ex.Message });
             }
-            _a01Context.Favorites.Remove(delete);
-            _a01Context.SaveChanges();
-            return NoContent();
         }
+
+
+
+
+
+
+        //// POST api/<FavoritesController>
+        //[HttpPost]
+        //public void Post([FromBody] Favorite value)
+        //{
+
+        //}
+
+        //// DELETE api/<FavoritesController>/5
+        //[HttpPost("{furnitureId}")]
+        //public IActionResult Delete(int furnitureId)
+        //{
+        //    var userId = GetUserIdFromFirebaseToken(); // 使用您的方法從Firebase ID令牌中提取用戶ID
+
+        //    if (userId == null)
+        //    {
+        //        // 可以在這裡處理無效的 nameId，例如回傳 401 Unauthorized
+        //        return Unauthorized();
+        //    }
+
+        //    var delete = (from b in _a01Context.Favorites
+        //                  where b.UserId == userId
+        //                  && b.FurnitureId == furnitureId
+        //                  select b).SingleOrDefault();
+
+        //    if (delete == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    _a01Context.Favorites.Remove(delete);
+        //    _a01Context.SaveChanges();
+        //    return NoContent();
+        //}
         private string GetUserIdFromFirebaseToken()
         {
             try

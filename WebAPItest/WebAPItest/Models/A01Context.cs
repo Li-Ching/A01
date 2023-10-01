@@ -17,8 +17,6 @@ public partial class A01Context : DbContext
 
     public virtual DbSet<Furniture> Furnitures { get; set; }
 
-    public virtual DbSet<User> Users { get; set; }
-
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     { }
 
@@ -44,25 +42,6 @@ public partial class A01Context : DbContext
                 .IsUnicode(false)
                 .HasColumnName("logo");
             entity.Property(e => e.PhoneNumber).HasColumnName("phoneNumber");
-        });
-
-        modelBuilder.Entity<User>(entity =>
-        {
-            entity.HasKey(e => e.UserId).HasName("PK__Users__CB9A1CFF73659BC8");
-
-            entity.Property(e => e.UserId).HasColumnName("userId");
-            entity.Property(e => e.Email)
-                .HasMaxLength(50)
-                .IsUnicode(false)
-                .HasColumnName("email");
-            entity.Property(e => e.Password)
-                .HasMaxLength(50)
-                .IsUnicode(false)
-                .HasColumnName("password");
-            entity.Property(e => e.Username)
-                .HasMaxLength(50)
-                .IsUnicode(false)
-                .HasColumnName("username");
         });
 
         modelBuilder.Entity<Furniture>(entity =>
