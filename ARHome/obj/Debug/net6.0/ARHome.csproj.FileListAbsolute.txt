@@ -637,13 +637,6 @@ C:\Users\Chlinkuser\Documents\GitHub\A01\ARHome\bin\Debug\net6.0\Aspose.3D.dll
 C:\Users\Chlinkuser\Documents\GitHub\A01\ARHome\bin\Debug\net6.0\Azure.Core.dll
 C:\Users\Chlinkuser\Documents\GitHub\A01\ARHome\bin\Debug\net6.0\Azure.Identity.dll
 C:\Users\Chlinkuser\Documents\GitHub\A01\ARHome\bin\Debug\net6.0\Firebase.Auth.dll
-C:\Users\Chlinkuser\Documents\GitHub\A01\ARHome\bin\Debug\net6.0\FirebaseAdmin.dll
-C:\Users\Chlinkuser\Documents\GitHub\A01\ARHome\bin\Debug\net6.0\Google.Api.Gax.dll
-C:\Users\Chlinkuser\Documents\GitHub\A01\ARHome\bin\Debug\net6.0\Google.Api.Gax.Rest.dll
-C:\Users\Chlinkuser\Documents\GitHub\A01\ARHome\bin\Debug\net6.0\Google.Apis.dll
-C:\Users\Chlinkuser\Documents\GitHub\A01\ARHome\bin\Debug\net6.0\Google.Apis.Auth.PlatformServices.dll
-C:\Users\Chlinkuser\Documents\GitHub\A01\ARHome\bin\Debug\net6.0\Google.Apis.Auth.dll
-C:\Users\Chlinkuser\Documents\GitHub\A01\ARHome\bin\Debug\net6.0\Google.Apis.Core.dll
 C:\Users\Chlinkuser\Documents\GitHub\A01\ARHome\bin\Debug\net6.0\Humanizer.dll
 C:\Users\Chlinkuser\Documents\GitHub\A01\ARHome\bin\Debug\net6.0\MessagePack.dll
 C:\Users\Chlinkuser\Documents\GitHub\A01\ARHome\bin\Debug\net6.0\MessagePack.Annotations.dll

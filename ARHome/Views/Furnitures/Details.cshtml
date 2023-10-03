@@ -3,25 +3,22 @@
 @{
     ViewData["Title"] = "顯示家具明細";
 }
-<style>
-    dl {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        list-style: none;
-        padding: 0;
-    }
 
-    dt {
-        width: 100%;
-        text-align: left;
-        padding-right: 10px;
-        box-sizing: border-box;
-    }
-
-    /* 若需更精細的樣式，可根據需求進行調整 */
-</style>
-
+<!-- The Modal -->
+<div id="Likemessage" class="message">
+    <div class="msg_div">
+        <div class="msg_div2">
+            <span id="messagetext" style="color:#fff;font-weight:400;font-size:18px;">成功加入喜好項目！</span>
+        </div>
+    </div>
+</div>
+<div id="DisLikemessage" class="message">
+    <div class="msg_div">
+        <div class="msg_div2">
+            <span id="messagetext" style="color:#fff;font-weight:400;font-size:18px;">成功移除家具！</span>
+        </div>
+    </div>
+</div>
 
 <h3><span class="badge rounded-pill bg-info">顯示家具明細操作頁面</span></h3>
 <br />
@@ -35,7 +32,7 @@
             <div>
                 <img src="http://140.137.41.136:1380/A01Web/Images/@Model.picture" style="width: 100%; height:auto;" alt="@Model.picture" />
             </div>
-            
+
             <dl>
                 <dt>
                     <b><label asp-for="type" class="text-primary"></label></b>: <span>@Model.type</span>
@@ -56,7 +53,7 @@
                     <b><label asp-for="address" class="text-primary"></label></b>: <span>@Model.address</span>
                 </dt>
             </dl>
-            
+
 
 
         </div>
@@ -94,7 +91,18 @@
             success: function (response) {
                 if (response.success) {
                     console.log(response.message);
-                    alert(response.message);
+                    if (response.message == "新增家具") {
+                        $('#Likemessage').show();
+                        $('#Likemessage').fadeOut(2000);
+                    }
+                    else {
+                        $('#DisLikemessage').show();
+                        $('#DisLikemessage').fadeOut(2000);
+                    }
+                    //alert(response.message);
+                    setTimeout(function () {
+                        window.location.reload();
+                    }, 800);
                 }
                 else {
                     alert(response.message); // 在用戶未登入時也顯示訊息
@@ -106,6 +114,4 @@
             }
         });
     }
-
-
 </script>

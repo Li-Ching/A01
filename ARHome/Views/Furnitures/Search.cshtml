@@ -3,62 +3,21 @@
 @{
     ViewData["Title"] = "家具網站首頁";
 }
-
-<style>
-
-    /* 連結的樣式 */
-    .card-link {
-        text-decoration: none;
-        color: inherit; /* 繼承父元素的顏色 */
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-    }
-
-    /* <h1>元素的樣式 */
-    .card-title {
-        font-size: 24px; /* 調整字體大小 */
-        margin: 0; /* 清除標題的預設邊距 */
-        padding: 10px; /* 添加一些內間距 */
-    }
-
-    .card-img {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        min-height: 300px;
-        overflow: hidden; /* 隱藏溢出的部分 */
-    }
-
-        .card-img img {
-            width: 100%;
-            height: auto;
-            max-width: 100%; /* 設置最大寬度 */
-        }
-
-    .bar {
-        display: flex;
-        justify-content: space-between; /* 左右對齊 */
-        align-items: center; /* 垂直居中對齊 */
-        margin: 10px; /* 添加一些底部間距 */
-    }
-
-    h3 {
-        margin: 0; /* 清除標題的預設邊距 */
-    }
-
-    .search {
-        display: flex;
-        align-items: center; /* 垂直居中對齊搜索框 */
-    }
-
-    /* 調整搜索框和按鈕之間的間距 */
-    .search-bar {
-        margin-right: 10px;
-    }
-
-</style>
+<!-- The Modal -->
+<div id="Likemessage" class="message">
+    <div class="msg_div">
+        <div class="msg_div2">
+            <span id="messagetext" style="color:#fff;font-weight:400;font-size:18px;">成功加入喜好項目！</span>
+        </div>
+    </div>
+</div>
+<div id="DisLikemessage" class="message">
+    <div class="msg_div">
+        <div class="msg_div2">
+            <span id="messagetext" style="color:#fff;font-weight:400;font-size:18px;">成功移除家具！</span>
+        </div>
+    </div>
+</div>
 
 <div class="bar">
     <h3>
@@ -87,18 +46,57 @@
     <div class="row">
         @foreach (var item in Model)
         {
-            <div class="col-lg-3 col-sm-4 col-6">            
-                <a asp-action="Details" asp-route-id="@item.furnitureId" class="card-link">
-                    <div class="card" style="margin-bottom:5px">
-                        <div class="card-body d-flex flex-column">
+            <div class="col-lg-3 col-sm-4 col-6">
+                <div class="card" style="margin-bottom:5px">
+                    <div class="card-body d-flex flex-column">
+                        <div>
+                            <i class="fa fa-heart" style="float: right; cursor: pointer;" onclick="toggleFavorite('@item.furnitureId')" data-furniture-id="@item.furnitureId"></i>
+                        </div>
+                        <a asp-action="Details" asp-route-id="@item.furnitureId" class="card-link">
                             <div class="card-img">
                                 <img src="http://140.137.41.136:1380/A01Web/Images/@item.picture" alt="@item.picture" />
                             </div>
                             <h1 class="card-title">@item.type</h1>
-                        </div>
+                        </a>
                     </div>
-                </a>
+                </div>
             </div>
         }
     </div>
 </div>
+
+
+<script>
+    function toggleFavorite(furnitureId) {
+        console.log(furnitureId);
+        $.ajax({
+            type: "GET",
+            url: '@Url.Action("ToggleFavorite", "Favorites")',
+            data: { furnitureId: furnitureId },
+            success: function (response) {
+                if (response.success) {
+                    console.log(response.message);
+                    if (response.message == "新增家具") {
+                        $('#Likemessage').show();
+                        $('#Likemessage').fadeOut(2000);
+                    }
+                    else {
+                        $('#DisLikemessage').show();
+                        $('#DisLikemessage').fadeOut(2000);
+                    }
+                    //alert(response.message);
+                    setTimeout(function () {
+                        window.location.reload();
+                    }, 800);
+                }
+                else {
+                    alert(response.message); // 在用戶未登入時也顯示訊息
+                    window.location.href = '@Url.Action("SignIn", "Home")';
+                }
+            },
+            error: function () {
+                alert("請求失敗");
+            }
+        });
+    }
+</script>
