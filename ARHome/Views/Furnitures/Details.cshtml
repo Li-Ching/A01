@@ -19,6 +19,13 @@
         </div>
     </div>
 </div>
+<div id="NoLogin" class="message">
+    <div class="msg_div">
+        <div class="msg_div3">
+            <span id="messagetext" style="color:#fff;font-weight:400;font-size:18px;">用戶未登入！</span>
+        </div>
+    </div>
+</div>
 
 <h3><span class="badge rounded-pill bg-info">顯示家具明細操作頁面</span></h3>
 <br />
@@ -105,8 +112,13 @@
                     }, 800);
                 }
                 else {
-                    alert(response.message); // 在用戶未登入時也顯示訊息
-                    window.location.href = '@Url.Action("SignIn", "Home")';
+                    // alert(response.message); // 在用戶未登入時也顯示訊息
+                    // window.location.href = '@Url.Action("SignIn", "Home")';
+                    $('#NoLogin').show();
+                    $('#NoLogin').fadeOut(2000);
+                    setTimeout(function () {
+                        window.location.href = '@Url.Action("SignIn", "Home")';
+                    }, 800);
                 }
             },
             error: function () {
