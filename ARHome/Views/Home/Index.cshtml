@@ -14,6 +14,30 @@
 
     @* <p>使用者的 token：@ViewBag.token</p> *@
     <p>使用者的 DisplayName：@ViewBag.DisplayName</p>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        更改 DisplayName
+    </button>
+
     <p>使用者的 Email：@ViewBag.Email</p>
     <a asp-action="LogOut">Sign Out</a>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">更改名字</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- 新增一個輸入框 -->
+                <input type="text" class="form-control" id="newName" placeholder="請輸入新的名字">
+            </div>
+            <div class="modal-footer">
+                <!-- 新增一個按鈕用於儲存變更 -->
+                <button type="button" class="btn btn-primary" onclick="changeName()">儲存變更</button>
+            </div>
+        </div>
+    </div>
 </div>

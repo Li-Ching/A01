@@ -4,9 +4,11 @@ using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Diagnostics;
 using Microsoft.AspNetCore.Http; // 引入用於會話的命名空間
+using Microsoft.AspNetCore.Identity;
 
 namespace ARHome.Controllers
 {
+
     public class HomeController : Controller
     {
         FirebaseAuthProvider auth;
@@ -16,6 +18,7 @@ namespace ARHome.Controllers
                             new FirebaseConfig("AIzaSyCuJICZfjPRYfSLZ4LRUqGris0T3klukKU"));
         }
 
+       
         public IActionResult Registration()
         {
             return View();
