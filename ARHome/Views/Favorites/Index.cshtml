@@ -37,7 +37,7 @@
                             <div>
                                 <i class="fa fa-heart" style="float: right; cursor: pointer;" onclick="toggleFavorite('@item.furnitureId')" data-furniture-id="@item.furnitureId"></i>
                             </div>
-                            <a asp-action="Details" asp-route-id="@item.furnitureId" class="card-link">
+                            <a asp-controller="Furnitures" asp-action="Details" asp-route-id="@item.furnitureId" class="card-link">
                                 <div class="card-img">
                                     <img src="http://140.137.41.136:1380/A01Web/Images/@item.picture" alt="@item.picture" />
                                 </div>
