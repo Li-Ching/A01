@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "6u/+yAgjUJijvDlFl5tVZFpHjswEK+gpDTkhPaS+XPc=",
+  "Hash": "LkMMdcCMfmZe0CkIAjHTF6ZqZOX/wI6HrekOHR3mLNc=",
   "Source": "ARHome",
   "BasePath": "_content/ARHome",
   "Mode": "Default",
@@ -236,6 +236,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\ikea-logo.png"
+    },
+    {
+      "Identity": "C:\\Users\\user\\A01\\ARHome\\wwwroot\\Images\\Koltuk1.png",
+      "SourceId": "ARHome",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\A01\\ARHome\\wwwroot\\",
+      "BasePath": "_content/ARHome",
+      "RelativePath": "Images/Koltuk1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Koltuk1.png"
     },
     {
       "Identity": "C:\\Users\\user\\A01\\ARHome\\wwwroot\\Images\\love.png",
