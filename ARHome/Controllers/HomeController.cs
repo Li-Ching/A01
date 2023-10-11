@@ -18,7 +18,7 @@ namespace ARHome.Controllers
                             new FirebaseConfig("AIzaSyCuJICZfjPRYfSLZ4LRUqGris0T3klukKU"));
         }
 
-       
+
         public IActionResult Registration()
         {
             return View();
@@ -94,11 +94,11 @@ namespace ARHome.Controllers
 
         public async Task<IActionResult> Index()
         {
-            
-                var token = HttpContext.Session.GetString("_UserToken");
 
-                if (token != null)
-                {
+            var token = HttpContext.Session.GetString("_UserToken");
+
+            if (token != null)
+            {
                 ViewBag.token=token;
                 try
                 {
@@ -106,7 +106,6 @@ namespace ARHome.Controllers
                     // 你可能需要使用 Firebase SDK 或其他适当的方式来获取这些信息
                     // 以下是一种示例方法，假设你可以从 Firebase 中获取用户信息
                     var user = await auth.GetUserAsync(token); // 使用 Firebase SDK 获取用户信息
-
                     ViewBag.DisplayName = user.DisplayName;
                     ViewBag.Email = user.Email;
                 }
@@ -118,11 +117,11 @@ namespace ARHome.Controllers
                     ViewBag.Email = "N/A";
                 }
                 return View();
-                }
-                else
-                {
-                    return RedirectToAction("SignIn");
-                }
+            }
+            else
+            {
+                return RedirectToAction("SignIn");
+            }
 
         }
 
