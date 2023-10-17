@@ -69,14 +69,58 @@
 </div>
 
 <script>
-    function changePW(){
+     function changePW() {
         var pw = $('#newPW').val();
         var rePW = $('#renewPW').val();
-        if (pw === rePW) {
-
+        if (pw.length >= 6 && rePW.length >= 6) { // 檢查密碼長度是否大於等於6位數
+            if (pw === rePW) {
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("ChangePassword", "Home")',
+                    data: { newPassword: pw },
+                    success: function (response) {
+                        if (response.success) {
+                          //alert(response.message);
+                            setTimeout(function () {
+                                window.location.reload();
+                            }, 500);
+                        }
+                        else {
+                            alert(response.message); // 在用戶未登入時也顯示訊息
+                        }
+                    },
+                    error: function () {
+                        alert("請求失敗");
+                    }
+                });
+            }
+            else {
+                $('#danger').text('兩個密碼不一致');
+            }
+        } else {
+            $('#danger').text('密碼至少需要6位數');
         }
-        else {
-            $('#danger').text('兩個密碼不一致');
-        }
+    }
+    function changeName() {
+        var newDN = $('#newName').val();
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("ChangeDisplayName", "Home")',
+                    data: { newDN: newDN },
+                    success: function (response) {
+                        if (response.success) {
+                          alert(response.message);
+                            setTimeout(function () {
+                                window.location.reload();
+                            }, 500);
+                        }
+                        else {
+                            alert(response.message);  //在用戶未登入時也顯示訊息
+                        }
+                    },
+                    error: function () {
+                        alert("請求失敗");
+                    }
+                });
     }
 </script>
