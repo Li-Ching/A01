@@ -2,6 +2,7 @@ package com.example.arhomedesign;
 
 import android.os.Bundle;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -13,7 +14,7 @@ import android.widget.LinearLayout;
 
 public class ChairFragment extends Fragment {
 
-    LinearLayout chair1, chair2;
+    CardView chair1, chair2;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

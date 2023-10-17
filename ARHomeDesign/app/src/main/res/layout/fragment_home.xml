@@ -35,15 +35,12 @@
 
     </LinearLayout>
 
-    <androidx.cardview.widget.CardView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        app:cardElevation="10dp"
-        app:cardCornerRadius="20dp"
-        app:cardBackgroundColor="@color/gray"
-        app:cardMaxElevation="12dp"
-        app:cardPreventCornerOverlap="true">
+        android:background="@drawable/elevated_rectangle_15"
+        android:backgroundTint="@color/gray">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -98,7 +95,7 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
-    </androidx.cardview.widget.CardView>
+    </LinearLayout>
 
     <TextView
         android:id="@+id/tvRecommended"
@@ -120,20 +117,17 @@
         android:layout_marginTop="5dp">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
-            <androidx.cardview.widget.CardView
+            <LinearLayout
                 android:id="@+id/butRec1"
                 android:layout_width="220dp"
                 android:layout_height="220dp"
                 android:layout_margin="10dp"
-                app:cardElevation="10dp"
-                app:cardCornerRadius="20dp"
-                app:cardBackgroundColor="@color/chair_2"
-                app:cardMaxElevation="12dp"
-                app:cardPreventCornerOverlap="true"
+                android:background="@drawable/elevated_rectangle_15"
+                android:backgroundTint="@color/chair_2"
                 android:gravity="center">
 
                 <LinearLayout
@@ -209,18 +203,15 @@
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
+            </LinearLayout>
 
-            <androidx.cardview.widget.CardView
+            <LinearLayout
                 android:id="@+id/butRec2"
                 android:layout_width="220dp"
                 android:layout_height="220dp"
                 android:layout_margin="10dp"
-                app:cardElevation="10dp"
-                app:cardCornerRadius="20dp"
-                app:cardBackgroundColor="@color/sofa_2"
-                app:cardMaxElevation="12dp"
-                app:cardPreventCornerOverlap="true"
+                android:background="@drawable/elevated_rectangle_15"
+                android:backgroundTint="@color/sofa_2"
                 android:gravity="center">
 
                 <LinearLayout
@@ -296,18 +287,15 @@
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
+            </LinearLayout>
 
-            <androidx.cardview.widget.CardView
+            <LinearLayout
                 android:id="@+id/butRec3"
                 android:layout_width="220dp"
                 android:layout_height="220dp"
                 android:layout_margin="10dp"
-                app:cardElevation="10dp"
-                app:cardCornerRadius="20dp"
-                app:cardBackgroundColor="@color/table_3"
-                app:cardMaxElevation="12dp"
-                app:cardPreventCornerOverlap="true"
+                android:background="@drawable/elevated_rectangle_15"
+                android:backgroundTint="@color/table_3"
                 android:gravity="center">
 
                 <LinearLayout
@@ -383,7 +371,7 @@
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
+            </LinearLayout>
 
         </LinearLayout>
 

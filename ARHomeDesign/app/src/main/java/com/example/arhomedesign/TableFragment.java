@@ -3,6 +3,7 @@ package com.example.arhomedesign;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -14,7 +15,7 @@ import android.widget.LinearLayout;
 
 public class TableFragment extends Fragment {
 
-    LinearLayout table1, table2, table3;
+    CardView table1, table2, table3;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
