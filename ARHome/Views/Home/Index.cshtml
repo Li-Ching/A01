@@ -19,6 +19,10 @@
     </button>
 
     <p>使用者的 Email：@ViewBag.Email</p>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#changepwModel">
+        更改密碼
+    </button>
+    <br />
     <a asp-action="LogOut">Sign Out</a>
 </div>
 
@@ -41,3 +45,38 @@
         </div>
     </div>
 </div>
+
+<!-- Modal -->
+<div class="modal fade" id="changepwModel" tabindex="-1" aria-labelledby="changepwModelLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="changepwModelLabel">更改密碼</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- 新增一個輸入框 -->
+                <input type="password" class="form-control" id="newPW" placeholder="請輸入新的密碼">
+                <input type="password" class="form-control" id="renewPW" placeholder="再輸入一次新的密碼">
+                <span id="danger" style="color: red"></span>
+            </div>
+            <div class="modal-footer">
+                <!-- 新增一個按鈕用於儲存變更 -->
+                <button type="button" class="btn btn-primary" onclick="changePW()">儲存變更</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function changePW(){
+        var pw = $('#newPW').val();
+        var rePW = $('#renewPW').val();
+        if (pw === rePW) {
+
+        }
+        else {
+            $('#danger').text('兩個密碼不一致');
+        }
+    }
+</script>

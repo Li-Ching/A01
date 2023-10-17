@@ -24,6 +24,8 @@ namespace ARHome.Models
         public string? address { get; set; }              // 用於儲存流水號
         [Display(Name = "圖片位址")]
         public string? picture { get; set; }     // 定義[圖片位址]欄位
+        [Display(Name = "模型位址")]
+        public string? location { get; set; }     // 定義[圖片位址]欄位
 
 
     }
