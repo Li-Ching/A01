@@ -1,6 +1,7 @@
 C:\Users\Chlinkuser\Documents\GitHub\A01\ARHome\obj\Release\net6.0\PubTmp\Out\ARHome.exe
 C:\Users\Chlinkuser\Documents\GitHub\A01\ARHome\obj\Release\net6.0\PubTmp\Out\appsettings.Development.json
 C:\Users\Chlinkuser\Documents\GitHub\A01\ARHome\obj\Release\net6.0\PubTmp\Out\appsettings.json
+C:\Users\Chlinkuser\Documents\GitHub\A01\ARHome\obj\Release\net6.0\PubTmp\Out\ar-home-design-firebase-adminsdk-pcy6j-cadf5e2d4d.json
 C:\Users\Chlinkuser\Documents\GitHub\A01\ARHome\obj\Release\net6.0\PubTmp\Out\ARHome.dll
 C:\Users\Chlinkuser\Documents\GitHub\A01\ARHome\obj\Release\net6.0\PubTmp\Out\ARHome.runtimeconfig.json
 C:\Users\Chlinkuser\Documents\GitHub\A01\ARHome\obj\Release\net6.0\PubTmp\Out\ARHome.pdb
@@ -8,6 +9,13 @@ C:\Users\Chlinkuser\Documents\GitHub\A01\ARHome\obj\Release\net6.0\PubTmp\Out\As
 C:\Users\Chlinkuser\Documents\GitHub\A01\ARHome\obj\Release\net6.0\PubTmp\Out\Azure.Core.dll
 C:\Users\Chlinkuser\Documents\GitHub\A01\ARHome\obj\Release\net6.0\PubTmp\Out\Azure.Identity.dll
 C:\Users\Chlinkuser\Documents\GitHub\A01\ARHome\obj\Release\net6.0\PubTmp\Out\Firebase.Auth.dll
+C:\Users\Chlinkuser\Documents\GitHub\A01\ARHome\obj\Release\net6.0\PubTmp\Out\FirebaseAdmin.dll
+C:\Users\Chlinkuser\Documents\GitHub\A01\ARHome\obj\Release\net6.0\PubTmp\Out\Google.Api.Gax.dll
+C:\Users\Chlinkuser\Documents\GitHub\A01\ARHome\obj\Release\net6.0\PubTmp\Out\Google.Api.Gax.Rest.dll
+C:\Users\Chlinkuser\Documents\GitHub\A01\ARHome\obj\Release\net6.0\PubTmp\Out\Google.Apis.dll
+C:\Users\Chlinkuser\Documents\GitHub\A01\ARHome\obj\Release\net6.0\PubTmp\Out\Google.Apis.Auth.PlatformServices.dll
+C:\Users\Chlinkuser\Documents\GitHub\A01\ARHome\obj\Release\net6.0\PubTmp\Out\Google.Apis.Auth.dll
+C:\Users\Chlinkuser\Documents\GitHub\A01\ARHome\obj\Release\net6.0\PubTmp\Out\Google.Apis.Core.dll
 C:\Users\Chlinkuser\Documents\GitHub\A01\ARHome\obj\Release\net6.0\PubTmp\Out\Humanizer.dll
 C:\Users\Chlinkuser\Documents\GitHub\A01\ARHome\obj\Release\net6.0\PubTmp\Out\MessagePack.dll
 C:\Users\Chlinkuser\Documents\GitHub\A01\ARHome\obj\Release\net6.0\PubTmp\Out\MessagePack.Annotations.dll

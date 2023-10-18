@@ -2,6 +2,7 @@ package com.example.arhomedesign;
 
 import android.os.Bundle;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -13,7 +14,7 @@ import android.widget.LinearLayout;
 
 public class BedFragment extends Fragment {
 
-    LinearLayout bed1, bed2;
+    CardView bed1, bed2;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
