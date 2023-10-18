@@ -12,7 +12,7 @@ using WebAPItest.Models;
 namespace WebAPItest.Migrations
 {
     [DbContext(typeof(A01Context))]
-    [Migration("20231001082440_initialdb")]
+    [Migration("20231018154252_initialdb")]
     partial class initialdb
     {
         /// <inheritdoc />
@@ -25,6 +25,47 @@ namespace WebAPItest.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("WebAPItest.Models.Branch", b =>
+                {
+                    b.Property<int>("BranchId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("branchId");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BranchId"));
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .IsUnicode(false)
+                        .HasColumnType("varchar(max)")
+                        .HasColumnName("address");
+
+                    b.Property<string>("BranchName")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .IsUnicode(false)
+                        .HasColumnType("varchar(50)")
+                        .HasColumnName("branchName");
+
+                    b.Property<int>("BrandId")
+                        .HasColumnType("int")
+                        .HasColumnName("brandId");
+
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .IsUnicode(false)
+                        .HasColumnType("varchar(50)")
+                        .HasColumnName("phoneNumber");
+
+                    b.HasKey("BranchId")
+                        .HasName("PK__Branch__751EBD5F33FA43BF");
+
+                    b.HasIndex("BrandId");
+
+                    b.ToTable("Branch", (string)null);
+                });
+
             modelBuilder.Entity("WebAPItest.Models.Brand", b =>
                 {
                     b.Property<int>("BrandId")
@@ -35,29 +76,40 @@ namespace WebAPItest.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BrandId"));
 
                     b.Property<string>("Address")
-                        .HasMaxLength(50)
+                        .IsRequired()
                         .IsUnicode(false)
-                        .HasColumnType("varchar(50)")
+                        .HasColumnType("varchar(max)")
                         .HasColumnName("address");
 
                     b.Property<string>("Brand1")
+                        .IsRequired()
                         .HasMaxLength(50)
                         .IsUnicode(false)
                         .HasColumnType("varchar(50)")
                         .HasColumnName("brand");
 
                     b.Property<string>("Logo")
+                        .IsRequired()
                         .HasMaxLength(50)
                         .IsUnicode(false)
                         .HasColumnType("varchar(50)")
                         .HasColumnName("logo");
 
                     b.Property<string>("PhoneNumber")
-                        .HasColumnType("nvarchar(max)")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .IsUnicode(false)
+                        .HasColumnType("varchar(50)")
                         .HasColumnName("phoneNumber");
 
+                    b.Property<string>("Url")
+                        .IsRequired()
+                        .IsUnicode(false)
+                        .HasColumnType("varchar(max)")
+                        .HasColumnName("url");
+
                     b.HasKey("BrandId")
-                        .HasName("PK__Brand__06B772993166DED0");
+                        .HasName("PK__Brand__06B772995AD10E28");
 
                     b.ToTable("Brand", (string)null);
                 });
@@ -66,7 +118,8 @@ namespace WebAPItest.Migrations
                 {
                     b.Property<int>("FavoriteId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnName("favoriteId");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("FavoriteId"));
 
@@ -75,18 +128,14 @@ namespace WebAPItest.Migrations
                         .HasColumnName("furnitureId");
 
                     b.Property<string>("UserId")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("userId");
 
-                    b.Property<int?>("UserId1")
-                        .HasColumnType("int");
-
                     b.HasKey("FavoriteId")
-                        .HasName("PK__Favorite");
+                        .HasName("PK__Favorite__876A64D58AA15765");
 
                     b.HasIndex("FurnitureId");
-
-                    b.HasIndex("UserId1");
 
                     b.ToTable("Favorite", (string)null);
                 });
@@ -104,96 +153,98 @@ namespace WebAPItest.Migrations
                         .HasColumnType("int")
                         .HasColumnName("brandId");
 
-                    b.Property<int?>("BrandId1")
-                        .HasColumnType("int");
-
                     b.Property<string>("Color")
+                        .IsRequired()
                         .HasMaxLength(50)
                         .IsUnicode(false)
                         .HasColumnType("varchar(50)")
                         .HasColumnName("color");
 
                     b.Property<string>("Location")
-                        .HasMaxLength(50)
+                        .IsRequired()
                         .IsUnicode(false)
-                        .HasColumnType("varchar(50)")
+                        .HasColumnType("varchar(max)")
                         .HasColumnName("location");
 
                     b.Property<string>("Picture")
+                        .IsRequired()
                         .HasMaxLength(50)
                         .IsUnicode(false)
                         .HasColumnType("varchar(50)")
                         .HasColumnName("picture");
 
                     b.Property<string>("Style")
+                        .IsRequired()
                         .HasMaxLength(50)
                         .IsUnicode(false)
                         .HasColumnType("varchar(50)")
                         .HasColumnName("style");
 
                     b.Property<string>("Type")
+                        .IsRequired()
                         .HasMaxLength(50)
                         .IsUnicode(false)
                         .HasColumnType("varchar(50)")
                         .HasColumnName("type");
 
                     b.HasKey("FurnitureId")
-                        .HasName("PK__Furnitur__BD41E4C59D892524");
+                        .HasName("PK__Furnitur__BD41E4C50FA6B547");
 
                     b.HasIndex("BrandId");
-
-                    b.HasIndex("BrandId1");
 
                     b.ToTable("Furniture", (string)null);
                 });
 
-            modelBuilder.Entity("WebAPItest.Models.User", b =>
+            modelBuilder.Entity("WebAPItest.Models.Message", b =>
                 {
-                    b.Property<int>("UserId")
-                        .ValueGeneratedOnAdd()
+                    b.Property<Guid>("MessageId")
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnName("messageId");
+
+                    b.Property<int>("FurnitureId")
                         .HasColumnType("int")
+                        .HasColumnName("furnitureId");
+
+                    b.Property<bool>("IsDelete")
+                        .HasColumnType("bit")
+                        .HasColumnName("isDelete");
+
+                    b.Property<string>("Message1")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("message");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
                         .HasColumnName("userId");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserId"));
+                    b.HasKey("MessageId")
+                        .HasName("PK__Message__4808B9933BCF5750");
 
-                    b.Property<string>("Email")
+                    b.HasIndex("FurnitureId");
+
+                    b.ToTable("Message", (string)null);
+                });
+
+            modelBuilder.Entity("WebAPItest.Models.Branch", b =>
+                {
+                    b.HasOne("WebAPItest.Models.Brand", "Brand")
+                        .WithMany("Branches")
+                        .HasForeignKey("BrandId")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(50)")
-                        .HasColumnName("email");
+                        .HasConstraintName("FK__Branch__brandId__4E88ABD4");
 
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(50)")
-                        .HasColumnName("password");
-
-                    b.Property<string>("Username")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(50)")
-                        .HasColumnName("username");
-
-                    b.HasKey("UserId")
-                        .HasName("PK__Users__CB9A1CFF73659BC8");
-
-                    b.ToTable("Users");
+                    b.Navigation("Brand");
                 });
 
             modelBuilder.Entity("WebAPItest.Models.Favorite", b =>
                 {
                     b.HasOne("WebAPItest.Models.Furniture", "Furniture")
-                        .WithMany()
+                        .WithMany("Favorites")
                         .HasForeignKey("FurnitureId")
                         .IsRequired()
-                        .HasConstraintName("FK__Favorite__furnit__2B3F6F97");
-
-                    b.HasOne("WebAPItest.Models.User", null)
-                        .WithMany("Favorites")
-                        .HasForeignKey("UserId1");
+                        .HasConstraintName("FK__Favorite__furnit__59FA5E80");
 
                     b.Navigation("Furniture");
                 });
@@ -201,26 +252,37 @@ namespace WebAPItest.Migrations
             modelBuilder.Entity("WebAPItest.Models.Furniture", b =>
                 {
                     b.HasOne("WebAPItest.Models.Brand", "Brand")
-                        .WithMany()
+                        .WithMany("Furnitures")
                         .HasForeignKey("BrandId")
                         .IsRequired()
-                        .HasConstraintName("FK__Furniture__brand__286302EC");
-
-                    b.HasOne("WebAPItest.Models.Brand", null)
-                        .WithMany("Furnitures")
-                        .HasForeignKey("BrandId1");
+                        .HasConstraintName("FK__Furniture__brand__571DF1D5");
 
                     b.Navigation("Brand");
                 });
 
+            modelBuilder.Entity("WebAPItest.Models.Message", b =>
+                {
+                    b.HasOne("WebAPItest.Models.Furniture", "Furniture")
+                        .WithMany("Messages")
+                        .HasForeignKey("FurnitureId")
+                        .IsRequired()
+                        .HasConstraintName("FK__Message__furnitu__5CD6CB2B");
+
+                    b.Navigation("Furniture");
+                });
+
             modelBuilder.Entity("WebAPItest.Models.Brand", b =>
                 {
+                    b.Navigation("Branches");
+
                     b.Navigation("Furnitures");
                 });
 
-            modelBuilder.Entity("WebAPItest.Models.User", b =>
+            modelBuilder.Entity("WebAPItest.Models.Furniture", b =>
                 {
                     b.Navigation("Favorites");
+
+                    b.Navigation("Messages");
                 });
 #pragma warning restore 612, 618
         }
