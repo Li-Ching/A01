@@ -25,8 +25,8 @@ public partial class A01Context : DbContext
 
     public virtual DbSet<Message> Messages { get; set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) { }
-
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    { }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Branch>(entity =>
@@ -84,7 +84,7 @@ public partial class A01Context : DbContext
 
         modelBuilder.Entity<Favorite>(entity =>
         {
-            entity.HasKey(e => e.FavoriteId).HasName("PK__Favorite__876A64D58AA15765");
+            entity.HasKey(e => e.FavoriteId).HasName("PK__Favorite__876A64D50EA0B196");
 
             entity.ToTable("Favorite");
 
@@ -95,12 +95,12 @@ public partial class A01Context : DbContext
             entity.HasOne(d => d.Furniture).WithMany(p => p.Favorites)
                 .HasForeignKey(d => d.FurnitureId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Favorite__furnit__59FA5E80");
+                .HasConstraintName("FK__Favorite__furnit__628FA481");
         });
 
         modelBuilder.Entity<Furniture>(entity =>
         {
-            entity.HasKey(e => e.FurnitureId).HasName("PK__Furnitur__BD41E4C50FA6B547");
+            entity.HasKey(e => e.FurnitureId).HasName("PK__Furnitur__BD41E4C5B48A8697");
 
             entity.ToTable("Furniture");
 
@@ -110,6 +110,10 @@ public partial class A01Context : DbContext
                 .HasMaxLength(50)
                 .IsUnicode(false)
                 .HasColumnName("color");
+            entity.Property(e => e.FurnitureName)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("furnitureName");
             entity.Property(e => e.Location)
                 .IsUnicode(false)
                 .HasColumnName("location");
@@ -129,12 +133,12 @@ public partial class A01Context : DbContext
             entity.HasOne(d => d.Brand).WithMany(p => p.Furnitures)
                 .HasForeignKey(d => d.BrandId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Furniture__brand__571DF1D5");
+                .HasConstraintName("FK__Furniture__brand__5FB337D6");
         });
 
         modelBuilder.Entity<Message>(entity =>
         {
-            entity.HasKey(e => e.MessageId).HasName("PK__Message__4808B9933BCF5750");
+            entity.HasKey(e => e.MessageId).HasName("PK__Message__4808B9935E8AD562");
 
             entity.ToTable("Message");
 
@@ -144,12 +148,15 @@ public partial class A01Context : DbContext
             entity.Property(e => e.FurnitureId).HasColumnName("furnitureId");
             entity.Property(e => e.IsDelete).HasColumnName("isDelete");
             entity.Property(e => e.Message1).HasColumnName("message");
+            entity.Property(e => e.MessageTime)
+                .HasColumnType("datetime")
+                .HasColumnName("messageTime");
             entity.Property(e => e.UserId).HasColumnName("userId");
 
             entity.HasOne(d => d.Furniture).WithMany(p => p.Messages)
                 .HasForeignKey(d => d.FurnitureId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Message__furnitu__5CD6CB2B");
+                .HasConstraintName("FK__Message__furnitu__656C112C");
         });
 
         OnModelCreatingPartial(modelBuilder);

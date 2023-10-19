@@ -7,6 +7,8 @@ public partial class Furniture
 {
     public int FurnitureId { get; set; }
 
+    public string FurnitureName { get; set; } = null!;
+
     public string Type { get; set; } = null!;
 
     public string Color { get; set; } = null!;

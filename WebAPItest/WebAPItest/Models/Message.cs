@@ -13,6 +13,8 @@ public partial class Message
 
     public string Message1 { get; set; } = null!;
 
+    public DateTime MessageTime { get; set; }
+
     public bool IsDelete { get; set; }
 
     public virtual Furniture Furniture { get; set; } = null!;

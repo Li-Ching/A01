@@ -28,6 +28,7 @@ namespace WebAPItest.Controllers
                           select new FurnituresDto
                           {
                               FurnitureId=a.FurnitureId,
+                              FurnitureName=a.FurnitureName,
                               Type=a.Type,
                               Color=a.Color,
                               Style=a.Style,
@@ -56,6 +57,7 @@ namespace WebAPItest.Controllers
                           select new FurnituresDto
                           {
                               FurnitureId=a.FurnitureId,
+                              FurnitureName=a.FurnitureName,
                               Type=a.Type,
                               Color=a.Color,
                               Style=a.Style,
