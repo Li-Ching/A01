@@ -12,9 +12,9 @@
     <color name="blue_bg">#EBF3F6</color>
     <color name="blue_main">#D0E1E7</color>
     <color name="text">#3F3F3F</color>
-    <color name="brand_text">#FFFFFF</color>
+    <color name="brand_text">#808080</color>
 
-    <color name="furniture_card">#607D8B</color>
+    <color name="furniture_card">#EBF3F6</color>
 
     <color name="red_btn">#FA473B</color>
     <color name="orange_btn">#FA973B</color>

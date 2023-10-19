@@ -68,7 +68,6 @@
             android:layout_marginTop="8dp"
             android:layout_marginBottom="240dp"
             android:gravity="center"
-            android:text="@string/sofa1"
             android:textColor="@color/black"
             android:textSize="36sp"
             android:textStyle="bold"

@@ -19,7 +19,7 @@ import com.example.arhomedesign.utils.RetrofitClient;
 import com.example.arhomedesign.utils.furnitures;
 
 public class FurnitureActivity extends AppCompatActivity {
-    private TextView tvType, tvColor, tvStyle, tvBrand, tvPhoneNumber, tvAddress;
+    private TextView tvName, tvType, tvColor, tvStyle, tvBrand, tvPhoneNumber, tvAddress;
     ImageButton back;
     ImageView furnitureImage;
 
@@ -45,6 +45,7 @@ public class FurnitureActivity extends AppCompatActivity {
                 .load(imageUrl)
                 .into(furnitureImage);
 
+        tvName = findViewById(R.id.furnitureName);
         tvType = findViewById(R.id.tvType);
         tvColor = findViewById(R.id.tvColor);
         tvStyle = findViewById(R.id.tvStyle);
@@ -63,6 +64,7 @@ public class FurnitureActivity extends AppCompatActivity {
                     Log.d("API Response", "Color: " + furniture.getColor());
                     Log.d("API Response", "getBrand1: " + furniture.getBrand1());
 
+                    tvName.setText(furniture.getFurnitureName());
                     tvType.setText(furniture.getType());
                     tvColor.setText(furniture.getColor());
                     tvStyle.setText(furniture.getStyle());
