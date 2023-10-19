@@ -1,23 +1,22 @@
 package com.example.arhomedesign;
 
-import static java.security.AccessController.getContext;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import com.bumptech.glide.Glide;
+import com.example.arhomedesign.utils.Methods;
+import com.example.arhomedesign.utils.RetrofitClient;
+import com.example.arhomedesign.utils.furnitures;
 
 public class FurnitureActivity extends AppCompatActivity {
     private TextView tvType, tvColor, tvStyle, tvBrand, tvPhoneNumber, tvAddress;

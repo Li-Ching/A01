@@ -1,4 +1,4 @@
-package com.example.arhomedesign;
+package com.example.arhomedesign.utils;
 
 public class UserData {
     private String username;
