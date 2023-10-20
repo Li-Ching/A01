@@ -41,6 +41,7 @@ namespace ARHome.Models
             public string? userId { get; set; }
             public string? message1 { get; set; }
             public DateTime messageTime { get; set; }
+            public bool isDelete { get; set; }
             public int furnitureId { get; set; }
         }
     }

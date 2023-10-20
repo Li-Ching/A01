@@ -26,6 +26,20 @@
         </div>
     </div>
 </div>
+<div id="DeleteMessage" class="message">
+    <div class="msg_div">
+        <div class="msg_div2">
+            <span id="messagetext" style="color:#fff;font-weight:400;font-size:18px;">成功刪除留言！</span>
+        </div>
+    </div>
+</div>
+<div id="BadMessage" class="message">
+    <div class="msg_div">
+        <div class="msg_div3">
+            <span id="messagetext" style="color:#fff;font-weight:400;font-size:18px;">留言無法刪除</span>
+        </div>
+    </div>
+</div>
 
 <h3><span class="badge rounded-pill bg-info">顯示家具明細操作頁面</span></h3>
 <br />
@@ -93,6 +107,12 @@
                 <div class="col-12 col-md-6 custom-col">
                     <p>
                         <span class="text-muted">@message.messageTime</span>
+                        @if (ViewBag.id == message.userId.ToString())
+                        {
+                            <button onclick="DeleteMseeage('@message.messageId')">
+                                <i class="fa fa-trash"></i>
+                            </button>
+                        }
                     </p>
                     <p>@message.message1</p>
                 </div>
@@ -145,8 +165,39 @@
                     // window.location.href = '@Url.Action("SignIn", "Home")';
                     $('#NoLogin').show();
                     $('#NoLogin').fadeOut(2000);
+                }
+            },
+            error: function () {
+                alert("請求失敗");
+            }
+        });
+    }
+
+    function DeleteMseeage(messageId) {
+        console.log(messageId);
+        $.ajax({
+            type: "POST",
+            url: '@Url.Action("DeleteMseeage", "Furnitures")',
+            data: { messageId: messageId },
+            success: function (response) {
+                if (response.success) {
+                    console.log(response.message);
+                    if (response.message == "刪除留言成功") {
+                        $('#DeleteMessage').show();
+                        $('#DeleteMessage').fadeOut(2000);
+                    }
+                    //alert(response.message);
                     setTimeout(function () {
-                        window.location.href = '@Url.Action("SignIn", "Home")';
+                        window.location.reload();
+                    }, 800);
+                }
+                else {
+                    // alert(response.message); // 在用戶未登入時也顯示訊息
+                    // window.location.href = '@Url.Action("SignIn", "Home")';
+                    $('#BadMessage').show();
+                    $('#BadMessage').fadeOut(2000);
+                    setTimeout(function () {
+                        window.location.reload();
                     }, 800);
                 }
             },

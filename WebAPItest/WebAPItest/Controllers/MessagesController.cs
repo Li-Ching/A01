@@ -71,6 +71,28 @@ namespace WebAPItest.Controllers
             return  Ok("新增留言成功"); ;
         }
 
+        // POST api/<MessagesController>
+        [HttpPost("Delete")]
+        public IActionResult Delete([FromBody] string MessageId)
+        {
+            if (Guid.TryParse(MessageId, out Guid messageId))
+            {
+                var message = _a01Context.Messages.FirstOrDefault(n => n.MessageId == messageId);
+                if (message == null)
+                {
+                    return BadRequest("刪除留言失敗");
+                }
+                message.IsDelete = true;
+
+                _a01Context.SaveChanges();
+                return Ok("刪除留言成功");
+            }
+            else
+            {
+                return BadRequest("無效的 MessageId 格式");
+            }
+        }
+
         /*// PUT api/<BrandsController>/5
         [HttpPut("{BrandId}")]
         public IActionResult Put(int BrandId, [FromBody] Brand value)
