@@ -18,6 +18,7 @@ namespace ARHome.Controllers
             using (HttpClient client = new HttpClient())
             {
                 string url;
+                ViewBag.type = "所有家具";
                 if (type == null)
                 {
                     // 設定[取得全部留言紀錄]Web API之網址
@@ -27,8 +28,8 @@ namespace ARHome.Controllers
                 {
                     // 設定[取得全部留言紀錄]Web API之網址
                     url = baseurl+"?Type="+type;
+                    ViewBag.type = type;
                 }
-
 
                 // 以非同步GET方式呼叫Web API
                 var response = await client.GetAsync(url);
@@ -90,7 +91,7 @@ namespace ARHome.Controllers
                     // 設定[取得全部留言紀錄]Web API之網址
                     url = baseurl+"/Search?content="+content;
                 }
-
+                ViewBag.content = content;
 
                 // 以非同步GET方式呼叫Web API
                 var response = await client.GetAsync(url);

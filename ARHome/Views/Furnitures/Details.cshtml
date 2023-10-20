@@ -39,8 +39,11 @@
             <div>
                 <img src="http://140.137.41.136:1380/A01Web/Images/@Model.picture" style="width: 100%; height:auto;" alt="@Model.picture" />
             </div>
-
+            <br />
             <dl>
+                <dt>
+                    <b><label asp-for="furnitureName" class="text-primary"></label></b>: <span>@Model.furnitureName</span>
+                </dt>
                 <dt>
                     <b><label asp-for="type" class="text-primary"></label></b>: <span>@Model.type</span>
                 </dt>

@@ -52,6 +52,8 @@
 
 <div class="container">
     <div class="row">
+        <h2>@ViewBag.type</h2>
+
         @foreach (var item in Model)
         {
             <div class="col-lg-3 col-sm-4 col-6">
@@ -64,7 +66,7 @@
                             <div class="card-img">
                                 <img src="http://140.137.41.136:1380/A01Web/Images/@item.picture" alt="@item.picture" />
                             </div>
-                            <h1 class="card-title">@item.type</h1>
+                            <h1 class="card-title">@item.furnitureName</h1>
                         </a>
                     </div>
                 </div>

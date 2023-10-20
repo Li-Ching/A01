@@ -206,12 +206,12 @@ namespace ARHome.Controllers
                     });
 
                     // 將需要傳遞的數據包裝成 JSON 返回
-                    return Json(new { success = true, message = "DisplayName變更成功" });
+                    return Json(new { success = true, message = "暱稱變更成功" });
                 }
                 else
                 {
                     // 如果沒有登入的 token，返回一個 JSON 錯誤響應
-                    return Json(new { success = false, message = "DisplayName變更失敗" });
+                    return Json(new { success = false, message = "暱稱變更失敗" });
                 }
             }
             catch (Firebase.Auth.FirebaseAuthException ex)
@@ -219,7 +219,7 @@ namespace ARHome.Controllers
                 var firebaseEx = JsonConvert.DeserializeObject<FirebaseError>(ex.ResponseData);
                 ModelState.AddModelError(String.Empty, firebaseEx.error.message);
                 // 返回變更密碼的表單視圖，並顯示錯誤訊息
-                return Json(new { success = false, message = "DisplayName變更失敗" });
+                return Json(new { success = false, message = "暱稱變更失敗" });
             }
         }
 

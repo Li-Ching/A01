@@ -58,6 +58,7 @@ namespace WebAPItest.Controllers
                           {
                               UserId = b.UserId,
                               FurnitureId = b.FurnitureId,
+                              FurnitureName = b.Furniture.FurnitureName,
                               Type=b.Furniture.Type,
                               Color=b.Furniture.Color,
                               Style=b.Furniture.Style,

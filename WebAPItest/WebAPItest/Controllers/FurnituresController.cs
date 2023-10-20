@@ -80,6 +80,7 @@ namespace WebAPItest.Controllers
                           select new FurnituresDto
                           {
                               FurnitureId=a.FurnitureId,
+                              FurnitureName=a.FurnitureName,
                               Type=a.Type,
                               Color=a.Color,
                               Style=a.Style,
@@ -93,7 +94,8 @@ namespace WebAPItest.Controllers
 
             if (!string.IsNullOrWhiteSpace(content))
             {
-                result=result.Where(a => a.Type.Contains(content)||
+                result=result.Where(a => a.FurnitureName.Contains(content)||
+                                        a.Type.Contains(content)||
                                         a.Color.Contains(content)||
                                         a.Style.Contains(content)||
                                         a.Brand1.Contains(content));

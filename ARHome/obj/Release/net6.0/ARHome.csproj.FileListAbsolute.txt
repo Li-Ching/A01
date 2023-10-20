@@ -812,3 +812,11 @@ C:\Users\Chlinkuser\Documents\GitHub\A01\ARHome\bin\Release\net6.0\Google.Apis.d
 C:\Users\Chlinkuser\Documents\GitHub\A01\ARHome\bin\Release\net6.0\Google.Apis.Auth.PlatformServices.dll
 C:\Users\Chlinkuser\Documents\GitHub\A01\ARHome\bin\Release\net6.0\Google.Apis.Auth.dll
 C:\Users\Chlinkuser\Documents\GitHub\A01\ARHome\bin\Release\net6.0\Google.Apis.Core.dll
+C:\Users\user\A01\ARHome\bin\Release\net6.0\ar-home-design-firebase-adminsdk-pcy6j-cadf5e2d4d.json
+C:\Users\user\A01\ARHome\bin\Release\net6.0\FirebaseAdmin.dll
+C:\Users\user\A01\ARHome\bin\Release\net6.0\Google.Api.Gax.dll
+C:\Users\user\A01\ARHome\bin\Release\net6.0\Google.Api.Gax.Rest.dll
+C:\Users\user\A01\ARHome\bin\Release\net6.0\Google.Apis.dll
+C:\Users\user\A01\ARHome\bin\Release\net6.0\Google.Apis.Auth.PlatformServices.dll
+C:\Users\user\A01\ARHome\bin\Release\net6.0\Google.Apis.Auth.dll
+C:\Users\user\A01\ARHome\bin\Release\net6.0\Google.Apis.Core.dll

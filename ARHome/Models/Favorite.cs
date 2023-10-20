@@ -5,7 +5,10 @@ namespace ARHome.Models
     public class Favorite
     {
         public int furnitureId { get; set; }              // 用於儲存流水號
-        
+
+        [Display(Name = "家具名稱")]
+        public string? furnitureName { get; set; }          // 定義[家具名稱]欄位
+
         [Display(Name = "家具類型")]
         public string? type { get; set; }          // 定義[家具類型]欄位
 

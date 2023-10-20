@@ -1,29 +1,33 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "首頁";
 }
 
 <div class="text-center">
     @if (ViewBag.DisplayName != null)
     {
-        <h1 class="display-4">Hi @ViewBag.DisplayName, Welcome! You have successfully signed in.</h1>
+        <h1 class="display-4">嗨! @ViewBag.DisplayName, 歡迎您使用AR Home!</h1>
     }
     else
     {
-        <h1 class="display-4">Welcome! You have successfully signed in.</h1>
+        <h1 class="display-4">歡迎您使用AR Home!</h1>
     }
 
     @* <p>使用者的 token：@ViewBag.token</p> *@
-    <p>使用者的 DisplayName：@ViewBag.DisplayName</p>
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        更改 DisplayName
-    </button>
-
+    <div style="display: flex; justify-content: center;">
+        <p>使用者的暱稱：@ViewBag.DisplayName &nbsp;&nbsp;&nbsp;&nbsp;</p>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            更改暱稱
+        </button>
+    </div>
+    <br />
     <p>使用者的 Email：@ViewBag.Email</p>
+    <br />
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#changepwModel">
         更改密碼
     </button>
     <br />
-    <a asp-action="LogOut">Sign Out</a>
+    <br />
+    <div><a asp-action="LogOut">登出</a></div>
 </div>
 
 <!-- Modal -->
@@ -31,12 +35,12 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">更改名字</h5>
+                <h5 class="modal-title" id="exampleModalLabel">更改暱稱</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <!-- 新增一個輸入框 -->
-                <input type="text" class="form-control" id="newName" placeholder="請輸入新的名字">
+                <input type="text" class="form-control" id="newName" placeholder="請輸入新的暱稱">
             </div>
             <div class="modal-footer">
                 <!-- 新增一個按鈕用於儲存變更 -->
@@ -69,7 +73,7 @@
 </div>
 
 <script>
-     function changePW() {
+    function changePW() {
         var pw = $('#newPW').val();
         var rePW = $('#renewPW').val();
         if (pw.length >= 6 && rePW.length >= 6) { // 檢查密碼長度是否大於等於6位數
@@ -80,7 +84,7 @@
                     data: { newPassword: pw },
                     success: function (response) {
                         if (response.success) {
-                          //alert(response.message);
+                            alert("密碼變更成功，請再次登入!");
                             setTimeout(function () {
                                 window.location.reload();
                             }, 500);
@@ -103,24 +107,24 @@
     }
     function changeName() {
         var newDN = $('#newName').val();
-                $.ajax({
-                    type: "POST",
-                    url: '@Url.Action("ChangeDisplayName", "Home")',
-                    data: { newDN: newDN },
-                    success: function (response) {
-                        if (response.success) {
-                          alert(response.message);
-                            setTimeout(function () {
-                                window.location.reload();
-                            }, 500);
-                        }
-                        else {
-                            alert(response.message);  //在用戶未登入時也顯示訊息
-                        }
-                    },
-                    error: function () {
-                        alert("請求失敗");
-                    }
-                });
+        $.ajax({
+            type: "POST",
+            url: '@Url.Action("ChangeDisplayName", "Home")',
+            data: { newDN: newDN },
+            success: function (response) {
+                if (response.success) {
+                    alert(response.message);
+                    setTimeout(function () {
+                        window.location.reload();
+                    }, 500);
+                }
+                else {
+                    alert(response.message);  //在用戶未登入時也顯示訊息
+                }
+            },
+            error: function () {
+                alert("請求失敗");
+            }
+        });
     }
 </script>

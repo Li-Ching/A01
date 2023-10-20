@@ -5,6 +5,7 @@
         public string? UserId { get; set; }
 
         public int FurnitureId { get; set; }
+        public string? FurnitureName { get; set; }
 
         public string? Type { get; set; }
 
