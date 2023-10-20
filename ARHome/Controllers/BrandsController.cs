@@ -44,18 +44,32 @@ namespace ARHome.Controllers
             {
                 // 設定[取得第id筆留言紀錄]Web API的網址
                 string url = baseurl + "/" + id.ToString();
+                string url2 = "http://140.137.41.136:1380/A01/api/Branches/"+ id.ToString();
 
-                // 以非同步GET方式呼叫Web API
                 var response = await client.GetAsync(url);
-                // 以非同步方式取出API回傳之JSON格式字串
                 string apiResponse = await response.Content.ReadAsStringAsync();
-                // 將回傳的JSON格式字串反序列化成JSON物件
                 Brand resultJsonObj = JsonSerializer.Deserialize<Brand>(apiResponse);
+
+                var response2 = await client.GetAsync(url2);
+                string apiResponse2 = await response2.Content.ReadAsStringAsync();
+                List<Brand.Branch> messagesFromApiResponse2 = JsonSerializer.Deserialize<List<Brand.Branch>>(apiResponse2);
+
 
                 if (resultJsonObj == null)
                 {
                     return NotFound();
                 }
+
+                // 初始化 Messages 屬性
+                if (resultJsonObj.Branches == null)
+                {
+                    resultJsonObj.Branches = new List<Brand.Branch>();
+                }
+
+
+                // 將新的留言加入到 resultJsonObj.Messages 中
+                resultJsonObj.Branches.AddRange(messagesFromApiResponse2);
+                resultJsonObj.Branches = resultJsonObj.Branches;
 
                 // 將resultJsonObj物件傳給View頁面，並回傳View頁面
                 return View(resultJsonObj);

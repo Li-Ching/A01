@@ -39,6 +39,36 @@
         <b><label asp-for="address" class="text-primary"></label></b>: <span>@Model.address</span>
     </dt>
 </dl>
+
+<div class="container">
+    @if (Model.Branches != null)
+    {
+        <h3>分店資訊</h3>
+        <div class="row">
+            @foreach (var branch in Model.Branches)
+            {
+                <div class="col-md-6 col-12 mb-4">
+                    <div class="custom-col">
+                        <div>
+                            <b><label asp-for="@branch.branchName" class="text-primary"></label></b>: <span>@branch.branchName</span>
+                        </div>
+                        <div>
+                            <b><label asp-for="@branch.phoneNumber" class="text-primary"></label></b>: <span>@branch.phoneNumber</span>
+                        </div>
+                        <div>
+                            <b><label asp-for="@branch.address" class="text-primary"></label></b>: <span>@branch.address</span>
+                        </div>
+                        <!-- 將地址嵌入地圖 -->
+                        <iframe width="100%" height="450" frameborder="0" style="border:0"
+                                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAzlbbSZygvlSv_Pjf2NiHzhRnaR_qkZrw&q=@branch.address" allowfullscreen></iframe>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>
+
+
 <div>
     <a asp-action="Index" class="btn btn-info btn-sm">回品牌首頁</a>
 </div>

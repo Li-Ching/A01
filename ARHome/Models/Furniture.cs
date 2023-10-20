@@ -33,5 +33,15 @@ namespace ARHome.Models
         [Display(Name = "模型位址")]
         public string? location { get; set; }     // 定義[圖片位址]欄位
 
+        public List<Message>? Messages { get; set; }
+
+        public class Message
+        {
+            public Guid messageId { get; set; }
+            public string? userId { get; set; }
+            public string? message1 { get; set; }
+            public DateTime messageTime { get; set; }
+            public int furnitureId { get; set; }
+        }
     }
 }

@@ -129,3 +129,9 @@ dt {
     padding-right: 10px;
     box-sizing: border-box;
 }
+.custom-col {
+    background-color: #f5f5f5; /* 背景顏色 */
+    border-radius: 10px; /* 圓弧邊框 */
+    padding: 10px; /* 內邊距 */
+    margin: 10px; /* 底部間距 */
+}

@@ -81,6 +81,32 @@
         </div>
     </div>
 </div>
+
+
+<div class="container">
+    @if (Model.Messages != null)
+    {
+        <h3>討論區</h3>
+        @foreach (var message in Model.Messages)
+        {
+            <div class="row m-3">
+                <div class="col-12 col-md-6 custom-col">
+                    <p>
+                        <span class="text-muted">@message.messageTime</span>
+                    </p>
+                    <p>@message.message1</p>
+                </div>
+            </div>
+        }
+    }
+    <form class="input-group" asp-action="AddMessage">
+        <div class="col-6" style="display: flex">
+            <input type="hidden" name="FurnitureId" value="@Model.furnitureId" />
+            <textarea class="form-control" type="text" placeholder="請先登入再留言" name="Message1"></textarea>
+            <input class="btn btn-sm btn-primary" type="submit" value="送出" />
+        </div>
+    </form>
+</div>
 <br />
 <div>
     <a asp-action="Index" class="btn btn-info btn-sm">回到家具網站首頁</a>
