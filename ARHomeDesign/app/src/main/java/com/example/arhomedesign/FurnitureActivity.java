@@ -1,26 +1,25 @@
 package com.example.arhomedesign;
 
-import static java.security.AccessController.getContext;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import com.bumptech.glide.Glide;
+import com.example.arhomedesign.utils.Methods;
+import com.example.arhomedesign.utils.RetrofitClient;
+import com.example.arhomedesign.utils.furnitures;
 
 public class FurnitureActivity extends AppCompatActivity {
-    private TextView tvType, tvColor, tvStyle, tvBrand, tvPhoneNumber, tvAddress;
+    private TextView tvName, tvType, tvColor, tvStyle, tvBrand, tvPhoneNumber, tvAddress;
     ImageButton back;
     ImageView furnitureImage;
 
@@ -46,6 +45,7 @@ public class FurnitureActivity extends AppCompatActivity {
                 .load(imageUrl)
                 .into(furnitureImage);
 
+        tvName = findViewById(R.id.furnitureName);
         tvType = findViewById(R.id.tvType);
         tvColor = findViewById(R.id.tvColor);
         tvStyle = findViewById(R.id.tvStyle);
@@ -64,6 +64,7 @@ public class FurnitureActivity extends AppCompatActivity {
                     Log.d("API Response", "Color: " + furniture.getColor());
                     Log.d("API Response", "getBrand1: " + furniture.getBrand1());
 
+                    tvName.setText(furniture.getFurnitureName());
                     tvType.setText(furniture.getType());
                     tvColor.setText(furniture.getColor());
                     tvStyle.setText(furniture.getStyle());

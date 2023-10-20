@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/blue_main"
@@ -35,65 +36,26 @@
 
     </LinearLayout>
 
-    <HorizontalScrollView
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="5dp"
-        android:layout_marginTop="5dp">
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginVertical="5dp"
+        app:layout_scrollFlags="scroll|enterAlways">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+        <SearchView
+            android:id="@+id/search_view"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginHorizontal="15dp"
+            android:queryHint="在找什麽？"
+            android:background="@drawable/bottom_bar_bg"
+            android:backgroundTint="@color/gray_btn"/>
 
-            <ImageButton
-                android:id="@+id/btnTable"
-                android:layout_width="130dp"
-                android:layout_height="60dp"
-                android:layout_margin="5dp"
-                android:elevation="100dp"
-                android:padding="10dp"
-                android:src="@drawable/table_icon"
-                android:contentDescription="@string/table"
-                android:background="@drawable/rectangle_15"
-                android:backgroundTint="@color/white"/>
+    </androidx.appcompat.widget.Toolbar>
 
-            <ImageButton
-                android:id="@+id/btnChair"
-                android:layout_width="130dp"
-                android:layout_height="60dp"
-                android:layout_margin="5dp"
-                android:background="@drawable/rectangle_15"
-                android:backgroundTint="@color/white"
-                android:contentDescription="@string/chair"
-                android:src="@drawable/chair_icon" />
-
-            <ImageButton
-                android:id="@+id/btnBed"
-                android:layout_width="130dp"
-                android:layout_height="60dp"
-                android:layout_margin="5dp"
-                android:src="@drawable/bed_icon"
-                android:contentDescription="@string/bed"
-                android:background="@drawable/rectangle_15"
-                android:backgroundTint="@color/white"/>
-
-            <ImageButton
-                android:id="@+id/btnSofa"
-                android:layout_width="130dp"
-                android:layout_height="60dp"
-                android:layout_margin="5dp"
-                android:src="@drawable/sofa_icon"
-                android:contentDescription="@string/sofa"
-                android:background="@drawable/rectangle_15"
-                android:backgroundTint="@color/white"/>
-
-        </LinearLayout>
-
-    </HorizontalScrollView>
-
-    <FrameLayout
-        android:id="@+id/HomeFrame"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 

@@ -1,8 +1,10 @@
-package com.example.arhomedesign;
+package com.example.arhomedesign.utils;
 
 public class furnitures {
 
     private Integer furnitureId;
+
+    private String furnitureName;
     private String type;
     private String color;
     private String style;
@@ -13,11 +15,18 @@ public class furnitures {
     private String location;
     private String picture;
 
-    public furnitures(int furnitureId, String type, String color, String style){
-        this.furnitureId=furnitureId;
-        this.type=type;
-        this.color=color;
-        this.style=style;
+    public furnitures(Integer furnitureId, String furnitureName, String type, String color, String style, String brand1, String phoneNumber, String address, String logo, String location, String picture) {
+        this.furnitureId = furnitureId;
+        this.furnitureName = furnitureName;
+        this.type = type;
+        this.color = color;
+        this.style = style;
+        this.brand1 = brand1;
+        this.phoneNumber = phoneNumber;
+        this.address = address;
+        this.logo = logo;
+        this.location = location;
+        this.picture = picture;
     }
 
     public Integer getFurnitureId() {
@@ -26,6 +35,14 @@ public class furnitures {
 
     public void setFurnitureId(Integer furnitureId) {
         this.furnitureId = furnitureId;
+    }
+
+    public String getFurnitureName() {
+        return furnitureName;
+    }
+
+    public void setFurnitureName(String furnitureName) {
+        this.furnitureName = furnitureName;
     }
 
     public String getType() {

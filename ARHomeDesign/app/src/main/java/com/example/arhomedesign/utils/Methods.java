@@ -1,4 +1,6 @@
-package com.example.arhomedesign;
+package com.example.arhomedesign.utils;
+
+import com.example.arhomedesign.LoginData;
 
 import java.util.List;
 

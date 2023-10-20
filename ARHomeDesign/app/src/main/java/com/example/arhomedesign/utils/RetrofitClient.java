@@ -1,4 +1,4 @@
-package com.example.arhomedesign;
+package com.example.arhomedesign.utils;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

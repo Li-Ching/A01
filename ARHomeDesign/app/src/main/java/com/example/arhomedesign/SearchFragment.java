@@ -2,93 +2,97 @@ package com.example.arhomedesign;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
+import android.widget.SearchView;
+
+import com.example.arhomedesign.utils.FurnituresAdapter;
+import com.example.arhomedesign.utils.Methods;
+import com.example.arhomedesign.utils.RetrofitClient;
+import com.example.arhomedesign.utils.furnitures;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class SearchFragment extends Fragment {
 
-    ImageButton table, chair, sofa, bed;
+    RecyclerView recyclerView;
+    LinearLayoutManager layoutManager;
+    FurnituresAdapter adapter;
+    List<furnitures> furnituresList = new ArrayList<>();
+
+    SearchView searchView;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_search, container, false);
 
-        table = view.findViewById(R.id.btnTable);
-        chair = view.findViewById(R.id.btnChair);
-        sofa = view.findViewById(R.id.btnSofa);
-        bed = view.findViewById(R.id.btnBed);
+        searchView = view.findViewById(R.id.search_view);
+        SetupSearchView(searchView);
 
-        TableFragment tableFragment = new TableFragment();
-        FragmentManager fragmentManager = getChildFragmentManager();
-        FragmentTransaction transaction = fragmentManager.beginTransaction();
-        transaction.setCustomAnimations(R.anim.fade_in, R.anim.fade_out);
-        transaction.replace(R.id.HomeFrame, tableFragment);
-        transaction.addToBackStack(null);
-        transaction.commit();
+        recyclerView = view.findViewById(R.id.recyclerView);
+        layoutManager = new LinearLayoutManager(requireContext());
+        recyclerView.setLayoutManager(layoutManager);
+        adapter = new FurnituresAdapter(furnituresList);
+        recyclerView.setAdapter(adapter);
 
-        table.setOnClickListener(new View.OnClickListener() {
+        fetchFurnitures();
+
+        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
-            public void onClick(View v) {
-                TableFragment tableFragment = new TableFragment();
-
-                FragmentManager fragmentManager = getChildFragmentManager();
-                FragmentTransaction transaction = fragmentManager.beginTransaction();
-                transaction.setCustomAnimations(R.anim.fade_in, R.anim.fade_out);
-                transaction.replace(R.id.HomeFrame, tableFragment);
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        chair.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ChairFragment chairFragment = new ChairFragment();
-
-                FragmentManager fragmentManager = getChildFragmentManager();
-                FragmentTransaction transaction = fragmentManager.beginTransaction();
-                transaction.setCustomAnimations(R.anim.fade_in, R.anim.fade_out);
-                transaction.replace(R.id.HomeFrame, chairFragment);
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        sofa.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                SofaFragment sofaFragment = new SofaFragment();
-
-                FragmentManager fragmentManager = getChildFragmentManager();
-                FragmentTransaction transaction = fragmentManager.beginTransaction();
-                transaction.setCustomAnimations(R.anim.fade_in, R.anim.fade_out);
-                transaction.replace(R.id.HomeFrame, sofaFragment);
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
-        bed.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                BedFragment bedFragment = new BedFragment();
-
-                FragmentManager fragmentManager = getChildFragmentManager();
-                FragmentTransaction transaction = fragmentManager.beginTransaction();
-                transaction.setCustomAnimations(R.anim.fade_in, R.anim.fade_out);
-                transaction.replace(R.id.HomeFrame, bedFragment);
-                transaction.addToBackStack(null);
-                transaction.commit();
+            public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
+                super.onScrollStateChanged(recyclerView, newState);
             }
         });
 
         return view;
+    }
+
+
+    private void fetchFurnitures(){
+        Methods methods = RetrofitClient.getRetrofitInstance().create(Methods.class);
+        Call<List<furnitures>> call = methods.getFurnitures();
+        call.enqueue(new Callback<List<furnitures>>() {
+            @Override
+            public void onResponse(Call<List<furnitures>> call, Response<List<furnitures>> response) {
+                if(response.isSuccessful() && response.body() != null){
+                    furnituresList.addAll(response.body());
+                    adapter.notifyDataSetChanged();
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<furnitures>> call, Throwable t) {
+                //Toast.makeText("An error has occurred", Toast.LENGTH_LONG).show();
+                Log.e("API Response", "Error: " + t.getMessage());
+            }
+        });
+    }
+
+    private void SetupSearchView(SearchView search) {
+         search.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+             @Override
+             public boolean onQueryTextSubmit(String query) {
+
+                 return false;
+             }
+
+             @Override
+             public boolean onQueryTextChange(String newText) {
+                 return false;
+             }
+         });
     }
 }
