@@ -53,47 +53,9 @@ public class FurnitureActivity extends AppCompatActivity {
         tvPhoneNumber = findViewById(R.id.tvPhoneNumber);
         tvAddress = findViewById(R.id.tvAddress);
 
-        Methods methods = RetrofitClient.getRetrofitInstance().create(Methods.class);
-        Call<furnitures> call = methods.getFurniture();
-        call.enqueue(new Callback<furnitures>() {
-            @Override
-            public void onResponse(@NonNull Call<furnitures> call, @NonNull Response<furnitures> response) {
-                furnitures furniture= response.body();
-                if (response.isSuccessful() && furniture != null) {
-                    Log.d("API Response", "Type: " + furniture.getType());
-                    Log.d("API Response", "Color: " + furniture.getColor());
-                    Log.d("API Response", "getBrand1: " + furniture.getBrand1());
+        GetDataFromIntent();
+    }
 
-                    tvName.setText(furniture.getFurnitureName());
-                    tvType.setText(furniture.getType());
-                    tvColor.setText(furniture.getColor());
-                    tvStyle.setText(furniture.getStyle());
-                    tvBrand.setText(furniture.getBrand1());
-                    tvPhoneNumber.setText(furniture.getPhoneNumber());
-                    tvAddress.setText(furniture.getAddress());
-
-                    /*new Thread(new Runnable(){
-                        @Override
-                        public void run() {
-
-                            final Bitmap mBitmap = getBitmapFromURL(furniture.getPicture());
-                            runOnUiThread(new Runnable(){
-                                public void run() {
-                                    ImageView mImageView = (ImageView) view.findViewById(R.id.imgSofa1);
-                                    mImageView.setImageBitmap(mBitmap);
-                                }}
-                            );
-                        }}).start();*/
-                } else {
-                    //Toast.makeText("An error has occurred", Toast.LENGTH_LONG).show();
-                    Log.e("API Response", "Error: " + response.message());
-                }
-            }
-
-            @Override
-            public void onFailure(@NonNull Call<furnitures> call, @NonNull Throwable t) {
-                //Toast.makeText("onFailure: " + t.getMessage(), Toast.LENGTH_LONG).show();
-            }
-        });
+    private void GetDataFromIntent() {
     }
 }

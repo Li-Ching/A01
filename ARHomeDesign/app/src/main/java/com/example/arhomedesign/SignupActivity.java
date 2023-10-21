@@ -19,6 +19,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserProfileChangeRequest;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -67,8 +69,21 @@ public class SignupActivity extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     if (task.isSuccessful()) {
-                                        Log.d("Firebase", "註冊成功");
-                                        // 顯示一個AlertDialog，告知使用者註冊成功
+                                        FirebaseUser user = mAuth.getCurrentUser();
+                                        UserProfileChangeRequest profileUpdates = new UserProfileChangeRequest.Builder()
+                                                .setDisplayName(username) // Set the username as the display name
+                                                .build();
+
+                                        user.updateProfile(profileUpdates)
+                                                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                    @Override
+                                                    public void onComplete(@NonNull Task<Void> updateTask) {
+                                                        if (updateTask.isSuccessful()) {
+                                                            Log.d("Firebase", "註冊成功");
+                                                            // 顯示一個AlertDialog，告知使用者註冊成功
+                                                        }
+                                                    }
+                                                });
 
                                     } else {
                                         Log.d("Firebase", "註冊失敗: " + task.getException().getMessage());

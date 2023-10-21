@@ -18,18 +18,15 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.arhomedesign.utils.Methods;
-import com.example.arhomedesign.utils.RetrofitClient;
-import com.example.arhomedesign.utils.UserData;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 public class ProfileFragment extends Fragment {
     LinearLayout username, chgPw;
     TextView Name, Email;
+
+
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -42,29 +39,8 @@ public class ProfileFragment extends Fragment {
         Email = view.findViewById(R.id.Email);
         chgPw = view.findViewById(R.id.chgPw);
 
-        Methods methods = RetrofitClient.getRetrofitInstance().create(Methods.class);
-        Call<UserData> call = methods.getProfile();
-        call.enqueue(new Callback<UserData>() {
-            @Override
-            public void onResponse(Call<UserData> call,  Response<UserData> response) {
-                UserData userData= response.body();
-                if (response.isSuccessful() && userData != null) {
-                    Log.d("API Response", "Username: " + response);
-                    Log.d("API Response", "Username: " + userData.getUsername());
-                    Log.d("API Response", "Email: " + userData.getEmail());
-                    Name.setText(userData.getUsername());
-                    Email.setText(userData.getEmail());
-                } else {
-                    Toast.makeText(getContext(), "An error has occurred", Toast.LENGTH_LONG).show();
-                    Log.e("API Response", "Error: " + response.message());
-                }
-            }
+        updateProfileInformation();
 
-            @Override
-            public void onFailure(@NonNull Call<UserData> call, @NonNull Throwable t) {
-                Toast.makeText(getContext(), "onFailure: " + t.getMessage(), Toast.LENGTH_LONG).show();
-            }
-        });
         username.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -107,4 +83,21 @@ public class ProfileFragment extends Fragment {
         });
         return view;
     }
+
+    private void updateProfileInformation() {
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user != null) {
+            user.reload();
+            String displayName = user.getDisplayName();
+            String email = user.getEmail();
+
+            // Check if user's email is verified
+            boolean emailVerified = user.isEmailVerified();
+
+            // Update the TextViews with the refreshed information
+            Name.setText(displayName);
+            Email.setText(email);
+        }
+    }
+
 }
