@@ -21,16 +21,71 @@
                 <input asp-for="Password" class="form-control" type="password" />
                 <span asp-validation-for="Password" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="登入" class="btn btn-primary" />
+            <div style="display: flex; align-items: baseline;">
+                <div class="form-group" style="margin: 10px; margin-left: 0">
+                    <input type="submit" value="登入" class="btn btn-light text-dark" />
+                </div>
+                <div style="margin: 10px; cursor: pointer;">
+                    <p class="text-dark" data-bs-toggle="modal" data-bs-target="#forgetpwModel">
+                        忘記密碼?
+                    </p>
+                </div>
+                
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Registration">註冊一個新帳號</a>
+    <a asp-action="Registration" class="btn btn-light text-dark">註冊一個新帳號</a>
 </div>
+<!-- Modal -->
+<div class="modal fade" id="forgetpwModel" tabindex="-1" aria-labelledby="forgetpwModelLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="forgetpwModelLabel">更改密碼</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- 新增一個輸入框 -->
+                <input type="text" class="form-control" id="email" placeholder="請輸入Email">
+                <span id="danger" style="color: red"></span>
+            </div>
+            <div class="modal-footer">
+                <!-- 新增一個按鈕用於儲存變更 -->
+                <button type="button" class="btn btn-light text-dark" onclick="inputEamil()">發送Email</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    function inputEamil() {
+        var email = $('#email').val();
+        $.ajax({
+            type: "POST",
+            url: '@Url.Action("ForgetPassword", "Home")',
+            data: { email: email },
+            success: function (response) {
+                if (response.success) {
+                    alert(response.message);
+                    setTimeout(function () {
+                        window.location.reload();
+                    }, 500);
+                }
+                else {
+                    alert(response.message);  //在用戶未登入時也顯示訊息
+                }
+            },
+            error: function () {
+                alert("請求失敗");
+            }
+        });
+    }
+</script>
 
 @section Scripts {
     @{

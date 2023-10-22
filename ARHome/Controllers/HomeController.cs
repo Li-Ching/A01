@@ -98,7 +98,13 @@ namespace ARHome.Controllers
 
             return View();
         }
+        [HttpPost]
+        public async Task<IActionResult> ForgetPassword(string email)
+        {
+            await auth.SendPasswordResetEmailAsync(email);
 
+            return Json(new { success = true, message = "已寄送email至" + email +"，請至信箱查看" });
+        }
 
         public IActionResult LogOut()
         {

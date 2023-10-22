@@ -27,25 +27,27 @@
     </div>
 </div>
 
-<div class="bar">
+<div class="bar col-12">
+    <div class="col-12 col-md-6">
     <h3>
-        <a asp-area="" asp-controller="Furnitures" asp-action="Index" class="badge rounded-pill bg-info cursor-pointer">所有家具</a>
-        <a asp-area="" asp-controller="Furnitures" asp-action="Index" asp-route-type="chair" class="badge rounded-pill bg-info cursor-pointer">椅子</a>
-        <a asp-area="" asp-controller="Furnitures" asp-action="Index" asp-route-type="table" class="badge rounded-pill bg-info cursor-pointer">桌子</a>
-        <a asp-area="" asp-controller="Furnitures" asp-action="Index" asp-route-type="bed" class="badge rounded-pill bg-info cursor-pointer">床</a>
-        <a asp-area="" asp-controller="Furnitures" asp-action="Index" asp-route-type="sofa" class="badge rounded-pill bg-info cursor-pointer">沙發</a>
+        <a asp-area="" asp-controller="Furnitures" asp-action="Index" class="badge rounded-pill bg-light text-dark cursor-pointer">所有家具</a>
+        <a asp-area="" asp-controller="Furnitures" asp-action="Index" asp-route-type="chair" class="badge rounded-pill bg-light text-dark cursor-pointer">椅子</a>
+        <a asp-area="" asp-controller="Furnitures" asp-action="Index" asp-route-type="table" class="badge rounded-pill bg-light text-dark cursor-pointer">桌子</a>
+        <a asp-area="" asp-controller="Furnitures" asp-action="Index" asp-route-type="bed" class="badge rounded-pill bg-light text-dark cursor-pointer">床</a>
+        <a asp-area="" asp-controller="Furnitures" asp-action="Index" asp-route-type="sofa" class="badge rounded-pill bg-light text-dark cursor-pointer">沙發</a>
     </h3>
-
-    <div class="search">
-        <form asp-area="" asp-controller="Furnitures" asp-action="Search" method="get">
-            <input class="search-bar" type="text" name="content" id="content" placeholder="想找什麼">
-            <button type="submit" class="search-btn">
-                <i class="fas fa-search"></i>
-            </button>
-        </form>
     </div>
 
-
+    <div class="box col-12 col-md-6">
+        <div class="container-4">
+            <form asp-area="" asp-controller="Furnitures" asp-action="Search" method="get">
+                <input type="search" name="content" id="search" placeholder="想找什麼" required>
+                <button type="submit" class="icon">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+        </div>
+    </div>
 </div>
 
 <br />
@@ -60,7 +62,7 @@
                 <div class="card" style="margin-bottom:5px">
                     <div class="card-body d-flex flex-column">
                         <div>
-                            <i class="fa fa-heart" style="float: right; cursor: pointer;" onclick="toggleFavorite('@item.furnitureId')" data-furniture-id="@item.furnitureId"></i>
+                            <i class="fa fa-heart" style="float: right;" onclick="toggleFavorite('@item.furnitureId')" data-furniture-id="@item.furnitureId"></i>
                         </div>
                         <a asp-action="Details" asp-route-id="@item.furnitureId" class="card-link">
                             <div class="card-img">
