@@ -2,7 +2,7 @@
     ViewData["Title"] = "首頁";
 }
 
-<div class="text-center">
+<div>
     @if (ViewBag.DisplayName != null)
     {
         <h1 class="display-4">嗨! @ViewBag.DisplayName, 歡迎您使用AR Home!</h1>
@@ -13,7 +13,7 @@
     }
 
     @* <p>使用者的 token：@ViewBag.token</p> *@
-    <div style="display: flex; justify-content: center;align-items: baseline;">
+    <div style="display: flex; align-items: baseline;">
         <p>暱稱：@ViewBag.DisplayName &nbsp;&nbsp;&nbsp;&nbsp;</p>
         <button type="button" class="btn btn-light text-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
             更改暱稱
@@ -27,7 +27,7 @@
     </button>
     <br />
     <br />
-    <div style="margin: 10px">
+    <div>
         <div><a asp-action="LogOut" class="btn btn-light text-dark">登出</a></div>
     </div>
 </div>
