@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = "首頁";
+    ViewData["Title"] = "個人資料頁";
 }
 
 <div>
@@ -28,7 +28,7 @@
     <br />
     <br />
     <div>
-        <div><a asp-action="LogOut" class="btn btn-light text-dark">登出</a></div>
+        <div><a asp-action="LogOut" class="btn bg-secondary text-white">登出</a></div>
     </div>
 </div>
 
@@ -46,7 +46,7 @@
             </div>
             <div class="modal-footer">
                 <!-- 新增一個按鈕用於儲存變更 -->
-                <button type="button" class="btn btn-light text-dark" onclick="changeName()">儲存變更</button>
+                <button type="button" class="btn bg-secondary text-white" onclick="changeName()">儲存變更</button>
             </div>
         </div>
     </div>
@@ -63,12 +63,13 @@
             <div class="modal-body">
                 <!-- 新增一個輸入框 -->
                 <input type="password" class="form-control" id="newPW" placeholder="請輸入新的密碼">
+                <br />
                 <input type="password" class="form-control" id="renewPW" placeholder="再輸入一次新的密碼">
                 <span id="danger" style="color: red"></span>
             </div>
             <div class="modal-footer">
                 <!-- 新增一個按鈕用於儲存變更 -->
-                <button type="button" class="btn btn-light text-dark" onclick="changePW()">儲存變更</button>
+                <button type="button" class="btn bg-secondary text-white" onclick="changePW()">儲存變更</button>
             </div>
         </div>
     </div>

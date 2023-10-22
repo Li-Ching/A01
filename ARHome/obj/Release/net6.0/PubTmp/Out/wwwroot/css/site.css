@@ -101,7 +101,8 @@ body {
     display: flex;
     justify-content: space-between; /* 左右對齊 */
     align-items: center; /* 垂直居中對齊 */
-    margin: 10px; /* 添加一些底部間距 */
+    margin: 10px 0; /* 添加一些底部間距 */
+    flex-wrap: wrap;
 }
 
 h3 {
@@ -110,11 +111,19 @@ h3 {
 
 .container-4 {
     overflow: hidden;
-    width: 300px;
+    width: 350px;
     vertical-align: middle;
     white-space: nowrap;
-    float: right;
+    margin-top: 10px;
 }
+
+@media (min-width: 576px) {
+    .col-12 .container-4 {
+        float: right; /* 修改為 float: right; */
+        margin-left: auto; /* 新增 margin-left: auto; */
+    }
+}
+
     .container-4 input#search::-webkit-input-placeholder {
         color: #65737e;
     }
@@ -131,7 +140,7 @@ h3 {
         color: #65737e;
     }
     .container-4 input#search {
-        width: 300px;
+        width: 350px;
         height: 50px;
         background: #d0b8ac;
         border: none;
@@ -193,15 +202,15 @@ dt {
     background-color: #f5f5f5; /* 背景顏色 */
     border-radius: 10px; /* 圓弧邊框 */
     padding: 10px; /* 內邊距 */
-    margin: 10px; /* 底部間距 */
+    margin: 10px 0; /* 底部間距 */
 }
 a {
     text-decoration: none;
 }
-/*
-    a:hover {
-        text-decoration: underline;
-    }*/
 i {
     cursor: pointer;
+}
+.delete {
+    border: none;
+    background-color: #f5f5f5;
 }

@@ -3,30 +3,11 @@
 @{
     ViewData["Title"] = "顯示品牌明細";
 }
-<style>
-    dl {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        list-style: none;
-        padding: 0;
-    }
-
-    dt {
-        width: 100%;
-        text-align: left;
-        padding-right: 10px;
-        box-sizing: border-box;
-    }
-
-    /* 若需更精細的樣式，可根據需求進行調整 */
-</style>
-
 
 <h3><span class="badge rounded-pill bg-light text-dark">顯示品牌明細操作頁面</span></h3>
 <br />
 <div>
-    <img src="http://140.137.41.136:1380/A01Web/Images/@Model.logo" style="height:400px; border-radius: 10%;" alt="@Model.logo" />
+    <img src="http://140.137.41.136:1380/A01Web/Images/@Model.logo" style="width:350px; border-radius: 10%;" alt="@Model.logo" />
 </div>
 <dl>
     <dt>
