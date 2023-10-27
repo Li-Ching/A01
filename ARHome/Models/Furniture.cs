@@ -39,6 +39,7 @@ namespace ARHome.Models
         {
             public Guid messageId { get; set; }
             public string? userId { get; set; }
+            public string? displayName { get; set; }
             public string? message1 { get; set; }
             public DateTime messageTime { get; set; }
             public bool isDelete { get; set; }

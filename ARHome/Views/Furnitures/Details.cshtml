@@ -108,7 +108,8 @@
                 {
                     <div class="custom-col">
                         <p>
-                            <span class="text-muted">@message.messageTime</span>
+                            <span class="font-weight-bold">@message.displayName</span>
+                            <span class="text-muted">． @message.messageTime</span>
                             @if (ViewBag.id == message.userId.ToString())
                             {
                                 <button class="delete" onclick="DeleteMseeage('@message.messageId')">

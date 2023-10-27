@@ -117,6 +117,18 @@ namespace ARHome.Controllers
 
                 // 將新的留言加入到 resultJsonObj.Messages 中
                 resultJsonObj.Messages.AddRange(messagesFromApiResponse2);
+
+                foreach (var message in messagesFromApiResponse2)
+                {
+                    // 使用者 ID
+                    var userId = message.userId;
+
+                    // 使用 FirebaseAdmin.Auth.FirebaseAuth.DefaultInstance.GetUserAsync(userId) 來獲取使用者資訊
+                    UserRecord userRecord = await FirebaseAdmin.Auth.FirebaseAuth.DefaultInstance.GetUserAsync(userId);
+
+                    message.displayName = userRecord.DisplayName;
+                }
+
                 resultJsonObj.Messages = resultJsonObj.Messages.Where(n => n.isDelete == false).OrderByDescending(m => m.messageTime).ToList();
 
                 return View(resultJsonObj);
