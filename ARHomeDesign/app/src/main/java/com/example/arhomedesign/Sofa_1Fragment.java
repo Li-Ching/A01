@@ -14,7 +14,6 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
-
 import com.example.arhomedesign.utils.Methods;
 import com.example.arhomedesign.utils.RetrofitClient;
 import com.example.arhomedesign.utils.furnitures;
