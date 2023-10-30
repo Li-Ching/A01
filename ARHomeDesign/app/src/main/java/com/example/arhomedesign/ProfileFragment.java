@@ -29,12 +29,13 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
-        updateProfileInformation();
 
         username = view.findViewById(R.id.username);
         Name = view.findViewById(R.id.Name);
         Email = view.findViewById(R.id.Email);
         chgPw = view.findViewById(R.id.chgPw);
+
+        updateProfileInformation();
 
         username.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,6 +86,10 @@ public class ProfileFragment extends Fragment {
             user.reload();
             String displayName = user.getDisplayName();
             String email = user.getEmail();
+            ProfileFragment profileFragment = (ProfileFragment) getParentFragmentManager().findFragmentByTag("ProfileFragment");
+            if (profileFragment != null) {
+                profileFragment.updateUsername(displayName);
+            }
 
             // Check if user's email is verified
             boolean emailVerified = user.isEmailVerified();
@@ -94,5 +99,12 @@ public class ProfileFragment extends Fragment {
             Email.setText(email);
         }
     }
+
+    public void updateUsername(String newUsername) {
+        if (Name != null) {
+            Name.setText(newUsername);
+        }
+    }
+
 
 }

@@ -1,9 +1,13 @@
 package com.example.arhomedesign.utils;
 
-public class furnitures {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+import androidx.annotation.NonNull;
+
+public class furnitures implements Parcelable {
 
     private Integer furnitureId;
-
     private String furnitureName;
     private String type;
     private String color;
@@ -28,6 +32,37 @@ public class furnitures {
         this.location = location;
         this.picture = picture;
     }
+
+    protected furnitures(Parcel in) {
+        if (in.readByte() == 0) {
+            furnitureId = null;
+        } else {
+            furnitureId = in.readInt();
+        }
+        furnitureName = in.readString();
+        type = in.readString();
+        color = in.readString();
+        style = in.readString();
+        brand1 = in.readString();
+        phoneNumber = in.readString();
+        address = in.readString();
+        logo = in.readString();
+        location = in.readString();
+        picture = in.readString();
+    }
+
+    public static final Creator<furnitures> CREATOR = new Creator<furnitures>() {
+        @Override
+        public furnitures createFromParcel(Parcel in) {
+            return new furnitures(in);
+        }
+
+        @Override
+        public furnitures[] newArray(int size) {
+            return new furnitures[size];
+        }
+    };
+
 
     public Integer getFurnitureId() {
         return furnitureId;
@@ -115,5 +150,30 @@ public class furnitures {
 
     public void setPicture(String picture) {
         this.picture = picture;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(@NonNull Parcel dest, int flags) {
+        if (furnitureId == null) {
+            dest.writeByte((byte) 0);
+        } else {
+            dest.writeByte((byte) 1);
+            dest.writeInt(furnitureId);
+        }
+        dest.writeString(furnitureName);
+        dest.writeString(type);
+        dest.writeString(color);
+        dest.writeString(style);
+        dest.writeString(brand1);
+        dest.writeString(phoneNumber);
+        dest.writeString(address);
+        dest.writeString(logo);
+        dest.writeString(location);
+        dest.writeString(picture);
     }
 }

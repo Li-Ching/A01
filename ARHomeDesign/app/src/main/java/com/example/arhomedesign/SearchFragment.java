@@ -11,7 +11,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.SearchView;
+import androidx.appcompat.widget.SearchView;
 
 import com.example.arhomedesign.utils.FurnituresAdapter;
 import com.example.arhomedesign.utils.Methods;
@@ -85,14 +85,35 @@ public class SearchFragment extends Fragment {
          search.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
              @Override
              public boolean onQueryTextSubmit(String query) {
-
-                 return false;
+                 filterFurnitureList(query);
+                 search.setQuery("", false); // Clear the search query
+                 return true;
              }
 
              @Override
              public boolean onQueryTextChange(String newText) {
-                 return false;
+                 filterFurnitureList(newText);
+                 return true;
              }
          });
+    }
+
+    private void filterFurnitureList(String query) {
+        List<furnitures> filteredList = new ArrayList<>();
+
+        for (furnitures furniture : furnituresList) {
+            String name = furniture.getFurnitureName().toLowerCase();
+            String category = furniture.getType().toLowerCase();
+            String brand = furniture.getBrand1().toLowerCase();
+            String color = furniture.getColor().toLowerCase();
+            String style = furniture.getStyle().toLowerCase();
+            query = query.toLowerCase();
+
+            if (name.contains(query) || category.contains(query) || brand.contains(query)) {
+                filteredList.add(furniture);
+            }
+        }
+
+        adapter.filterList(filteredList);
     }
 }

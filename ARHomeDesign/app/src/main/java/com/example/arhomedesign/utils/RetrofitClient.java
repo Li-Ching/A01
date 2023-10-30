@@ -25,4 +25,8 @@ public class RetrofitClient {
         }
         return retrofit;
     }
+
+    //private static FurnitureApi furnitureApi = retrofit.create(FurnitureApi.class);
+
+
 }
