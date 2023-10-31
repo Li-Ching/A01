@@ -11,15 +11,12 @@ import retrofit2.http.POST;
 
 public interface Methods {
     @GET("api/furnitures/1")
-    Call<furnitures> getFurniture();
+    Call<furnitures> getFurniture1();
+    @GET("api/furnitures/2")
+    Call<furnitures> getFurniture2();
+    @GET("api/furnitures/3")
+    Call<furnitures> getFurniture3();
     @GET("api/furnitures")
     Call<List<furnitures>> getFurnitures();
-    @POST("api/users")
-        //on below line we are creating a method to post our data.
-    Call<UserData> createPost(@Body UserData dataModal);
-    @GET("api/users/profile")
-    Call<UserData> getProfile();
-    @POST("api/login")
-        //on below line we are creating a method to post our data.
-    Call<LoginData> Login(@Body LoginData dataModal);
+
 }

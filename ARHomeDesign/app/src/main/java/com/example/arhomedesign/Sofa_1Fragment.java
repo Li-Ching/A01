@@ -44,7 +44,7 @@ public class Sofa_1Fragment extends Fragment {
         tvAddress = view.findViewById(R.id.tvAddress);
 
         Methods methods = RetrofitClient.getRetrofitInstance().create(Methods.class);
-        Call<furnitures> call = methods.getFurniture();
+        Call<furnitures> call = methods.getFurniture1();
         call.enqueue(new Callback<furnitures>() {
             @Override
             public void onResponse(@NonNull Call<furnitures> call, @NonNull Response<furnitures> response) {
