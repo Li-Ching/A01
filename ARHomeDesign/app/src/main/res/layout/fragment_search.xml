@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
@@ -9,19 +9,24 @@
     tools:context=".SearchFragment">
 
     <LinearLayout
+        android:id="@+id/linearLayout5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
         android:layout_marginHorizontal="10dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/recyclerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.01">
 
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_gravity="center_vertical"
-            android:src="@drawable/search_icon"
-            android:contentDescription="@string/search"/>
+            android:contentDescription="@string/search"
+            android:src="@drawable/search_icon" />
 
         <TextView
             android:id="@+id/tvLookFor"
@@ -30,9 +35,9 @@
             android:layout_marginHorizontal="5dp"
             android:fontFamily="@font/kaiu"
             android:text="@string/look_for"
-            android:textSize="40sp"
             android:textColor="@color/matte_black"
-            android:textStyle="bold"/>
+            android:textSize="40sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
@@ -41,6 +46,9 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:layout_marginVertical="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout5"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout5"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5"
         app:layout_scrollFlags="scroll|enterAlways">
 
         <androidx.appcompat.widget.SearchView
@@ -48,15 +56,33 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:layout_marginHorizontal="15dp"
-            android:queryHint="在找什麽？"
             android:background="@drawable/bottom_bar_bg"
-            android:backgroundTint="@color/gray_btn"/>
+            android:backgroundTint="@color/gray_btn"
+            android:queryHint="在找什麽？">
+
+        </androidx.appcompat.widget.SearchView>
 
     </androidx.appcompat.widget.Toolbar>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        app:layout_constraintBottom_toBottomOf="@+id/recyclerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/recyclerView" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:layout_marginTop="120dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

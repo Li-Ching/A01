@@ -11,6 +11,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
+
 import androidx.appcompat.widget.SearchView;
 
 import com.example.arhomedesign.utils.FurnituresAdapter;
@@ -31,7 +33,7 @@ public class SearchFragment extends Fragment {
     LinearLayoutManager layoutManager;
     FurnituresAdapter adapter;
     List<furnitures> furnituresList = new ArrayList<>();
-
+    ProgressBar progressBar;
     SearchView searchView;
 
     @Override
@@ -40,6 +42,8 @@ public class SearchFragment extends Fragment {
 
         searchView = view.findViewById(R.id.search_view);
         SetupSearchView(searchView);
+
+        progressBar = view.findViewById(R.id.progressBar);
 
         recyclerView = view.findViewById(R.id.recyclerView);
         layoutManager = new LinearLayoutManager(requireContext());
@@ -61,6 +65,7 @@ public class SearchFragment extends Fragment {
 
 
     private void fetchFurnitures(){
+        progressBar.setVisibility(View.VISIBLE);
         Methods methods = RetrofitClient.getRetrofitInstance().create(Methods.class);
         Call<List<furnitures>> call = methods.getFurnitures();
         call.enqueue(new Callback<List<furnitures>>() {
@@ -69,12 +74,13 @@ public class SearchFragment extends Fragment {
                 if(response.isSuccessful() && response.body() != null){
                     furnituresList.addAll(response.body());
                     adapter.notifyDataSetChanged();
-
+                    progressBar.setVisibility(View.GONE);
                 }
             }
 
             @Override
             public void onFailure(Call<List<furnitures>> call, Throwable t) {
+                progressBar.setVisibility(View.GONE);
                 //Toast.makeText("An error has occurred", Toast.LENGTH_LONG).show();
                 Log.e("API Response", "Error: " + t.getMessage());
             }
