@@ -28,7 +28,6 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class SearchFragment extends Fragment {
-
     RecyclerView recyclerView;
     LinearLayoutManager layoutManager;
     FurnituresAdapter adapter;

@@ -18,9 +18,6 @@
             android:name=".FurnitureActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivityNoLogin"
-            android:exported="false" />
-        <activity
             android:name=".ForgotPwdActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
