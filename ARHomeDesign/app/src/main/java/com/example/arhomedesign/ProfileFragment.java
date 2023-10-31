@@ -21,7 +21,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 
 public class ProfileFragment extends Fragment {
-    LinearLayout username, chgPw;
+    LinearLayout username;
     TextView Name, Email;
 
     @SuppressLint("MissingInflatedId")
@@ -33,7 +33,6 @@ public class ProfileFragment extends Fragment {
         username = view.findViewById(R.id.username);
         Name = view.findViewById(R.id.Name);
         Email = view.findViewById(R.id.Email);
-        chgPw = view.findViewById(R.id.chgPw);
 
         updateProfileInformation();
 
@@ -51,19 +50,7 @@ public class ProfileFragment extends Fragment {
             }
         });
 
-        chgPw.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ChangePasswordFragment changePasswordFragment = new ChangePasswordFragment();
 
-                FragmentManager fragmentManager = getParentFragmentManager();
-                FragmentTransaction transaction = fragmentManager.beginTransaction();
-                transaction.setCustomAnimations(R.anim.slide_up, R.anim.fade_out, R.anim.fade_in, R.anim.slide_down);
-                transaction.replace(R.id.FrameLayout, changePasswordFragment);
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
 
         Button logoutButton = view.findViewById(R.id.logout_button); // 找到登出按鈕
 

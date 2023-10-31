@@ -11,7 +11,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 
 public class Intro extends AppCompatActivity {
-    Button login, guest;
+    Button login;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,21 +21,11 @@ public class Intro extends AppCompatActivity {
         getSupportActionBar().hide();
 
         login = findViewById(R.id.btnLogin);
-        guest = findViewById(R.id.btnGuest);
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Intro.this, LoginActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-
-        guest.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intro.this, MainActivityNoLogin.class);
                 startActivity(intent);
                 finish();
             }

@@ -88,6 +88,34 @@ public class HomeFragment extends Fragment {
                 Log.e("API Response", "Error: " + t.getMessage());
             }
         });
+
+        call2.enqueue(new Callback<furnitures>() {
+            @Override
+            public void onResponse(Call<furnitures> call, Response<furnitures> response) {
+                if (response.isSuccessful()) {
+                    recommendedFurniture1 = response.body();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<furnitures> call, Throwable t) {
+                Log.e("API Response", "Error: " + t.getMessage());
+            }
+        });
+
+        call3.enqueue(new Callback<furnitures>() {
+            @Override
+            public void onResponse(Call<furnitures> call, Response<furnitures> response) {
+                if (response.isSuccessful()) {
+                    recommendedFurniture1 = response.body();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<furnitures> call, Throwable t) {
+                Log.e("API Response", "Error: " + t.getMessage());
+            }
+        });
     }
 
     // Open the FurnitureDetailsActivity with the selected furniture item
