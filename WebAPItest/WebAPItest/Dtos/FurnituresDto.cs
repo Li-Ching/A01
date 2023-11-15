@@ -21,6 +21,8 @@
 
         public string? Location { get; set; }
 
-        public string? Picture { get; set; } 
+        public string? Picture { get; set; }
+        public string? SceneName { get; set; }
+
     }
 }

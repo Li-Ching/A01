@@ -67,7 +67,8 @@ namespace WebAPItest.Controllers
                               Address= (b.Furniture.Brand == null) ? null : b.Furniture.Brand.Address,
                               Logo= (b.Furniture.Brand == null) ? null : b.Furniture.Brand.Logo,
                               Location=b.Furniture.Location,
-                              Picture=b.Furniture.Picture
+                              Picture=b.Furniture.Picture,
+                              SceneName = b.Furniture.SceneName
                           }).ToList();
             return result;
         }

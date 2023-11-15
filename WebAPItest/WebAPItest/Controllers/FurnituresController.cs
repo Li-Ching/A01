@@ -27,17 +27,18 @@ namespace WebAPItest.Controllers
                           .Include(a => a.Brand)
                           select new FurnituresDto
                           {
-                              FurnitureId=a.FurnitureId,
-                              FurnitureName=a.FurnitureName,
-                              Type=a.Type,
-                              Color=a.Color,
-                              Style=a.Style,
-                              Brand1 = (a.Brand==null) ? null: a.Brand.Brand1,
+                              FurnitureId = a.FurnitureId,
+                              FurnitureName = a.FurnitureName,
+                              Type = a.Type,
+                              Color = a.Color,
+                              Style = a.Style,
+                              Brand1 = (a.Brand==null) ? null : a.Brand.Brand1,
                               PhoneNumber = (a.Brand == null) ? null : a.Brand.PhoneNumber,
-                              Address= (a.Brand == null) ? null : a.Brand.Address,
-                              Logo= (a.Brand == null) ? null : a.Brand.Logo,
-                              Location=a.Location,
-                              Picture=a.Picture
+                              Address = (a.Brand == null) ? null : a.Brand.Address,
+                              Logo = (a.Brand == null) ? null : a.Brand.Logo,
+                              Location = a.Location,
+                              Picture = a.Picture,
+                              SceneName = a.SceneName
                           });
 
             if (!string.IsNullOrWhiteSpace(Type))
@@ -56,17 +57,18 @@ namespace WebAPItest.Controllers
                           where a.FurnitureId== FurnitureId
                           select new FurnituresDto
                           {
-                              FurnitureId=a.FurnitureId,
-                              FurnitureName=a.FurnitureName,
-                              Type=a.Type,
-                              Color=a.Color,
-                              Style=a.Style,
-                              Brand1= (a.Brand == null) ? null : a.Brand.Brand1,
-                              PhoneNumber= (a.Brand == null) ? null : a.Brand.PhoneNumber,
-                              Address= (a.Brand == null) ? null : a.Brand.Address,
-                              Logo= (a.Brand == null) ? null : a.Brand.Logo,
-                              Location=a.Location,
-                              Picture=a.Picture
+                              FurnitureId = a.FurnitureId,
+                              FurnitureName = a.FurnitureName,
+                              Type = a.Type,
+                              Color = a.Color,
+                              Style = a.Style,
+                              Brand1 = (a.Brand == null) ? null : a.Brand.Brand1,
+                              PhoneNumber = (a.Brand == null) ? null : a.Brand.PhoneNumber,
+                              Address = (a.Brand == null) ? null : a.Brand.Address,
+                              Logo = (a.Brand == null) ? null : a.Brand.Logo,
+                              Location = a.Location,
+                              Picture = a.Picture,
+                              SceneName = a.SceneName
                           }).SingleOrDefault();
             return result;
         }
@@ -79,17 +81,18 @@ namespace WebAPItest.Controllers
                           .Include(a => a.Brand)
                           select new FurnituresDto
                           {
-                              FurnitureId=a.FurnitureId,
-                              FurnitureName=a.FurnitureName,
-                              Type=a.Type,
-                              Color=a.Color,
-                              Style=a.Style,
+                              FurnitureId = a.FurnitureId,
+                              FurnitureName = a.FurnitureName,
+                              Type = a.Type,
+                              Color = a.Color,
+                              Style = a.Style,
                               Brand1 = (a.Brand==null) ? null : a.Brand.Brand1,
                               PhoneNumber = (a.Brand == null) ? null : a.Brand.PhoneNumber,
-                              Address= (a.Brand == null) ? null : a.Brand.Address,
-                              Logo= (a.Brand == null) ? null : a.Brand.Logo,
-                              Location=a.Location,
-                              Picture=a.Picture
+                              Address = (a.Brand == null) ? null : a.Brand.Address,
+                              Logo = (a.Brand == null) ? null : a.Brand.Logo,
+                              Location = a.Location,
+                              Picture = a.Picture,
+                              SceneName = a.SceneName
                           });
 
             if (!string.IsNullOrWhiteSpace(content))

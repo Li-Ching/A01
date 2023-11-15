@@ -20,6 +20,8 @@ public partial class Furniture
     public string Location { get; set; } = null!;
 
     public string Picture { get; set; } = null!;
+    public string SceneName { get; set; } = null!;
+
 
     public virtual Brand Brand { get; set; } = null!;
 
