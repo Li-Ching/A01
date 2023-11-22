@@ -24,7 +24,7 @@ public class LoadScene : MonoBehaviour
     {
         int displayProgress = 0;
         int toProgress = 0;
-        AsyncOperation op = SceneManager.LoadSceneAsync("SampleScene"); //此處改成要加載的場景名
+        AsyncOperation op = SceneManager.LoadSceneAsync("HomePage"); //此處改成要加載的場景名
         op.allowSceneActivation = false;
         while (op.progress < 0.9f) //此處如果是 <= 0.9f 則會出現死循環所以必須小0.9
         {

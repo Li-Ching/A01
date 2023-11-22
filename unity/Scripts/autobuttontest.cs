@@ -16,7 +16,14 @@ public class autobuttontest : MonoBehaviour
     void Start()
     {
         // 監看 InputField 的 onValueChanged 事件
-        searchInputField.onValueChanged.AddListener(OnSearchInputValueChanged);
+        if (searchInputField != null)
+        {
+            searchInputField.onValueChanged.AddListener(OnSearchInputValueChanged);
+        }
+        else
+        {
+            Debug.LogError("searchInputField is null. Make sure it is assigned in the Unity editor.");
+        }
 
         // 呼叫家具 API
         StartCoroutine(getRequest("http://140.137.41.136:1380/A01/api/Furnitures"));
@@ -124,16 +131,25 @@ public class autobuttontest : MonoBehaviour
             yOffset -= (buttonHeight + 10);
 
             // 取得按鈕上的Text元素，將其設定為家具名稱
-            Text buttonText = button.transform.Find("FurnitureName").GetComponent<Text>();
-            buttonText.text = furniture.furnitureName;
-
             // 取得按鈕上的Image元素，將其設定為家具圖片
-            string imageUrl = "http://140.137.41.136:1380/A01Web/Images/" + furniture.picture; // 圖片的 url
-            Image buttonImage = button.transform.Find("FurnitureImage").GetComponent<Image>();
-            StartCoroutine(GetTexture(imageUrl, buttonImage)); // 將圖片更新
+            Text buttonText = button.transform.Find("FurnitureName")?.GetComponent<Text>();
+            Text brandText = button.transform.Find("FurnitureBrand")?.GetComponent<Text>();
+            Image buttonImage = button.transform.Find("FurnitureImage")?.GetComponent<Image>();
 
-            // 添加按鈕點擊事件
-            button.GetComponent<Button>().onClick.AddListener(() => OnButtonClick(furniture));
+            if (buttonText != null && brandText != null && buttonImage != null)
+            {
+                buttonText.text = furniture.furnitureName;
+                brandText.text = furniture.brand1;
+
+                string imageUrl = "http://140.137.41.136:1380/A01Web/Images/" + furniture.picture;
+                StartCoroutine(GetTexture(imageUrl, buttonImage));
+
+                button.GetComponent<Button>().onClick.AddListener(() => OnButtonClick(furniture));
+            }
+            else
+            {
+                Debug.LogWarning("One or more UI elements not found in the button prefab.");
+            }
         }
     }
     #endregion
