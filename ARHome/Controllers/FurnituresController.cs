@@ -15,8 +15,8 @@ namespace ARHome.Controllers
 {
     public class FurnituresController : Controller
     {// 留言板服務在私有雲虛擬機執行時的網址 (要將此網址改為你的Web API網址)
-        string baseurl = "http://140.137.41.136:1380/A01/api/Furnitures";
-        string baseurl2 = "http://140.137.41.136:1380/A01/api/Messages";
+        string baseurl = "http://172.20.10.2/A01API/api/Furnitures";
+        string baseurl2 = "http://172.20.10.2/A01API/api/Messages";
         FirebaseAuthProvider auth;
 
         public FurnituresController()

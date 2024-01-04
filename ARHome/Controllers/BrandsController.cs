@@ -8,7 +8,7 @@ namespace ARHome.Controllers
 {
     public class BrandsController : Controller
     {// 留言板服務在私有雲虛擬機執行時的網址 (要將此網址改為你的Web API網址)
-        string baseurl = "http://140.137.41.136:1380/A01/api/Brands";
+        string baseurl = "http://172.20.10.2/A01API/api/Brands";
 
         // GET: MessageBoard
         public async Task<IActionResult> Index()
@@ -44,7 +44,7 @@ namespace ARHome.Controllers
             {
                 // 設定[取得第id筆留言紀錄]Web API的網址
                 string url = baseurl + "/" + id.ToString();
-                string url2 = "http://140.137.41.136:1380/A01/api/Branches/"+ id.ToString();
+                string url2 = "http://172.20.10.2/A01API/api/Branches/"+ id.ToString();
 
                 var response = await client.GetAsync(url);
                 string apiResponse = await response.Content.ReadAsStringAsync();

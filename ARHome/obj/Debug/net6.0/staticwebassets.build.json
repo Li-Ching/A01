@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Pt4hHzLX4YyH/ns4ev6RPbEOT+pO023sXc+/hECI2dw=",
+  "Hash": "Ob3DhEzZ1YVnfJ4D66wJavCyEELMPfs/fkPtM6ulU+c=",
   "Source": "ARHome",
   "BasePath": "_content/ARHome",
   "Mode": "Default",
@@ -85,23 +85,6 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\user\\A01\\ARHome\\wwwroot\\Images\\Ashley-Furniture-logo.jpg",
-      "SourceId": "ARHome",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\A01\\ARHome\\wwwroot\\",
-      "BasePath": "_content/ARHome",
-      "RelativePath": "Images/Ashley-Furniture-logo.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\Ashley-Furniture-logo.jpg"
-    },
-    {
       "Identity": "C:\\Users\\user\\A01\\ARHome\\wwwroot\\Images\\bed1.jpg",
       "SourceId": "ARHome",
       "SourceType": "Discovered",
@@ -170,6 +153,23 @@
       "OriginalItemSpec": "wwwroot\\Images\\bed4.jpg"
     },
     {
+      "Identity": "C:\\Users\\user\\A01\\ARHome\\wwwroot\\Images\\BOCONCEPT.jpg",
+      "SourceId": "ARHome",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\A01\\ARHome\\wwwroot\\",
+      "BasePath": "_content/ARHome",
+      "RelativePath": "Images/BOCONCEPT.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\BOCONCEPT.jpg"
+    },
+    {
       "Identity": "C:\\Users\\user\\A01\\ARHome\\wwwroot\\Images\\chair1.jpg",
       "SourceId": "ARHome",
       "SourceType": "Discovered",
@@ -204,12 +204,12 @@
       "OriginalItemSpec": "wwwroot\\Images\\chair2.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\A01\\ARHome\\wwwroot\\Images\\Crate-and-Barrel-logo.jpg",
+      "Identity": "C:\\Users\\user\\A01\\ARHome\\wwwroot\\Images\\DCCASA.png",
       "SourceId": "ARHome",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\A01\\ARHome\\wwwroot\\",
       "BasePath": "_content/ARHome",
-      "RelativePath": "Images/Crate-and-Barrel-logo.jpg",
+      "RelativePath": "Images/DCCASA.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -218,7 +218,24 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\Crate-and-Barrel-logo.jpg"
+      "OriginalItemSpec": "wwwroot\\Images\\DCCASA.png"
+    },
+    {
+      "Identity": "C:\\Users\\user\\A01\\ARHome\\wwwroot\\Images\\H&D.jpg",
+      "SourceId": "ARHome",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\A01\\ARHome\\wwwroot\\",
+      "BasePath": "_content/ARHome",
+      "RelativePath": "Images/H&D.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\H&D.jpg"
     },
     {
       "Identity": "C:\\Users\\user\\A01\\ARHome\\wwwroot\\Images\\ikea-logo.png",
@@ -289,57 +306,6 @@
       "OriginalItemSpec": "wwwroot\\Images\\no_love.png"
     },
     {
-      "Identity": "C:\\Users\\user\\A01\\ARHome\\wwwroot\\Images\\Pottery-Barn-logo.jpg",
-      "SourceId": "ARHome",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\A01\\ARHome\\wwwroot\\",
-      "BasePath": "_content/ARHome",
-      "RelativePath": "Images/Pottery-Barn-logo.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\Pottery-Barn-logo.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\user\\A01\\ARHome\\wwwroot\\Images\\Pottery-Barn-logo.png",
-      "SourceId": "ARHome",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\A01\\ARHome\\wwwroot\\",
-      "BasePath": "_content/ARHome",
-      "RelativePath": "Images/Pottery-Barn-logo.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\Pottery-Barn-logo.png"
-    },
-    {
-      "Identity": "C:\\Users\\user\\A01\\ARHome\\wwwroot\\Images\\Rooms-To-Go-logo.jpg",
-      "SourceId": "ARHome",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\A01\\ARHome\\wwwroot\\",
-      "BasePath": "_content/ARHome",
-      "RelativePath": "Images/Rooms-To-Go-logo.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\Rooms-To-Go-logo.jpg"
-    },
-    {
       "Identity": "C:\\Users\\user\\A01\\ARHome\\wwwroot\\Images\\sofa1.jpg",
       "SourceId": "ARHome",
       "SourceType": "Discovered",
@@ -406,23 +372,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\table2.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\user\\A01\\ARHome\\wwwroot\\Images\\West-Elm-logo.jpg",
-      "SourceId": "ARHome",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\A01\\ARHome\\wwwroot\\",
-      "BasePath": "_content/ARHome",
-      "RelativePath": "Images/West-Elm-logo.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\West-Elm-logo.jpg"
     },
     {
       "Identity": "C:\\Users\\user\\A01\\ARHome\\wwwroot\\js\\site.js",
