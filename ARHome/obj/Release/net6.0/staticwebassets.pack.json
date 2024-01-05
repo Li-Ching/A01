@@ -41,8 +41,32 @@
       "PackagePath": "staticwebassets\\Images\\chair1.jpg"
     },
     {
+      "Id": "C:\\Users\\user\\A01\\ARHome\\wwwroot\\Images\\chair1.png",
+      "PackagePath": "staticwebassets\\Images\\chair1.png"
+    },
+    {
       "Id": "C:\\Users\\user\\A01\\ARHome\\wwwroot\\Images\\chair2.jpg",
       "PackagePath": "staticwebassets\\Images\\chair2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\A01\\ARHome\\wwwroot\\Images\\chair2.png",
+      "PackagePath": "staticwebassets\\Images\\chair2.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\A01\\ARHome\\wwwroot\\Images\\chair3.png",
+      "PackagePath": "staticwebassets\\Images\\chair3.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\A01\\ARHome\\wwwroot\\Images\\chair4.png",
+      "PackagePath": "staticwebassets\\Images\\chair4.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\A01\\ARHome\\wwwroot\\Images\\chair5.png",
+      "PackagePath": "staticwebassets\\Images\\chair5.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\A01\\ARHome\\wwwroot\\Images\\chair6.png",
+      "PackagePath": "staticwebassets\\Images\\chair6.png"
     },
     {
       "Id": "C:\\Users\\user\\A01\\ARHome\\wwwroot\\Images\\ikea-logo.png",
